@@ -181,7 +181,7 @@ const Result = () => {
 
        {/* 500k+  3  */}
 
-       
+
        <div class="bg-green-900 py-22 flex justify-around items-center w-full relative">
         <div class="stat relative text-center">
           <div class="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
@@ -321,7 +321,7 @@ const Result = () => {
 
     {/* second last page 8 */}
     <div>
-      <img src={green_bg} alt="" />
+      <img src={green_bg} alt="" className="" />
     </div>
 
 
