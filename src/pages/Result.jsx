@@ -29,9 +29,10 @@ import right_phone from '../result_assets/right_phone.png'
 import playstore from '../result_assets/playstore 1.png'
 import appstore from '../result_assets/appstore 1.png'
 import { useNavigate } from "react-router-dom";
-
 import { Link } from "react-router-dom";
-
+import Ellipse_4 from "../result_assets/Ellipse_4.png";
+import Ellipse_5 from "../result_assets/Ellipse_5.png";
+import Group_11 from "../result_assets/Group_11.png";
 const Result = () => {
 
   const navigate = useNavigate();
@@ -322,12 +323,12 @@ const Result = () => {
         <img
           src={rectangle}
           alt="Background"
-          className="absolute w-3/4 md:w-2/3 lg:w-1/2 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
+          className="absolute  w-[1400px] mx-auto top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/20 z-[5] h-[451px]"
         />
 
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
           {/* Left Section - Girl Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center z-[10]">
             <img
               src={girl}
               alt="Woman using a blender"
@@ -336,7 +337,7 @@ const Result = () => {
           </div>
 
           {/* Right Section - Business Info */}
-          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative">
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative z-[10]">
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               List Your Business for FREE Today!
             </h2>
@@ -346,7 +347,7 @@ const Result = () => {
             </p>
 
             <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
-            onClick={() => navigate("/login")} >
+              onClick={() => navigate("/login")} >
               List Now
             </button>
 
@@ -356,11 +357,72 @@ const Result = () => {
 
       {/* Green bg 6*/}
 
-      <div>
+      <div className="relative z-0">
         <div className="mt-16">
           <img src={green_bg} alt="" />
         </div>
+
+        <div className="absolute inset-0 flex items-center justify-center z-5">
+          {/* left */}
+          
+            <div className="flex flex-col items-center justify-center w-[20rem] gap-y-80">
+              <div className="text-white">
+                <h1>Highly Affordable</h1>
+                <p>From ideation to execution, we cover every aspect of the digital journey.</p>
+              </div>
+
+              <div className="text-white">
+                <h1>Highly Affordable</h1>
+                <p>From ideation to execution, we cover every aspect of the digital journey.</p>
+              </div>
+            </div>
+          
+
+
+
+          {/* mid image */}
+          <div className="relative flex items-center justify-center w-[40rem]">
+            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] left-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] right-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+          <img
+              src={Group_11}
+              alt="Woman using a blender"
+              className="w-[15rem] absolute top-[1/2] left-[1/2]"
+            />
+             
+            <img
+            src={Ellipse_5}
+            alt="Woman using a blender"
+            className="w-[25rem] aboslute top-1/2 left-1/2"
+          />
+
+<img
+              src={Ellipse_4}
+              alt="Woman using a blender"
+              className=" w-[30rem] absolute top-[1/2] left-[1/2]"
+            /> 
+          </div>
+
+          {/* right */}
+        <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
+        <div>
+            <h1>Highly Affordable</h1>
+            <p>From ideation to execution, we cover every aspect of the digital journey.</p>
+          </div>
+
+          <div>
+            <h1>Highly Affordable</h1>
+            <p>From ideation to execution, we cover every aspect of the digital journey.</p>
+          </div>
+        </div>
+          
+
+          
+        </div>
       </div>
+
 
       {/* How it works  7 */}
 
@@ -464,42 +526,42 @@ const Result = () => {
 
 
       {/* second last page 8 */}
-      <div className="relative bg-[#0F3D1E] py-10 px-6 md:px-16 lg:px-24">
-  {/* Background Image */}
-  <img src={green_bg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+      <div className="relative bg-[#0F3D1E] py-20 px-6 md:px-16 lg:px-24 ">
+        {/* Background Image */}
+        <img src={green_bg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
 
-  <div className="relative flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
-    {/* Left Side - Phone Images */}
-    <div className="relative w-[300px] h-[350px] flex items-center justify-center">
-      <img
-        src={left_phone}
-        alt="Phone 1"
-        className="w-40 md:w-52 lg:w-60 drop-shadow-lg absolute left-6 rotate-[-10deg]"
-      />
-      <img
-        src={right_phone}
-        alt="Phone 2"
-        className="w-40 md:w-52 lg:w-60 drop-shadow-lg absolute right-6 rotate-[10deg]"
-      />
-    </div>
+        <div className="relative flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
+          {/* Left Side - Phone Images */}
+          <div className="relative w-[300px] h-[350px] flex items-center justify-center">
+            <img
+              src={left_phone}
+              alt="Phone 1"
+              className="w-60  drop-shadow-lg absolute left-6 rotate-[-2deg] bottom-[3rem]"
+            />
+            <img
+              src={right_phone}
+              alt="Phone 2"
+              className="w-50 drop-shadow-lg absolute right-6 rotate-[5deg] left-[8rem]"
+            />
+          </div>
 
-    {/* Right Side - Heading & Text */}
-    <div className="text-white text-center lg:text-left max-w-lg">
-      <h2 className="text-3xl md:text-5xl font-bold">
-        Discover <span className="text-yellow-400">Punjabi</span> Businesses And Pages!
-      </h2>
-      <p className="mt-4 text-lg md:text-xl">
-        Download the Punjabi Pages app to explore and connect with trusted businesses, services, and community resources in your area.
-      </p>
+          {/* Right Side - Heading & Text */}
+          <div className="text-white text-center lg:text-left max-w-lg">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Discover <span className="text-yellow-400">Punjabi</span> Businesses And Pages!
+            </h2>
+            <p className="mt-4 text-lg md:text-xl">
+              Download the Punjabi Pages app to explore and connect with trusted businesses, services, and community resources in your area.
+            </p>
 
-      {/* Download Buttons */}
-      <div className="mt-6 flex flex-wrap justify-center lg:justify-start space-x-4">
-        <img src={playstore} alt="Google Play" className="w-40 md:w-48" />
-        <img src={appstore} alt="App Store" className="w-40 md:w-48" />
+            {/* Download Buttons */}
+            <div className="mt-6 flex flex-wrap justify-center lg:justify-start space-x-4">
+              <img src={playstore} alt="Google Play" className="w-40 md:w-48" />
+              <img src={appstore} alt="App Store" className="w-40 md:w-48" />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
 
