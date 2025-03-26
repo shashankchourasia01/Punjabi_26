@@ -2,29 +2,32 @@ import React from "react";
 import paji from "../home_assets/result main image.jpeg";
 import logo from "../home_assets/punjabi logo.png";
 import menu from "../home_assets/Menu Logo.png";
-import search_icon from '../home_assets/search icon.png'
-import bus from '../result_assets/bus.png'
-import cap from '../result_assets/cap.png'
-import church from '../result_assets/church.png'
-import more_icon from '../result_assets/more_icon.png'
-import health from '../result_assets/solar_health-bold.png'
-import dining from '../result_assets/dining.png'
-import clothing_store from '../result_assets/clothing_store.png'
-import spa from '../result_assets/spa.png'
+import search_icon from "../home_assets/search icon.png";
+import bus from "../result_assets/bus.png";
+import cap from "../result_assets/cap.png";
+import church from "../result_assets/church.png";
+import more_icon from "../result_assets/more_icon.png";
+import health from "../result_assets/solar_health-bold.png";
+import dining from "../result_assets/dining.png";
+import clothing_store from "../result_assets/clothing_store.png";
+import spa from "../result_assets/spa.png";
 import Footer from "../components/Footer";
 
 import first from "../result_assets/1 card.png";
 import second from "../result_assets/2 card.png";
 import third from "../result_assets/3 card.png";
-import left_arrow from '../result_assets/left_arrow.png'
-import right_arrow from '../result_assets/right_arrow.png'
-import rectangle from '../result_assets/rectangle.png'
-import girl from '../result_assets/girl (1).png'
-import green_bg from '../result_assets/green_bg.png'
-import cyan_bg from '../result_assets/cyan_bg.png'
-import email from '../home_assets/formkit_email.png'
-
-
+import left_arrow from "../result_assets/left_arrow.png";
+import right_arrow from "../result_assets/right_arrow.png";
+import rectangle from "../result_assets/rectangle.png";
+import girl from "../result_assets/girl (1).png";
+import green_bg from "../result_assets/green_bg.png";
+// import cyan_bg from '../result_assets/cyan_bg.png'
+// import email from '../home_assets/formkit_email.png'
+import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
+import left_phone from '../result_assets/left_phone.png'
+import right_phone from '../result_assets/right_phone.png'
+import playstore from '../result_assets/playstore 1.png'
+import appstore from '../result_assets/appstore 1.png'
 
 import { Link } from "react-router-dom";
 
@@ -107,82 +110,118 @@ const Result = () => {
 
           {/* Search Button */}
           <button className="bg-yellow-400 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
-            <img src={search_icon} alt="" className="w-[50px]"/>
+            <img src={search_icon} alt="" className="w-[50px]" />
           </button>
         </div>
       </div>
 
-
-
       {/* 8 options */}
 
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
-
-
-       
-          <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={dining} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Food & Beverages</p>
+        <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={dining}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
           </div>
-        
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={spa} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Beauty & wellness</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={clothing_store} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Apparel & Accessories</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={cap} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Education</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={health} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Health</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={church} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Wedding and Events</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={bus} alt="Food & Beverages" className="w-16 h-16 object-contain rounded-full" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Logistic Services</p>
-          </div>
-
-          <div className="flex items-center justify center flex-col mt-10 w-40">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
-              <img src={more_icon} alt="Food & Beverages" className="w-16 h-16 object-contain rounded" />
-            </div>
-            <p className="text-center mt-6 mb-6 text-gray-700 text-xl">More</p>
-          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Food & Beverages
+          </p>
         </div>
 
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={spa}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Beauty & wellness
+          </p>
+        </div>
 
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={clothing_store}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Apparel & Accessories
+          </p>
+        </div>
 
-       {/* 500k+  3  */}
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={cap}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Education
+          </p>
+        </div>
 
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={health}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Health</p>
+        </div>
 
-       <div class="bg-green-900 py-22 flex justify-around items-center w-full relative">
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={church}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Wedding and Events
+          </p>
+        </div>
+
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={bus}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded-full"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+            Logistic Services
+          </p>
+        </div>
+
+        <div className="flex items-center justify center flex-col mt-10 w-40">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+            <img
+              src={more_icon}
+              alt="Food & Beverages"
+              className="w-16 h-16 object-contain rounded"
+            />
+          </div>
+          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">More</p>
+        </div>
+      </div>
+
+      {/* 500k+  3  */}
+
+      <div class="bg-green-900 py-22 flex justify-around items-center w-full relative">
         <div class="stat relative text-center">
           <div class="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             500+
@@ -212,9 +251,7 @@ const Result = () => {
         </div>
       </div>
 
-
       {/* Featured business  4  */}
-
 
       <div class="bg-white p-10">
         {/*  Header Section  */}
@@ -262,67 +299,200 @@ const Result = () => {
 
         {/* <!-- Slider Icons --> */}
         <div class="flex justify-center gap-6 mt-20">
-          <button class="bg-yellow-400 p-9  rounded-full shadow-md"> <img src={left_arrow} alt="" /></button>
-          <button class="bg-yellow-400 p-9 rounded-full shadow-md"> <img src={right_arrow} alt="" /></button>
+          <button class="bg-yellow-400 p-9  rounded-full shadow-md">
+            {" "}
+            <img src={left_arrow} alt="" />
+          </button>
+          <button class="bg-yellow-400 p-9 rounded-full shadow-md">
+            {" "}
+            <img src={right_arrow} alt="" />
+          </button>
         </div>
       </div>
 
       {/* List your business 5 */}
 
       <div className="relative bg-white w-full flex items-center justify-center min-h-screen p-6">
-      {/* Background Image */}
-      <img
-        src={rectangle}
-        alt="Background"
-        className="absolute w-3/4 md:w-2/3 lg:w-1/2 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
-      />
-      
-      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
-        {/* Left Section - Girl Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img src={girl} alt="Woman using a blender" className="w-full max-w-md md:max-w-lg" />
-        </div>
+        {/* Background Image */}
+        <img
+          src={rectangle}
+          alt="Background"
+          className="absolute w-3/4 md:w-2/3 lg:w-1/2 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
+        />
 
-        {/* Right Section - Business Info */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative">
-          <h2 className="text-2xl md:text-3xl font-bold text-black">List Your Business for FREE Today!</h2>
-          <p className="mt-2 text-gray-700 text-lg">
-            Join the largest Punjabi business directory in Australia. Increase
-            your visibility and connect with customers easily!
-          </p>
-          <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition">
-            List Now
-          </button>
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
+          {/* Left Section - Girl Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={girl}
+              alt="Woman using a blender"
+              className="w-full max-w-md md:max-w-lg"
+            />
+          </div>
+
+          {/* Right Section - Business Info */}
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative">
+            <h2 className="text-2xl md:text-3xl font-bold text-black">
+              List Your Business for FREE Today!
+            </h2>
+            <p className="mt-2 text-gray-700 text-lg">
+              Join the largest Punjabi business directory in Australia. Increase
+              your visibility and connect with customers easily!
+            </p>
+            <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition">
+              List Now
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
+      {/* Green bg 6*/}
 
-    {/* Green bg 6*/}
-
-    <div>
-      <div className="mt-16">
-        <img src={green_bg} alt="" />
-      </div>
-    </div>
-
-
-
-
-    {/* How it works  7 */}
-
-    <div>
       <div>
-        <img src={cyan_bg} alt="" />
+        <div className="mt-16">
+          <img src={green_bg} alt="" />
+        </div>
+      </div>
+
+      {/* How it works  7 */}
+
+      <div className="bg-[#fdfaf3] px-6 lg:px-20 py-12 mb-30">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Left Section */}
+          <div>
+            <h1 className="text-4xl md:text-5xl font-semibold text-green-900 mb-4 pt-20">
+              How It Works ?
+            </h1>
+            <p className="text-gray-700 mb-6 pt-10 text-2xl">
+              We’ve designed our user-friendly system to make your <br />
+              search for businesses more effortless and smooth.
+            </p>
+            <div className="relative">
+              <div className="absolute left-4 top-2 h-full w-[2px] bg-green-700"></div>
+
+              {/* Step 1 */}
+              <div className="flex items-start mb-10 mt-20">
+                <div className="w-15 h-12 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                  1
+                </div>
+                <div className="ml-12">
+                  <h3 className="text-3xl font-semibold text-green-800">
+                    Search
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Use our search bar to find businesses in your network. Enter
+                    the keywords, location.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex items-start mb-10">
+                <div className="w-12 h-10 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                  2
+                </div>
+                <div className="ml-12">
+                  <h3 className="text-3xl font-semibold text-green-800">
+                    Discover
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Browse listings with business names, descriptions, and
+                    contact info.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                  3
+                </div>
+                <div className="ml-12">
+                  <h3 className="text-3xl font-semibold text-green-800">
+                    Connect
+                  </h3>
+                  <p className="text-gray-600 text-xl">
+                    Contact businesses directly or add your own to the list.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="relative">
+            {/* Girl Image */}
+            <div className="w-[500px] h-[500px] md:w-[550px] md:h-[550px] rounded-full overflow-hidden mx-auto mr-10">
+              <img
+                src={receptionist}
+                alt="Business Woman"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Card */}
+            <div className="absolute bottom-[-130px] right-0 bg-white shadow-lg rounded-lg w-90 h-95 p-4 mr-80">
+              <img
+                src={second}
+                alt="Food"
+                className="w-full h-62 object-cover rounded-md mb-3"
+              />
+              <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
+                <h5 className="text-lg mr-18">Lorem Ipsum</h5>
+                <div className="text-yellow-400">★★★★★</div>
+              </div>
+            </div>
+
+            {/* Button */}
+            <div className="absolute bottom-[-170px] ml-75">
+              <button className="bg-yellow-400 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-yellow-500 transition">
+                Search more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* second last page 8 */}
+      <div className="relative bg-[#0F3D1E] py-10 px-6 md:px-16 lg:px-24">
+  {/* Background Image */}
+  <img src={green_bg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+
+  <div className="relative flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
+    {/* Left Side - Phone Images */}
+    <div className="relative w-[300px] h-[350px] flex items-center justify-center">
+      <img
+        src={left_phone}
+        alt="Phone 1"
+        className="w-40 md:w-52 lg:w-60 drop-shadow-lg absolute left-6 rotate-[-10deg]"
+      />
+      <img
+        src={right_phone}
+        alt="Phone 2"
+        className="w-40 md:w-52 lg:w-60 drop-shadow-lg absolute right-6 rotate-[10deg]"
+      />
+    </div>
+
+    {/* Right Side - Heading & Text */}
+    <div className="text-white text-center lg:text-left max-w-lg">
+      <h2 className="text-3xl md:text-5xl font-bold">
+        Discover <span className="text-yellow-400">Punjabi</span> Businesses And Pages!
+      </h2>
+      <p className="mt-4 text-lg md:text-xl">
+        Download the Punjabi Pages app to explore and connect with trusted businesses, services, and community resources in your area.
+      </p>
+
+      {/* Download Buttons */}
+      <div className="mt-6 flex flex-wrap justify-center lg:justify-start space-x-4">
+        <img src={playstore} alt="Google Play" className="w-40 md:w-48" />
+        <img src={appstore} alt="App Store" className="w-40 md:w-48" />
       </div>
     </div>
+  </div>
+</div>
 
-
-
-    {/* second last page 8 */}
-    <div>
-      <img src={green_bg} alt="" className="" />
-    </div>
 
 
 
