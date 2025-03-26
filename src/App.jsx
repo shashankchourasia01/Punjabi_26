@@ -1,17 +1,22 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
+
 // import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       {/* <Navbar/> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
-      </Routes>
+           <main >
+           <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/result" element={<Result />} />
+        </Routes>
+            </main>   
+            
     </div>
 
   );
