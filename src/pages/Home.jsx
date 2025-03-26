@@ -9,6 +9,7 @@ import location from '../home_assets/location icon.png'
 import arcti from '../home_assets/arcticons_boost.png'
 import email from '../home_assets/formkit_email.png'
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -322,7 +323,7 @@ const Home = () => {
 
 
     {/* Footer section */}
-
+      <Footer></Footer>
 
     </div>
   );

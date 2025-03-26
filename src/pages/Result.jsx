@@ -11,6 +11,7 @@ import health from '../result_assets/solar_health-bold.png'
 import dining from '../result_assets/dining.png'
 import clothing_store from '../result_assets/clothing_store.png'
 import spa from '../result_assets/spa.png'
+import Footer from "../components/Footer";
 
 
 import { Link } from "react-router-dom";
@@ -18,7 +19,7 @@ import { Link } from "react-router-dom";
 const Result = () => {
   return (
     <div className="relative h-screen z-[10]">
-      /*Navbar*/
+      {/*Navbar*/}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
         <Link to="/" className="flex items-center">
           <img
@@ -167,6 +168,7 @@ const Result = () => {
 
 
       </div>
+      <Footer></Footer>
     </div>
   );
 };
