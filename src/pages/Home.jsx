@@ -7,7 +7,7 @@ import man from "../home_assets/Man Image.png"
 import people from '../home_assets/people.png'
 import location from '../home_assets/location icon.png'
 import arcti from '../home_assets/arcticons_boost.png'
-import email from '../home_assets/formkit_email.png'
+// import email from '../home_assets/formkit_email.png'
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
@@ -154,39 +154,39 @@ const Home = () => {
 
 
 
-      <div class=" relative container mx-auto px-6 py-5  mt-5">
+      <div className=" relative container mx-auto px-6 py-5  mt-5">
         {/* <!-- Progress Steps --> */}
-        <div class="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
-          <div class="relative flex flex-col items-center">
-            <div class="w-12 h-12 bg-green-800 text-white flex justify-center items-center rounded-full font-bold text-lg">
+        <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
+          <div className="relative flex flex-col items-center">
+            <div className="w-12 h-12 bg-green-800 text-white flex justify-center items-center rounded-full font-bold text-lg">
               1
             </div>
-            <span class="mt-2 text-2xl font-semibold">List Your Business</span>
+            <span className="mt-2 text-2xl font-semibold">List Your Business</span>
           </div>
-          <div class="w-20 md:w-32 border-t-2 border-green-700"></div>
-          <div class="relative flex flex-col items-center">
-            <div class="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
+          <div className="w-20 md:w-32 border-t-2 border-green-700"></div>
+          <div className="relative flex flex-col items-center">
+            <div className="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
               2
             </div>
-            <span class="mt-2 text-2xl font-semibold">Verify Your Business</span>
+            <span className="mt-2 text-2xl font-semibold">Verify Your Business</span>
           </div>
-          <div class="w-20 md:w-32 border-t-2 border-green-700"></div>
-          <div class="relative flex flex-col items-center">
-            <div class="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
+          <div className="w-20 md:w-32 border-t-2 border-green-700"></div>
+          <div className="relative flex flex-col items-center">
+            <div className="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
               3
             </div>
-            <span class="mt-2 text-2xl font-semibold">Target Customer</span>
+            <span className="mt-2 text-2xl font-semibold">Target Customer</span>
           </div>
         </div>
 
         {/* <!-- Content Section --> */}
-        <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
           {/* <!-- Left Text --> */}
-          <div class="md:w-1/2 mt-30">
-            <h1 class="text-5xl font-bold text-green-800 ml-20">
+          <div className="md:w-1/2 mt-30">
+            <h1 className="text-5xl font-bold text-green-800 ml-20">
               List Your Business Details
             </h1>
-            <p class="mt-4 ml-20 text-gray-700 text-2xl">
+            <p className="mt-4 ml-20 text-gray-700 text-2xl">
               To begin, you need to create an account on <br />
               Punjabi Pages. Simply visit the Sign-Up page and <br />
               enter your details. Once submitted,you'll receive <br />
@@ -197,7 +197,7 @@ const Home = () => {
           </div>
 
           {/* <!-- Right Image --> */}
-          <div class="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center">
             <img
               src={man}
               alt="Businessman" className="ml-10"
