@@ -28,10 +28,15 @@ import left_phone from '../result_assets/left_phone.png'
 import right_phone from '../result_assets/right_phone.png'
 import playstore from '../result_assets/playstore 1.png'
 import appstore from '../result_assets/appstore 1.png'
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
 const Result = () => {
+
+  const navigate = useNavigate();
+
+
   return (
     <div className="relative h-screen z-[10]">
       {/*Navbar*/}
@@ -339,9 +344,12 @@ const Result = () => {
               Join the largest Punjabi business directory in Australia. Increase
               your visibility and connect with customers easily!
             </p>
-            <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition">
+
+            <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
+            onClick={() => navigate("/login")} >
               List Now
             </button>
+
           </div>
         </div>
       </div>
