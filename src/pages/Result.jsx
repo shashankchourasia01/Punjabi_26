@@ -13,6 +13,18 @@ import clothing_store from '../result_assets/clothing_store.png'
 import spa from '../result_assets/spa.png'
 import Footer from "../components/Footer";
 
+import first from "../result_assets/1 card.png";
+import second from "../result_assets/2 card.png";
+import third from "../result_assets/3 card.png";
+import left_arrow from '../result_assets/left_arrow.png'
+import right_arrow from '../result_assets/right_arrow.png'
+import rectangle from '../result_assets/rectangle.png'
+import girl from '../result_assets/girl (1).png'
+import green_bg from '../result_assets/green_bg.png'
+import cyan_bg from '../result_assets/cyan_bg.png'
+import email from '../home_assets/formkit_email.png'
+
+
 
 import { Link } from "react-router-dom";
 
@@ -163,11 +175,158 @@ const Result = () => {
             </div>
             <p className="text-center mt-6 mb-6 text-gray-700 text-xl">More</p>
           </div>
-        
+        </div>
 
 
 
+       {/* 500k+  3  */}
+
+       
+       <div class="bg-green-900 py-22 flex justify-around items-center w-full relative">
+        <div class="stat relative text-center">
+          <div class="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            500+
+          </div>
+          <div class="text text-white mt-10">Lorem Ipsum</div>
+        </div>
+
+        <div class="stat relative text-center">
+          <div class="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            40K
+          </div>
+          <div class="text text-white mt-10">Lorem Ipsum</div>
+        </div>
+
+        <div class="stat relative text-center">
+          <div class="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            200+
+          </div>
+          <div class="text text-white mt-10">Lorem Ipsum</div>
+        </div>
+
+        <div class="stat relative text-center">
+          <div class="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            16+
+          </div>
+          <div class="text text-white mt-10">Lorem Ipsum</div>
+        </div>
       </div>
+
+
+      {/* Featured business  4  */}
+
+
+      <div class="bg-white p-10">
+        {/*  Header Section  */}
+        <div class="flex justify-between items-center mb-6 mt-18">
+          <h2 class="text-4xl font-bold text-green-900 ml-20">
+            Featured Business
+          </h2>
+          <button class="bg-yellow-400 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-yellow-400 ">
+            Explore More
+          </button>
+        </div>
+
+        {/*  Image Cards Section  */}
+        <div class="flex justify-center gap-6 mt-20">
+          {/* <!-- Card 1 --> */}
+          <div class="text-center">
+            <img src={first} alt="" class="w-110 h-70" />
+            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 class="font-bold">Lorem Ipsum</h3>
+              <div class="text-yellow-400">★★★★★</div>
+            </div>
+            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+          </div>
+
+          {/* <!-- Card 2 --> */}
+          <div class="text-center">
+            <img src={second} alt="" class="w-110 h-70" />
+            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 class="font-bold">Lorem Ipsum</h3>
+              <div class="text-yellow-400">★★★★★</div>
+            </div>
+            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+          </div>
+
+          {/* <!-- Card 3 --> */}
+          <div class="text-center">
+            <img src={third} alt="" className="w-110 h-70" />
+            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 class="font-bold">Lorem Ipsum</h3>
+              <div class="text-yellow-400">★★★★★</div>
+            </div>
+            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+          </div>
+        </div>
+
+        {/* <!-- Slider Icons --> */}
+        <div class="flex justify-center gap-6 mt-20">
+          <button class="bg-yellow-400 p-9  rounded-full shadow-md"> <img src={left_arrow} alt="" /></button>
+          <button class="bg-yellow-400 p-9 rounded-full shadow-md"> <img src={right_arrow} alt="" /></button>
+        </div>
+      </div>
+
+      {/* List your business 5 */}
+
+      <div className="relative bg-white w-full flex items-center justify-center min-h-screen p-6">
+      {/* Background Image */}
+      <img
+        src={rectangle}
+        alt="Background"
+        className="absolute w-3/4 md:w-2/3 lg:w-1/2 mx-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10"
+      />
+      
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
+        {/* Left Section - Girl Image */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img src={girl} alt="Woman using a blender" className="w-full max-w-md md:max-w-lg" />
+        </div>
+
+        {/* Right Section - Business Info */}
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative">
+          <h2 className="text-2xl md:text-3xl font-bold text-black">List Your Business for FREE Today!</h2>
+          <p className="mt-2 text-gray-700 text-lg">
+            Join the largest Punjabi business directory in Australia. Increase
+            your visibility and connect with customers easily!
+          </p>
+          <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition">
+            List Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    {/* Green bg 6*/}
+
+    <div>
+      <div className="mt-16">
+        <img src={green_bg} alt="" />
+      </div>
+    </div>
+
+
+
+
+    {/* How it works  7 */}
+
+    <div>
+      <div>
+        <img src={cyan_bg} alt="" />
+      </div>
+    </div>
+
+
+
+    {/* second last page 8 */}
+    <div>
+      <img src={green_bg} alt="" />
+    </div>
+
+
+
+
       <Footer></Footer>
     </div>
   );
