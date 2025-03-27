@@ -26,7 +26,7 @@ const Home = () => {
       {/* Navbar */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Punjabi Logo" className="w-16 rounded-full" />
+          <img src={logo} alt="Punjabi Logo" className="w-16 rounded-full ml-15" />
         </Link>
 
         {/* Nav Links */}
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
 
         {/* Menu Icon */}
-        <img onClick={goToResultPage} src={menu} alt="Menu Logo" className="w-10 rounded-full" />
+        <img onClick={goToResultPage} src={menu} alt="Menu Logo" className="w-12 rounded-full mr-15" />
       </div>
 
       {/* Background Image */}
@@ -75,8 +75,9 @@ const Home = () => {
         </h1>
         <h1 className="text-5xl font-bold mt-4">with Punjabi Pages!</h1>
         <br />
-        <h4 className="mb-4">
-          Join 1000+ Businesses & connect with <br /> customers today!
+        <h4 className="mb-4 text-2xl">
+          Join 1000+ Businesses & connect with <br />
+          customers today!
         </h4>
       </div>
 
@@ -152,25 +153,25 @@ const Home = () => {
 
 
 
-      <div className=" relative container mx-auto px-6 py-5  mt-5">
+      <div className=" relative container mx-auto px-6 py-5 bg-[#FFFDF5]  mt-5">
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-12 h-12 bg-green-800 text-white flex justify-center items-center rounded-full font-bold text-lg">
+            <div className="w-22 h-22 bg-green-800 text-white flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
             <span className="mt-2 text-2xl font-semibold">List Your Business</span>
           </div>
-          <div className="w-20 md:w-32 border-t-2 border-green-700"></div>
+          <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
+            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-green-800 text-green-700 flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
             <span className="mt-2 text-2xl font-semibold">Verify Your Business</span>
           </div>
-          <div className="w-20 md:w-32 border-t-2 border-green-700"></div>
+          <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-12 h-12 border-2 border-green-800 text-green-700 flex justify-center items-center rounded-full font-bold text-lg">
+            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-green-800 text-green-700 flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
             <span className="mt-2 text-2xl font-semibold">Target Customer</span>
