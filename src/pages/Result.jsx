@@ -12,7 +12,6 @@ import dining from "../result_assets/dining.png";
 import clothing_store from "../result_assets/clothing_store.png";
 import spa from "../result_assets/spa.png";
 import Footer from "../components/Footer";
-
 import first from "../result_assets/1 card.png";
 import second from "../result_assets/2 card.png";
 import third from "../result_assets/3 card.png";
@@ -21,8 +20,6 @@ import right_arrow from "../result_assets/right_arrow.png";
 import rectangle from "../result_assets/rectangle.png";
 import girl from "../result_assets/girl (1).png";
 import green_bg from "../result_assets/green_bg.png";
-// import cyan_bg from '../result_assets/cyan_bg.png'
-// import email from '../home_assets/formkit_email.png'
 import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
 import left_phone from '../result_assets/left_phone.png'
 import right_phone from '../result_assets/right_phone.png'

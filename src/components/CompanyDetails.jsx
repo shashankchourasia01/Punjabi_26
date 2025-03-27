@@ -1,3 +1,7 @@
+//RESPONSIVE 
+
+
+
 // import React from "react";
 
 // const CompanyDetailsForm = () => {

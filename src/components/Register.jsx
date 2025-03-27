@@ -1,3 +1,6 @@
+//RESPONSIVE
+
+
 // import React from "react";
 // import "./App.css";
 // import logo from "../home_assets/punjabi logo.png";
