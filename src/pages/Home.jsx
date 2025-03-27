@@ -3,11 +3,9 @@ import home from "../home_assets/Home image.jpeg";
 import logo from "../home_assets/punjabi logo.png";
 import menu from "../home_assets/Menu Logo.png";
 import man from "../home_assets/Man Image.png"
-// import green from '../home_assets/green bg.png'
 import people from '../home_assets/people.png'
 import location from '../home_assets/location icon.png'
 import arcti from '../home_assets/arcticons_boost.png'
-// import email from '../home_assets/formkit_email.png'
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 

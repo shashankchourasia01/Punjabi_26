@@ -1,49 +1,103 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
+            
+// import { useState } from "react";
+// import "./App.css";
+// import logo from "../home_assets/punjabi logo.png";
+// import pagi from "../home_assets/result main image.jpeg";
+// import google from '../home_assets/google_icon.png'
+// import x from '../home_assets/x_icon.png'
 
-// const Login = () => {
-//   const navigate = useNavigate();
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   const handleGoogleLogin = () => {
+//     window.location.href = "https://accounts.google.com/signin"; // Replace with your OAuth URL
+//   };
+
+//   const handleTwitterLogin = () => {
+//     window.location.href = "https://twitter.com/i/oauth2/authorize"; // Replace with your OAuth URL
+//   };
 
 //   return (
-//     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-//       <div className="bg-white p-8 rounded-lg shadow-md w-96">
-//         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
+//     <div className="flex flex-col md:flex-row h-screen w-full">
+//       {/* Left Section */}
+//       <div className="w-full md:w-1/2 bg-green-900 flex flex-col items-center justify-center px-6 py-10">
+//         {/* Logo */}
+//         <img src={logo} alt="Logo" className="w-20 mb-4 rounded-full" />
 
-//         <input
-//           type="email"
-//           placeholder="Enter your email"
-//           className="w-full p-3 border rounded-md mb-4 outline-none focus:border-blue-500"
-//         />
-        
-//         <input
-//           type="password"
-//           placeholder="Enter your password"
-//           className="w-full p-3 border rounded-md mb-4 outline-none focus:border-blue-500"
-//         />
-
-//         <button className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition">
-//           Login
-//         </button>
-
-//         <p className="text-center mt-4">
-//           Don't have an account?{" "}
-//           <span
-//             className="text-blue-600 cursor-pointer"
-//             onClick={() => navigate("/register")}
-//           >
-//             Register here
-//           </span>
+//         {/* Heading */}
+//         <h2 className="text-white text-3xl font-bold">Welcome Back</h2>
+//         <p className="text-gray-300 mb-6 text-center">
+//           Welcome Back! Please fill in your details
 //         </p>
 
+//         {/* Login Form */}
+//         <form className="w-full max-w-xs ">
+//           <input
+//             type="email"
+//             placeholder="Email"
+//             className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white"
+//           />
+//           <input
+//             type="password"
+//             placeholder="Password"
+//             className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white"
+//           />
+//           <button className="w-full bg-yellow-400 text-black font-semibold py-3 rounded-full hover:bg-yellow-500 transition">
+//             Sign In
+//           </button>
+//         </form>
+
+//         {/* Social Login Buttons */}
 //         <button
-//           className="mt-4 w-full bg-green-600 text-white p-3 rounded-md hover:bg-green-700 transition"
-//           onClick={() => navigate("/")}
+//           onClick={handleGoogleLogin}
+//           className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-3 mt-4 bg-white hover:bg-gray-100 transition"
 //         >
-//           Back to Home
+//           <img
+//             src={google}
+//             alt="Google"
+//             className="w-5"
+//           />
+//           <span>Sign in with Google</span>
 //         </button>
+
+//         <button
+//           onClick={handleTwitterLogin}
+//           className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-3 mt-3 bg-white hover:bg-gray-100 transition"
+//         >
+//           <img
+//             src={x}
+//             alt="Twitter"
+//             className="w-5"
+//           />
+//           <span>Sign in with Twitter</span>
+//         </button>
+
+//         {/* Links */}
+//         <p className="text-gray-300 text-sm mt-4">
+//           Forgot password?{" "}
+//           <a href="#" className="text-yellow-300 hover:underline">
+//             Help
+//           </a>
+//         </p>
+//         <p className="text-gray-300 text-sm">
+//           Don't have an account?{" "}
+//           <a href="#" className="text-yellow-300 hover:underline">
+//             Sign Up
+//           </a>{" "}
+//           for <strong>FREE</strong>
+//         </p>
+//       </div>
+
+//       {/* Right Section */}
+//       <div className="w-full md:w-1/2 h-full hidden md:flex overflow-hidden">
+//         <img
+//           src={pagi} // Replace with your image URL
+//           alt="Side Image"
+//           className="w-full h-full object-cover transform scale-145 -translate-x-40 mt-40"
+//         />
 //       </div>
 //     </div>
 //   );
-// };
+// }
 
-// export default Login;
+// export default App;
