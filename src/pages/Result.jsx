@@ -30,10 +30,11 @@ import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
+import { useState } from "react";
 const Result = () => {
 
   const navigate = useNavigate();
-
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="relative h-screen z-[10]">
@@ -49,11 +50,12 @@ const Result = () => {
 
         {/* Nav Links */}
         <div className="hidden md:flex space-x-10 pr-30">
-          <button className="text-white font-semibold hover:text-gray-900">
+          <button className="text-white font-semibold hover:text-gray-900"
+          onClick={() => navigate("/companyDetails")}>
             Add a Business
           </button>
           <Link
-            to="/services"
+            to="/result"
             className="text-white font-semibold hover:text-gray-900"
           >
             Our Services
@@ -67,7 +69,8 @@ const Result = () => {
         </div>
 
         {/* Menu Icon */}
-        <img src={menu} alt="Menu Logo" className="w-10 rounded-full mr-15" />
+        <img src={menu} alt="Menu Logo" className="w-10 rounded-full mr-15" onClick={() => {
+              setShowForm(true)}} />
       </div>
 
       {/* Background Image */}
@@ -118,6 +121,63 @@ const Result = () => {
         </div>
       </div>
 
+
+      {showForm && (
+  <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+    {/* Close Button */}
+    <button
+      onClick={() => setShowForm(false)}
+      className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-black rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold"
+    >
+      ×
+    </button>
+
+    <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
+      Register Here
+    </h5>
+    <input
+      type="text"
+      placeholder="Name"
+      className="w-full h-10 p-1 border mb-3 shadow-2xl rounded-md border-gray-300 placeholder:text-[12px] pl-5"
+    />
+    <input
+      type="text"
+      placeholder="Company / Business Name"
+      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+    />
+    <input
+      type="email"
+      placeholder="Your Email"
+      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+    />
+    <input
+      type="text"
+      placeholder="Mobile"
+      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+    />
+    <input
+      type="text"
+      placeholder="Locality"
+      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+    />
+    <div className="flex items-center mb-3">
+      <input type="checkbox" className="mr-2" />
+      <span>
+        I agree to all the{" "}
+        <a href="#" className="text-blue-600">
+          Terms of Use
+        </a>
+      </span>
+    </div>
+    <button className="w-full bg-yellow-400 text-white p-2 font-bold">
+      Submit
+    </button>
+    <p className="text-center mt-2">
+      Already registered?{" "}
+      <button className="text-red-600" onClick = {()=> navigate("/login")}> Sign up</button>
+    </p>
+  </div>
+)}
       {/* 8 options */}
 
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
@@ -344,7 +404,7 @@ const Result = () => {
             </p>
 
             <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
-              onClick={() => navigate("/login")} >
+              onClick={() => navigate("/companyDetails")} >
               List Now
             </button>
 

@@ -32,14 +32,14 @@ const Home = () => {
         {/* Nav Links */}
         <div className="hidden md:flex space-x-10">
           <button
-            onClick={() => {
-              setShowForm(true)}}
+          onClick={() => navigate("/companyDetails")}
+            
             className="text-white font-semibold hover:text-gray-900"
           >
             Add a Business
           </button>
           <Link 
-            to="/services"
+            to="/result"
             className="text-white font-semibold hover:text-gray-900"
           >
             Our Services
@@ -53,7 +53,8 @@ const Home = () => {
         </div>
 
         {/* Menu Icon */}
-        <img onClick={goToResultPage} src={menu} alt="Menu Logo" className="w-12 rounded-full mr-15" />
+        <img onClick={() => {
+              setShowForm(true)}} src={menu} alt="Menu Logo" className="w-12 rounded-full mr-15" />
       </div>
 
       {/* Background Image */}

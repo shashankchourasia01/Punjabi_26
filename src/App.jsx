@@ -2,6 +2,10 @@ import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
+import CompanyDetails from "./pages/CompanyDetails";
+
+import LoginPage from "./pages/LoginPage";
+
 
 // import Navbar from "./components/Navbar";
 
@@ -14,6 +18,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/result" element={<Result />} />
+          <Route path="/companyDetails" element={<CompanyDetails />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
         </Routes>
             </main>   
             
