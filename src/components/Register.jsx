@@ -55,7 +55,7 @@ function Register() {
           <input name="name" onChange={onChangeHandler} value={data.name} type="text" placeholder="Name"
             className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white" />
           <input name="userType" onChange={onChangeHandler} value={data.userType} type="text"
-            placeholder="User Type (eg. Customer, Vendor)" className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white" />
+            placeholder="User Type (eg. Customer, Admin)" className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white" />
           <input name="email" onChange={onChangeHandler} value={data.email} type="email" placeholder="Email"
             className="w-full p-3 border rounded-md mb-4 text-gray-700 bg-white" />
           <input name="password" onChange={onChangeHandler} value={data.password} type="password" placeholder="Password"

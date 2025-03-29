@@ -41,10 +41,10 @@ function Login({setShowLogin}) {
     event.preventDefault()
     let newUrl = url;
     if (currState==="Login") {
-      newUrl += "/api/user/login"
+      newUrl += "/api/users/login"
       }
       else{
-        newUrl += "/api/user/register"
+        newUrl += "/api/users/register"
       }
       const response = await axios.post(newUrl,data)
 

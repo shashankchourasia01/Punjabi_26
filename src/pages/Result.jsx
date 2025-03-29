@@ -21,10 +21,10 @@ import rectangle from "../result_assets/rectangle.png";
 import girl from "../result_assets/girl (1).png";
 import green_bg from "../result_assets/green_bg.png";
 import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
-import left_phone from '../result_assets/left_phone.png'
-import right_phone from '../result_assets/right_phone.png'
-import playstore from '../result_assets/playstore 1.png'
-import appstore from '../result_assets/appstore 1.png'
+import left_phone from "../result_assets/left_phone.png";
+import right_phone from "../result_assets/right_phone.png";
+import playstore from "../result_assets/playstore 1.png";
+import appstore from "../result_assets/appstore 1.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
@@ -32,7 +32,6 @@ import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
 import { useState } from "react";
 const Result = () => {
-
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
 
@@ -50,8 +49,10 @@ const Result = () => {
 
         {/* Nav Links */}
         <div className="hidden md:flex space-x-10 pr-30">
-          <button className="text-white font-semibold hover:text-gray-900"
-          onClick={() => navigate("/companyDetails")}>
+          <button
+            className="text-white font-semibold hover:text-gray-900"
+            onClick={() => navigate("/companyDetails")}
+          >
             Add a Business
           </button>
           <Link
@@ -69,8 +70,14 @@ const Result = () => {
         </div>
 
         {/* Menu Icon */}
-        <img src={menu} alt="Menu Logo" className="w-10 rounded-full mr-15" onClick={() => {
-              setShowForm(true)}} />
+        <img
+          src={menu}
+          alt="Menu Logo"
+          className="w-10 rounded-full mr-15"
+          onClick={() => {
+            setShowForm(true);
+          }}
+        />
       </div>
 
       {/* Background Image */}
@@ -99,7 +106,10 @@ const Result = () => {
 
         {/* Search Bar */}
 
-        <div className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch  rounded-2xl shadow-lg mt-10">
+        <div
+          id="searchBox"
+          className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch  rounded-2xl shadow-lg mt-10"
+        >
           {/* Search Business Input */}
           <input
             type="text"
@@ -121,164 +131,166 @@ const Result = () => {
         </div>
       </div>
 
-
       {showForm && (
-  <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
-    {/* Close Button */}
-    <button
-      onClick={() => setShowForm(false)}
-      className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-black rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold"
-    >
-      ×
-    </button>
+        <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+          {/* Close Button */}
+          <button
+            onClick={() => setShowForm(false)}
+            className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-black rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold"
+          >
+            ×
+          </button>
 
-    <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
-      Register Here
-    </h5>
-    <input
-      type="text"
-      placeholder="Name"
-      className="w-full h-10 p-1 border mb-3 shadow-2xl rounded-md border-gray-300 placeholder:text-[12px] pl-5"
-    />
-    <input
-      type="text"
-      placeholder="Company / Business Name"
-      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-    />
-    <input
-      type="email"
-      placeholder="Your Email"
-      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-    />
-    <input
-      type="text"
-      placeholder="Mobile"
-      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-    />
-    <input
-      type="text"
-      placeholder="Locality"
-      className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-    />
-    <div className="flex items-center mb-3">
-      <input type="checkbox" className="mr-2" />
-      <span>
-        I agree to all the{" "}
-        <a href="#" className="text-blue-600">
-          Terms of Use
-        </a>
-      </span>
-    </div>
-    <button className="w-full bg-yellow-400 text-white p-2 font-bold">
-      Submit
-    </button>
-    <p className="text-center mt-2">
-      Already registered?{" "}
-      <button className="text-red-600" onClick = {()=> navigate("/login")}> Sign up</button>
-    </p>
-  </div>
-)}
+          <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
+            Register Here
+          </h5>
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-full h-10 p-1 border mb-3 shadow-2xl rounded-md border-gray-300 placeholder:text-[12px] pl-5"
+          />
+          <input
+            type="text"
+            placeholder="Company / Business Name"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+          />
+          <input
+            type="text"
+            placeholder="Mobile"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+          />
+          <input
+            type="text"
+            placeholder="Locality"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
+          />
+          <div className="flex items-center mb-3">
+            <input type="checkbox" className="mr-2" />
+            <span>
+              I agree to all the{" "}
+              <a href="#" className="text-blue-600">
+                Terms of Use
+              </a>
+            </span>
+          </div>
+          <button className="w-full bg-yellow-400 text-white p-2 font-bold">
+            Submit
+          </button>
+          <p className="text-center mt-2">
+            Already registered?{" "}
+            <button className="text-red-600" onClick={() => navigate("/login")}>
+              {" "}
+              Sign up
+            </button>
+          </p>
+        </div>
+      )}
       {/* 8 options */}
 
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
         <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={dining}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Food & Beverages
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={spa}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Beauty & wellness
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={clothing_store}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Apparel & Accessories
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={cap}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Education
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={health}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">Health</p>
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">Health</p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={church}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Wedding and Events
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={bus}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Logistic Services
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border border-green-700 bg-[#FCE130]">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={more_icon}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 text-xl">More</p>
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">More</p>
         </div>
       </div>
 
@@ -403,11 +415,12 @@ const Result = () => {
               your visibility and connect with customers easily!
             </p>
 
-            <button className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
-              onClick={() => navigate("/companyDetails")} >
+            <button
+              className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
+              onClick={() => navigate("/companyDetails")}
+            >
               List Now
             </button>
-
           </div>
         </div>
       </div>
@@ -421,21 +434,24 @@ const Result = () => {
 
         <div className="absolute inset-0 flex items-center justify-center z-5">
           {/* left */}
-          
-            <div className="flex flex-col items-center justify-center w-[20rem] gap-y-80">
-              <div className="text-white">
-                <h1>Highly Affordable</h1>
-                <p>From ideation to execution, we cover every aspect of the digital journey.</p>
-              </div>
 
-              <div className="text-white">
-                <h1>Highly Affordable</h1>
-                <p>From ideation to execution, we cover every aspect of the digital journey.</p>
-              </div>
+          <div className="flex flex-col items-center justify-center w-[20rem] gap-y-80">
+            <div className="text-white">
+              <h1>Highly Affordable</h1>
+              <p>
+                From ideation to execution, we cover every aspect of the digital
+                journey.
+              </p>
             </div>
-          
 
-
+            <div className="text-white">
+              <h1>Highly Affordable</h1>
+              <p>
+                From ideation to execution, we cover every aspect of the digital
+                journey.
+              </p>
+            </div>
+          </div>
 
           {/* mid image */}
           <div className="relative flex items-center justify-center w-[40rem]">
@@ -443,43 +459,45 @@ const Result = () => {
             <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] right-[6rem]"></div>
             <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
             <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
-          <img
+            <img
               src={Group_11}
               alt="Woman using a blender"
               className="w-[15rem] absolute top-[1/2] left-[1/2]"
             />
-             
-            <img
-            src={Ellipse_5}
-            alt="Woman using a blender"
-            className="w-[25rem] aboslute top-1/2 left-1/2"
-          />
 
-<img
+            <img
+              src={Ellipse_5}
+              alt="Woman using a blender"
+              className="w-[25rem] aboslute top-1/2 left-1/2"
+            />
+
+            <img
               src={Ellipse_4}
               alt="Woman using a blender"
               className=" w-[30rem] absolute top-[1/2] left-[1/2]"
-            /> 
+            />
           </div>
 
           {/* right */}
-        <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
-        <div>
-            <h1>Highly Affordable</h1>
-            <p>From ideation to execution, we cover every aspect of the digital journey.</p>
-          </div>
+          <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
+            <div>
+              <h1>Highly Affordable</h1>
+              <p>
+                From ideation to execution, we cover every aspect of the digital
+                journey.
+              </p>
+            </div>
 
-          <div>
-            <h1>Highly Affordable</h1>
-            <p>From ideation to execution, we cover every aspect of the digital journey.</p>
+            <div>
+              <h1>Highly Affordable</h1>
+              <p>
+                From ideation to execution, we cover every aspect of the digital
+                journey.
+              </p>
+            </div>
           </div>
-        </div>
-          
-
-          
         </div>
       </div>
-
 
       {/* How it works  7 */}
 
@@ -572,7 +590,14 @@ const Result = () => {
 
             {/* Button */}
             <div className="absolute bottom-[-170px] ml-75">
-              <button className="bg-yellow-400 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-yellow-500 transition">
+              <button
+                className="bg-yellow-400 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-yellow-500 transition"
+                onClick={() =>
+                  document
+                    .getElementById("searchBox")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Search more
               </button>
             </div>
@@ -580,12 +605,14 @@ const Result = () => {
         </div>
       </div>
 
-
-
       {/* second last page 8 */}
       <div className="relative bg-[#0F3D1E] py-20 px-6 md:px-16 lg:px-24 ">
         {/* Background Image */}
-        <img src={green_bg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <img
+          src={green_bg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
 
         <div className="relative flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto">
           {/* Left Side - Phone Images */}
@@ -605,10 +632,12 @@ const Result = () => {
           {/* Right Side - Heading & Text */}
           <div className="text-white text-center lg:text-left max-w-lg">
             <h2 className="text-3xl md:text-5xl font-bold">
-              Discover <span className="text-yellow-400">Punjabi</span> Businesses And Pages!
+              Discover <span className="text-yellow-400">Punjabi</span>{" "}
+              Businesses And Pages!
             </h2>
             <p className="mt-4 text-lg md:text-xl">
-              Download the Punjabi Pages app to explore and connect with trusted businesses, services, and community resources in your area.
+              Download the Punjabi Pages app to explore and connect with trusted
+              businesses, services, and community resources in your area.
             </p>
 
             {/* Download Buttons */}
@@ -619,10 +648,6 @@ const Result = () => {
           </div>
         </div>
       </div>
-
-
-
-
 
       <Footer></Footer>
     </div>
