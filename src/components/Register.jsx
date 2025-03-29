@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Import Axios for API calls
+import axios from "axios"; 
 import logo from "../home_assets/punjabi logo.png";
 import pagi2 from "../home_assets/pagi2_register_page.png";
 
