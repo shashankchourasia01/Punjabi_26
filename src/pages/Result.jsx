@@ -235,81 +235,81 @@ const Result = () => {
           <div class="text text-white mt-10">Lorem Ipsum</div>
         </div>
 
-        <div class="stat relative text-center">
-          <div class="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div className="stat relative text-center">
+          <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             40K
           </div>
-          <div class="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text text-white mt-10">Lorem Ipsum</div>
         </div>
 
-        <div class="stat relative text-center">
-          <div class="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div className="stat relative text-center">
+          <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             200+
           </div>
-          <div class="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text text-white mt-10">Lorem Ipsum</div>
         </div>
 
-        <div class="stat relative text-center">
-          <div class="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <div className="stat relative text-center">
+          <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             16+
           </div>
-          <div class="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text text-white mt-10">Lorem Ipsum</div>
         </div>
       </div>
 
       {/* Featured business  4  */}
 
-      <div class="bg-white p-10">
+      <div className="bg-white p-10">
         {/*  Header Section  */}
-        <div class="flex justify-between items-center mb-6 mt-18">
-          <h2 class="text-4xl font-bold text-green-900 ml-20">
+        <div className="flex justify-between items-center mb-6 mt-18">
+          <h2 className="text-4xl font-bold text-green-900 ml-20">
             Featured Business
           </h2>
-          <button class="bg-yellow-400 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-yellow-400 ">
+          <button className="bg-yellow-400 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-yellow-400 ">
             Explore More
           </button>
         </div>
 
         {/*  Image Cards Section  */}
-        <div class="flex justify-center gap-6 mt-20">
+        <div className="flex justify-center gap-6 mt-20">
           {/* <!-- Card 1 --> */}
-          <div class="text-center">
-            <img src={first} alt="" class="w-110 h-70" />
-            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 class="font-bold">Lorem Ipsum</h3>
-              <div class="text-yellow-400">★★★★★</div>
+          <div className="text-center">
+            <img src={first} alt="" className="w-110 h-70" />
+            <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 className="font-bold">Lorem Ipsum</h3>
+              <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
           </div>
 
           {/* <!-- Card 2 --> */}
-          <div class="text-center">
-            <img src={second} alt="" class="w-110 h-70" />
-            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 class="font-bold">Lorem Ipsum</h3>
-              <div class="text-yellow-400">★★★★★</div>
+          <div className="text-center">
+            <img src={second} alt="" className="w-110 h-70" />
+            <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 className="font-bold">Lorem Ipsum</h3>
+              <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
           </div>
 
           {/* <!-- Card 3 --> */}
-          <div class="text-center">
-            <img src={third} alt="" className="w-110 h-70" />
-            <div class="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 class="font-bold">Lorem Ipsum</h3>
-              <div class="text-yellow-400">★★★★★</div>
+          <div className="text-center">
+            <img src={third} alt="" classNameName="w-110 h-70" />
+            <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
+              <h3 className="font-bold">Lorem Ipsum</h3>
+              <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p class="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
           </div>
         </div>
 
         {/* <!-- Slider Icons --> */}
-        <div class="flex justify-center gap-6 mt-20">
-          <button class="bg-yellow-400 p-9  rounded-full shadow-md">
+        <div className="flex justify-center gap-6 mt-20">
+          <button className="bg-yellow-400 p-9  rounded-full shadow-md">
             {" "}
             <img src={left_arrow} alt="" />
           </button>
-          <button class="bg-yellow-400 p-9 rounded-full shadow-md">
+          <button className="bg-yellow-400 p-9 rounded-full shadow-md">
             {" "}
             <img src={right_arrow} alt="" />
           </button>
