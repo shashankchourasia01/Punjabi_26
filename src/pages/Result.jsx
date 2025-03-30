@@ -31,9 +31,22 @@ import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
 import { useState } from "react";
+
+
+
 const Result = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+
+
+ // const navigate = useNavigate();
+
+  const handleCategoryClick = (category) => {
+    navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
+  };
+
+
+
 
   return (
     <div className="relative h-screen z-[10]">
@@ -194,19 +207,24 @@ const Result = () => {
 
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
         <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
+            <button key = {"food"} onClick={() => handleCategoryClick("Food")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={dining}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
+            
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+            </button>
+          <p
+ className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Food & Beverages
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Beauty & wellness")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={spa}
@@ -214,12 +232,14 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Beauty & wellness
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Apparel & Accessories")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={clothing_store}
@@ -227,12 +247,14 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Apparel & Accessories
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Education")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={cap}
@@ -240,12 +262,14 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Education
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Health")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={health}
@@ -253,12 +277,14 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Health
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Wedding and Events")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={church}
@@ -266,12 +292,14 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Wedding and Events
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("Logistic Services")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={bus}
@@ -279,19 +307,22 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Logistic Services
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
+          <button key = {"food"} onClick={() => handleCategoryClick("more")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
             <img
               src={more_icon}
               alt="Food & Beverages"
-              className="w-16 h-16 object-contain rounded"
+              className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             More
           </p>
