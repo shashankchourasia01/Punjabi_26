@@ -185,7 +185,7 @@ const Result = () => {
             Already registered?{" "}
             <button className="text-red-600" onClick={() => navigate("/login")}>
               {" "}
-              Sign up
+              Sign in
             </button>
           </p>
         </div>
@@ -253,7 +253,9 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">Health</p>
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+            Health
+          </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
@@ -290,7 +292,9 @@ const Result = () => {
               className="w-16 h-16 object-contain rounded"
             />
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">More</p>
+          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+            More
+          </p>
         </div>
       </div>
 
@@ -499,9 +503,14 @@ const Result = () => {
         </div>
       </div>
 
+
+
       {/* How it works  7 */}
 
-      <div className="bg-[#fdfaf3] px-6 lg:px-20 py-12 mb-30">
+
+
+
+      <div className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Section */}
           <div>
@@ -642,8 +651,24 @@ const Result = () => {
 
             {/* Download Buttons */}
             <div className="mt-6 flex flex-wrap justify-center lg:justify-start space-x-4">
-              <img src={playstore} alt="Google Play" className="w-40 md:w-48" />
-              <img src={appstore} alt="App Store" className="w-40 md:w-48" />
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={playstore}
+                  alt="Google Play"
+                  className="w-40 md:w-48 cursor-pointer hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+              <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+  <img
+    src={appstore}
+    alt="App Store"
+    className="w-40 md:w-48 cursor-pointer hover:scale-110 transition-transform duration-300"
+  />
+</a>
             </div>
           </div>
         </div>

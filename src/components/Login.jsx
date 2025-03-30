@@ -8,9 +8,12 @@ import google from '../main_assets/google_icon.png'
 import x from '../main_assets/x_icon.png'
 import { StoreContext } from "../context/StoreContext";
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 
 
 function Login({setShowLogin}) {
+
+  const navigate = useNavigate();
 
   const [currState, setCurrState] = useState("Login");
   const navigate = useNavigate();
@@ -82,11 +85,13 @@ function Login({setShowLogin}) {
       {/* Left Section */}
       <div className="w-full md:w-1/2 bg-green-900 flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-10">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="w-16 sm:w-20 mb-3 sm:mb-4 rounded-full" />
+        <img src={logo} alt="Logo" className="w-16 sm:w-20 mb-3 sm:mb-4 rounded-full cursor-pointer"
+        onClick={() => navigate("/result")}
+        />
 
         {/* Heading */}
         <h2 className="text-white text-2xl sm:text-3xl font-bold">Welcome Back</h2>
-        <p className="text-gray-300 mb-4 sm:mb-6 text-center text-sm sm:text-base">
+        <p className="text-gray-300 mb-4 sm:mb-6 text-center text-sm sm:text-base font-medium">
           Welcome Back! Please fill in your details
         </p>
 
