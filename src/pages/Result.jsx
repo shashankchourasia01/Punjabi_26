@@ -39,11 +39,26 @@ const Result = () => {
   const [showForm, setShowForm] = useState(false);
 
 
- // const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+};
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (query.trim() === "") return; // Prevent empty searches
+
+  // Navigate to search results page with query as URL parameter
+  navigate(`/searchResults?q=${encodeURIComponent(query)}`);
+};
 
   const handleCategoryClick = (category) => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
   };
+
+ 
 
 
 
@@ -124,23 +139,29 @@ const Result = () => {
           className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch  rounded-2xl shadow-lg mt-10"
         >
           {/* Search Business Input */}
-          <input
-            type="text"
-            placeholder="Search the business"
-            className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
-          />
+           <form onSubmit={handleSubmit} className="flex">
+            {/* Search Input */}
+            <input
+                type="text"
+                placeholder="Search products..."
+                value={query}
+                onChange={handleInputChange}
+                className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
+            />
 
-          {/* Location Input */}
-          <input
-            type="text"
-            placeholder="Location"
-            className="w-[300px] p-3 focus:outline-none text-black "
-          />
+            {/* Location Input (Optional, not used in backend yet) */}
+            <input
+                type="text"
+                placeholder="Location"
+                className="w-[300px] p-3 focus:outline-none text-black"
+            />
 
-          {/* Search Button */}
-          <button className="bg-yellow-400 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
-            <img src={search_icon} alt="" className="w-[50px]" />
-          </button>
+            {/* Search Button */}
+            <button className="bg-yellow-400 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
+                <img src={search_icon} alt="Search" className="w-[50px]" />
+            </button>
+        </form>
+
         </div>
       </div>
 

@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import StoreContextProvider from "./context/StoreContext";
 import Category from "./pages/Category"; 
+import SearchResults from "./pages/SearchResults";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} /> 
             <Route path="/category/:categoryName" element={<Category />} />
+            <Route path="/searchResults" element={<SearchResults />} />
           </Routes>
         </main>
       </StoreContextProvider>
