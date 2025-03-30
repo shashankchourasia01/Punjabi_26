@@ -8,7 +8,7 @@ import google from '../main_assets/google_icon.png'
 import x from '../main_assets/x_icon.png'
 import { StoreContext } from "../context/StoreContext";
 import axios from 'axios'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 function Login({setShowLogin}) {
