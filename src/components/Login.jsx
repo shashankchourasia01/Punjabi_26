@@ -83,7 +83,7 @@ function Login({setShowLogin}) {
 
         {/* Heading */}
         <h2 className="text-white text-2xl sm:text-3xl font-bold">Welcome Back</h2>
-        <p className="text-gray-300 mb-4 sm:mb-6 text-center text-sm sm:text-base">
+        <p className="text-gray-300 mb-4 sm:mb-6 text-center text-sm sm:text-base font-medium">
           Welcome Back! Please fill in your details
         </p>
 

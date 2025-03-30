@@ -1,13 +1,18 @@
-//RESPONSIVE 
-
-
-
 import React from "react";
 
 const CompanyDetailsForm = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6 relative">
+        
+        {/* Close Button */}
+        <button 
+          onClick={() => window.history.back()} 
+          className="absolute top-4 right-4  text-gray-600 hover:text-gray-900 text-4xl font-bold"
+        >
+          ×
+        </button>
+
         <h1 className="text-2xl font-bold text-center text-gray-800">Company Details</h1>
         <p className="text-gray-600 text-center mb-6">Share Business Details To Proceed further</p>
         
@@ -75,7 +80,7 @@ const CompanyDetailsForm = () => {
         
         {/* Register Button */}
         <div className="flex justify-center mt-6">
-          <button className="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-lg">Register</button>
+          <button className="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-lg cursor-pointer hover:bg-yellow-300">Register</button>
         </div>
       </div>
     </div>
