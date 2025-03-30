@@ -185,7 +185,7 @@ const Result = () => {
             Already registered?{" "}
             <button className="text-red-600" onClick={() => navigate("/login")}>
               {" "}
-              Sign up
+              Sign in
             </button>
           </p>
         </div>
@@ -510,7 +510,7 @@ const Result = () => {
 
 
 
-      <div className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen">
+      <div className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Section */}
           <div>

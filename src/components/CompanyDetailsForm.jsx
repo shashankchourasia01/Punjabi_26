@@ -8,7 +8,7 @@ const CompanyDetailsForm = () => {
         {/* Close Button */}
         <button 
           onClick={() => window.history.back()} 
-          className="absolute top-4 right-4  text-gray-600 hover:text-gray-900 text-4xl font-bold"
+          className="absolute top-4 right-4 w-10 h-10  text-gray-600 hover:text-gray-900 text-4xl font-bold bg-gray-300 hover:bg-gray-400 rounded-full"
         >
           ×
         </button>
