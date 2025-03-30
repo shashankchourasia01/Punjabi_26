@@ -57,7 +57,7 @@ function Register() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full">
       {/* Left Section (Registration Form) */}
-      <div className="w-full md:w-1/2 bg-green-900 flex flex-col items-center justify-center px-6 py-10">
+      <div className="w-full md:w-1/2 bg-blue-700 flex flex-col items-center justify-center px-6 py-10">
         <img
           src={logo}
           alt="Logo"
@@ -120,7 +120,7 @@ function Register() {
 
           <button
             type="submit"
-            className="w-full bg-yellow-400 text-black font-semibold py-3 rounded-full hover:bg-yellow-500 transition"
+            className="w-full bg-orange-600 text-black font-semibold py-3 rounded-full hover:bg-orange-700 transition"
           >
             Verify & Register
           </button>

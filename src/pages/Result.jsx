@@ -30,10 +30,24 @@ import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
+import blue_bg from '../main_assets/blue_600_background.png'
 import { useState } from "react";
+
+
+
 const Result = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+
+
+ // const navigate = useNavigate();
+
+  const handleCategoryClick = (category) => {
+    navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
+  };
+
+
+
 
   return (
     <div className="relative h-screen z-[10]">
@@ -43,7 +57,7 @@ const Result = () => {
           <img
             src={logo}
             alt="Punjabi Logo"
-            className="w-16 rounded-full ml-20"
+            className="w-16 rounded-full ml-20 "
           />
         </Link>
 
@@ -94,7 +108,7 @@ const Result = () => {
       {/* Main Content */}
       <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-20 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover <span className="text-[#FCE130]">Punjabi</span>
+          Discover <span className="text-orange-600">Punjabi</span>
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">Businesses And Pages!</h1>
@@ -125,7 +139,7 @@ const Result = () => {
           />
 
           {/* Search Button */}
-          <button className="bg-yellow-400 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
+          <button className="bg-orange-600 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
             <img src={search_icon} alt="" className="w-[50px]" />
           </button>
         </div>
@@ -178,7 +192,7 @@ const Result = () => {
               </a>
             </span>
           </div>
-          <button className="w-full bg-yellow-400 text-white p-2 font-bold">
+          <button className="w-full bg-orange-600 text-white p-2 font-bold">
             Submit
           </button>
           <p className="text-center mt-2">
@@ -194,104 +208,122 @@ const Result = () => {
 
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
         <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+            <button key = {"food"} onClick={() => handleCategoryClick("Food")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={dining}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
+            
           </div>
-          <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+            </button>
+          <p
+ className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Food & Beverages
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Beauty & wellness")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={spa}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Beauty & wellness
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Apparel & Accessories")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={clothing_store}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Apparel & Accessories
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Education")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={cap}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Education
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Health")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={health}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Health
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Wedding and Events")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={church}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Wedding and Events
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("Logistic Services")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={bus}
               alt="Food & Beverages"
               className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Logistic Services
           </p>
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-[#FCE130]">
+          <button key = {"food"} onClick={() => handleCategoryClick("more")}> 
+          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
             <img
               src={more_icon}
               alt="Food & Beverages"
-              className="w-16 h-16 object-contain rounded"
+              className="w-16 h-16 object-contain rounded-full"
             />
           </div>
+            </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             More
           </p>
@@ -300,7 +332,7 @@ const Result = () => {
 
       {/* 500k+  3  */}
 
-      <div className="bg-green-900 py-22 flex justify-around items-center w-full relative">
+      <div className="bg-blue-700 py-22 flex justify-around items-center w-full relative">
         <div className="stat relative text-center">
           <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             500+
@@ -335,10 +367,10 @@ const Result = () => {
       <div className="bg-white p-10">
         {/*  Header Section  */}
         <div className="flex justify-between items-center mb-6 mt-18">
-          <h2 className="text-4xl font-bold text-green-900 ml-20">
+          <h2 className="text-4xl font-bold text-orange-600 ml-20">
             Featured Business
           </h2>
-          <button className="bg-yellow-400 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-yellow-400 ">
+          <button className="bg-orange-600 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-orange-500 ">
             Explore More
           </button>
         </div>
@@ -378,11 +410,11 @@ const Result = () => {
 
         {/* <!-- Slider Icons --> */}
         <div className="flex justify-center gap-6 mt-20">
-          <button className="bg-yellow-400 p-9  rounded-full shadow-md">
+          <button className="bg-orange-600 p-9  rounded-full shadow-md">
             {" "}
             <img src={left_arrow} alt="" />
           </button>
-          <button className="bg-yellow-400 p-9 rounded-full shadow-md">
+          <button className="bg-orange-600 p-9 rounded-full shadow-md">
             {" "}
             <img src={right_arrow} alt="" />
           </button>
@@ -420,7 +452,7 @@ const Result = () => {
             </p>
 
             <button
-              className="mt-4 px-6 py-3 bg-green-700 text-white font-semibold rounded-md hover:bg-green-800 transition"
+              className="mt-4 px-6 py-3 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-500 transition"
               onClick={() => navigate("/companyDetails")}
             >
               List Now
@@ -433,7 +465,7 @@ const Result = () => {
 
       <div className="relative z-0">
         <div className="mt-16">
-          <img src={green_bg} alt="" />
+          <img src={blue_bg} alt="" />
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center z-5">
@@ -514,7 +546,7 @@ const Result = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Section */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-green-900 mb-4 pt-20">
+            <h1 className="text-4xl md:text-5xl font-semibold text-orange-600 mb-4 pt-20">
               How It Works ?
             </h1>
             <p className="text-gray-700 mb-6 pt-10 text-2xl">
@@ -522,15 +554,15 @@ const Result = () => {
               search for businesses more effortless and smooth.
             </p>
             <div className="relative">
-              <div className="absolute left-4 top-2 h-full w-[2px] bg-green-700"></div>
+              <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-600"></div>
 
               {/* Step 1 */}
               <div className="flex items-start mb-10 mt-20">
-                <div className="w-15 h-12 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-15 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   1
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-green-800">
+                  <h3 className="text-3xl font-semibold text-orange-600">
                     Search
                   </h3>
                   <p className="text-gray-600 text-lg">
@@ -542,11 +574,11 @@ const Result = () => {
 
               {/* Step 2 */}
               <div className="flex items-start mb-10">
-                <div className="w-12 h-10 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-12 h-10 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   2
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-green-800">
+                  <h3 className="text-3xl font-semibold text-orange-600">
                     Discover
                   </h3>
                   <p className="text-gray-600 text-lg">
@@ -558,11 +590,11 @@ const Result = () => {
 
               {/* Step 3 */}
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-green-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-12 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   3
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-green-800">
+                  <h3 className="text-3xl font-semibold text-orange-600">
                     Connect
                   </h3>
                   <p className="text-gray-600 text-xl">
@@ -600,7 +632,7 @@ const Result = () => {
             {/* Button */}
             <div className="absolute bottom-[-170px] ml-75">
               <button
-                className="bg-yellow-400 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-yellow-500 transition"
+                className="bg-orange-600 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-700 transition"
                 onClick={() =>
                   document
                     .getElementById("searchBox")
@@ -615,10 +647,10 @@ const Result = () => {
       </div>
 
       {/* second last page 8 */}
-      <div className="relative bg-[#0F3D1E] py-20 px-6 md:px-16 lg:px-24 ">
+      <div className="relative bg-[#1D4ED8] py-20 px-6 md:px-16 lg:px-24 ">
         {/* Background Image */}
         <img
-          src={green_bg}
+          src={blue_bg}
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />

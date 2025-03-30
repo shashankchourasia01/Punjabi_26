@@ -69,9 +69,9 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex items-start relative bottom-[5rem] z-10 flex flex-col justify-center items-center text-white text-center h-full px-6  mr-160 ml-20">
+      <div className="flex  relative bottom-[5rem] z-10  flex-col justify-center items-center text-white text-center h-full px-6  mr-160 ml-20">
         <h1 className="text-5xl font-bold">
-          List & Grow Your <span className="text-[#FCE130]">Business</span>
+          List & Grow Your <span className="text-orange-600">Business</span>
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">with Punjabi Pages!</h1>
@@ -158,21 +158,21 @@ const Home = () => {
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 bg-green-800 text-white flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 bg-orange-600 text-white flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
             <span className="mt-2 text-2xl font-semibold">List Your Business</span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-green-800 text-green-700 flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-600 flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
             <span className="mt-2 text-2xl font-semibold">Verify Your Business</span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-green-800 text-green-700 flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-600 flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
             <span className="mt-2 text-2xl font-semibold">Target Customer</span>
@@ -183,10 +183,10 @@ const Home = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
           {/* <!-- Left Text --> */}
           <div className="md:w-1/2 mt-30">
-            <h1 className="text-5xl font-bold text-green-800 ml-20">
+            <h1 className="text-5xl font-bold text-orange-700 ml-20">
               List Your Business Details
             </h1>
-            <p className="mt-4 ml-20 text-gray-700 text-2xl">
+            <p className="mt-4 ml-20 text-orange-700 text-2xl">
               To begin, you need to create an account on <br />
               Punjabi Pages. Simply visit the Sign-Up page and <br />
               enter your details. Once submitted,you'll receive <br />
@@ -210,11 +210,11 @@ const Home = () => {
 
       {/* List Business page  */}
 
-      <section className="bg-[#124929] text-white py-12 px-4 md:px-12">
+      <section className="bg-blue-700 text-white py-12 px-4 md:px-12">
       {/* Heading Section */}
       <div className=" max-w-3xl mx-auto ml-6">
         <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
-          Why List Your <span className="text-yellow-400">Business</span> with Us?
+          Why List Your <span className="text-orange-600">Business</span> with Us?
         </h1>
         <p className="text-2xl text-gray-300 mt-12 ml-15 leading-relaxed">
           Are you a Punjabi business owner in Australia? Increase your visibility and attract more
@@ -230,7 +230,7 @@ const Home = () => {
          {/* Feature 1 */}
     <div className="text-center relative">
       <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute -top-6 w-full h-full bg-[#124929]"></div> {/* Cutting the upper part */}
+        <div className="absolute -top-6 w-full h-full bg-orange-700"></div> {/* Cutting the upper part */}
         <img src={location} alt="Reach Local Customers" className="w-18 h-18 mb-4 relative z-10" />
         <h3 className="text-lg font-semibold mt-2 relative z-10">Reach Local Customers</h3>
         <p className="text-gray-300 text-sm relative z-10">
@@ -243,7 +243,7 @@ const Home = () => {
     {/* Feature 2 */}
     <div className="text-center relative">
       <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute -top-6 w-full h-full bg-[#124929]"></div> {/* Cutting the upper part */}
+        <div className="absolute -top-6 w-full h-full bg-orange-700"></div> {/* Cutting the upper part */}
         <img src={arcti} alt="Boost Online Presence" className="w-18 h-18 mb-4 relative z-10" />
         <h3 className="text-lg font-semibold mt-2 relative z-10">Boost Online Presence</h3>
         <p className="text-gray-300 text-sm relative z-10">
@@ -256,7 +256,7 @@ const Home = () => {
     {/* Feature 3 */}
     <div className="text-center relative">
       <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute -top-6 w-full h-full bg-[#124929]"></div> {/* Cutting the upper part */}
+        <div className="absolute -top-6 w-full h-full bg-orange-700"></div> {/* Cutting the upper part */}
         <img src={people} alt="Targeted Audience" className="w-18 h-18 mb-4 relative z-10" />
         <h3 className="text-lg font-semibold mt-2 relative z-10">Targeted Audience</h3>
         <p className="text-gray-300 text-sm relative z-10">
@@ -274,7 +274,7 @@ const Home = () => {
     <section className="bg-[#FFFDF5] py-16 px-6 md:px-12">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#124929] mt-18 mr-118">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mt-18 mr-118">
           Explore Answers to your Question!
         </h2>
       </div>
@@ -283,7 +283,7 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-6xl mx-auto mt-25">
         {/* FAQ Item 1 */}
         <div className=" p-6  ">
-          <h2 className="text-3xl font-semibold text-[#124929]">
+          <h2 className="text-3xl font-semibold text-orange-600">
             Q. Lorem ipsum dolor sit amet?
           </h2>
           <p className="text-gray-600 mt-2 text-xl">
@@ -295,7 +295,7 @@ const Home = () => {
 
         {/* FAQ Item 2 */}
         <div className=" p-6 ">
-          <h3 className="text-3xl font-semibold text-[#124929]">
+          <h3 className="text-3xl font-semibold text-orange-600">
             Q. Lorem ipsum dolor sit amet?
           </h3>
           <p className="text-gray-600 mt-2 text-xl">
@@ -307,7 +307,7 @@ const Home = () => {
 
         {/* FAQ Item 3 */}
         <div className=" p-6  ">
-          <h3 className="text-3xl font-semibold text-[#124929]">
+          <h3 className="text-3xl font-semibold text-orange-600">
             Q. Lorem ipsum dolor sit amet?
           </h3>
           <p className="text-gray-600 mt-2 text-xl">
@@ -319,7 +319,7 @@ const Home = () => {
 
         {/* FAQ Item 4 */}
         <div className=" p-6">
-          <h3 className="text-3xl font-semibold text-[#124929]">
+          <h3 className="text-3xl font-semibold text-orange-600">
             Q. Lorem ipsum dolor sit amet?
           </h3>
           <p className="text-gray-600 mt-2 text-xl">
