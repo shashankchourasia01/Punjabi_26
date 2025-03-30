@@ -96,9 +96,11 @@ const CompanyDetailsForm = () => {
               >
                 <option value="">Select</option>
                 <option>IT Services</option>
+                <option>Food</option>
                 <option>Finance</option>
                 <option>Retail</option>
                 <option>Healthcare</option>
+                <option>Accessories</option>
                 <option>Education</option>
                 <option>Real Estate</option>
                 <option>Manufacturing</option>
@@ -154,7 +156,7 @@ const CompanyDetailsForm = () => {
             <button type="button" onClick={addServiceField} className="mt-2 text-blue-600 underline">+ Add More</button>
           </div>
 
-          <button type="submit" className="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-lg mt-6">Register</button>
+          <button type="submit" className="bg-orange-600 text-black font-semibold py-2 px-6 rounded-lg mt-6">Register</button>
         </form>
       </div>
     </div>
