@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 import logo from "../home_assets/punjabi logo.png";
 import pagi2 from "../home_assets/pagi2_register_page.png";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Register() {
+
+  const navigate = useNavigate();
+
   const [data, setData] = useState({
     name: "",
     userType: "",
@@ -46,7 +51,9 @@ function Register() {
     <div className="flex flex-col md:flex-row h-screen w-full">
       {/* Left Section (Registration Form) */}
       <div className="w-full md:w-1/2 bg-green-900 flex flex-col items-center justify-center px-6 py-10">
-        <img src={logo} alt="Logo" className="w-20 mb-4 rounded-full" />
+        <img src={logo} alt="Logo" className="w-20 mb-4 rounded-full cursor-pointer"
+        onClick={() => navigate("/result")}
+        />
         <h2 className="text-white text-3xl font-bold">Register Now</h2>
         <p className="text-gray-300 mt-3 mb-6 text-center">Please fill in your details</p>
 
@@ -72,7 +79,13 @@ function Register() {
 
         <p className="text-gray-300 text-sm mt-4">
           Already have an account?{" "}
-          <a href="#" className="text-yellow-300 hover:underline">Sign In</a>
+
+
+          <Link to="/Login" className="text-yellow-300 hover:underline">
+            Sign Up
+          </Link>{" "}
+
+
         </p>
       </div>
 
