@@ -19,7 +19,7 @@ import left_arrow from "../result_assets/left_arrow.png";
 import right_arrow from "../result_assets/right_arrow.png";
 import rectangle from "../result_assets/rectangle.png";
 import girl from "../result_assets/girl (1).png";
-import green_bg from "../result_assets/green_bg.png";
+// import green_bg from "../result_assets/green_bg.png";
 import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
 import left_phone from "../result_assets/left_phone.png";
 import right_phone from "../result_assets/right_phone.png";
