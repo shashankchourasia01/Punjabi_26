@@ -1,7 +1,7 @@
 //RESPONSIVE 
 
 import React, { useContext,  useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../main_assets/punjabi logo.png'
 import pagi from '../main_assets/pagi1.jpeg';
 import google from '../main_assets/google_icon.png'
@@ -9,10 +9,11 @@ import x from '../main_assets/x_icon.png'
 import { StoreContext } from "../context/StoreContext";
 import axios from 'axios'
 
+
 function Login({setShowLogin}) {
 
   const [currState, setCurrState] = useState("Login");
-
+  const navigate = useNavigate();
   //Fetch url from StoreContext
   const {url,setToken} = useContext(StoreContext)
 
@@ -29,6 +30,7 @@ function Login({setShowLogin}) {
     setData(data => ({...data,[name]:value}))
   }
 
+  
   // useEffect(() => {
   //   console.log(data)
   // },[data])
@@ -46,12 +48,18 @@ function Login({setShowLogin}) {
       else{
         newUrl += "/api/users/register"
       }
-      const response = await axios.post(newUrl,data)
-
-      if (response.data.success) {
+      const response = await axios.post(newUrl,data, {withCredentials: true})
+      //console.log(response);
+      
+      if (response.status == 200) {
+        console.log("LoggedIN");
+        
         setToken(response.data.token);
-        localStorage.setItem("token",response.data.token);
-        setShowLogin(false)
+        localStorage.setItem("token", response.data.token);
+        console.log(response.data.token);
+        
+        //setShowLogin(false);
+        navigate("/result");
       }
       else{
         alert(response.data.message)
