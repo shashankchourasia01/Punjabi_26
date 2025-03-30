@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login({setShowLogin}) {
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const [currState, setCurrState] = useState("Login");
   const navigate = useNavigate();
