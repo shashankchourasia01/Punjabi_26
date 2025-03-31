@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const CompanyDetailsForm = () => {
-  const [data, setData] = useState({
+  const initialState = {
     primaryBusiness: "",
     businessName: "",
     address: { street: "", city: "", state: "" },
@@ -11,7 +11,14 @@ const CompanyDetailsForm = () => {
     aboutCompany: "",
     secondaryBusiness: [],
     serviceProducts: ["", ""], // Initial 2 fields for services/products
-  });
+  };
+
+  const [data, setData] = useState(initialState);
+
+  // Reset form fields
+  const handleReset = () => {
+    setData(initialState);
+  };
 
   // Handle input changes for normal fields
   const handleChange = (e) => {
@@ -59,7 +66,11 @@ const CompanyDetailsForm = () => {
     e.preventDefault();
     console.log("Submitting Data:", data);
     try {
-      const response = await axios.post("http://localhost:5000/api/company/listbusiness", data, { withCredentials: true });
+      const response = await axios.post(
+        "http://localhost:5000/api/company/listbusiness",
+        data,
+        { withCredentials: true }
+      );
       alert(response.data.message || "Company registered successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -74,7 +85,7 @@ const CompanyDetailsForm = () => {
         {/* Close Button */}
         <button 
           onClick={() => window.history.back()} 
-          className="absolute top-4 right-4 w-10 h-10  text-gray-600 hover:text-gray-900 text-4xl font-bold bg-gray-300 hover:bg-gray-400 rounded-full"
+          className="absolute top-4 right-4 w-10 h-10 text-gray-600 hover:text-gray-900 text-4xl font-bold bg-gray-300 hover:bg-gray-400 rounded-full"
         >
           ×
         </button>
@@ -97,7 +108,7 @@ const CompanyDetailsForm = () => {
                 <option value="">Select</option>
                 <option>IT Services</option>
                 <option>Food and Beverages</option>
-                <option>Beauty and Wellness</option>
+                <option>Beauty & Wellness</option>
                 <option>Finance</option>
                 <option>Retail</option>
                 <option>Healthcare</option>
@@ -149,15 +160,35 @@ const CompanyDetailsForm = () => {
             </div>
           </div>
 
-          {/* Services / Products */}
-          <div className="mt-6">
-            {data.serviceProducts.map((service, index) => (
-              <input key={index} type="text" placeholder={`Service / Product ${index + 1}`} value={service} onChange={(e) => handleServiceChange(index, e.target.value)} className="border border-gray-300 rounded-md w-full p-2 mt-2" />
-            ))}
-            <button type="button" onClick={addServiceField} className="mt-2 text-blue-600 underline">+ Add More</button>
-          </div>
 
-          <button type="submit" className="bg-orange-600 text-black font-semibold py-2 px-6 rounded-lg mt-6">Register</button>
+              {/* Services / Products */}
+              <div className="mt-6">
+  {data.serviceProducts.map((service, index) => (
+    <input 
+      key={index} 
+      type="text" 
+      placeholder={`Service / Product ${index + 1}`} // Corrected placeholder
+      value={service} 
+      onChange={(e) => handleServiceChange(index, e.target.value)} 
+      className="border border-gray-300 rounded-md w-full p-2 mt-2" 
+    />
+  ))}
+  <button 
+    type="button" 
+    onClick={addServiceField} 
+    className="mt-2 text-blue-600 underline"
+  >
+    + Add More
+  </button>
+</div>
+
+
+
+
+          <div className="flex justify-between mt-6">
+            <button type="button" onClick={handleReset} className="bg-gray-500 text-white font-semibold py-2 px-6 rounded-lg">Reset</button>
+            <button type="submit" className="bg-orange-600 text-black font-semibold py-2 px-6 rounded-lg">Register</button>
+          </div>
         </form>
       </div>
     </div>

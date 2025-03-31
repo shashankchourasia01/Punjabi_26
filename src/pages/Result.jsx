@@ -246,7 +246,7 @@ const handleSubmit = (e) => {
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key = {"food"} onClick={() => handleCategoryClick("Beauty & wellness")}> 
+          <button key = {"food"} onClick={() => handleCategoryClick("Beauty & Wellness")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full    bg-orange-600">
             <img
               src={spa}
@@ -256,7 +256,7 @@ const handleSubmit = (e) => {
           </div>
             </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-            Beauty & wellness
+            Beauty & Wellness
           </p>
         </div>
 
