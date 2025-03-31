@@ -358,28 +358,28 @@ const handleSubmit = (e) => {
           <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             500+
           </div>
-          <div className="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text-2xl text-white mt-10">Business Listing Everyday</div>
         </div>
 
         <div className="stat relative text-center">
           <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             40K
           </div>
-          <div className="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text-2xl text-white mt-10">Businesses</div>
         </div>
 
         <div className="stat relative text-center">
           <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             200+
           </div>
-          <div className="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text-2xl text-white mt-10">Services</div>
         </div>
 
         <div className="stat relative text-center">
           <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
-            16+
+            16k
           </div>
-          <div className="text text-white mt-10">Lorem Ipsum</div>
+          <div className="text-2xl text-white mt-10">Users</div>
         </div>
       </div>
 
@@ -653,7 +653,7 @@ const handleSubmit = (e) => {
             {/* Button */}
             <div className="absolute bottom-[-170px] ml-75">
               <button
-                className="bg-orange-700 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-800 transition"
+                className="bg-orange-600 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-700 transition"
                 onClick={() =>
                   document
                     .getElementById("searchBox")

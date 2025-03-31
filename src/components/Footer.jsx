@@ -4,7 +4,7 @@ import email from '../home_assets/formkit_email.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-800 text-white mt-auto pt-[4rem] w-full mb-0">
+    <footer className="bg-green-900 text-white mt-auto pt-[4rem] w-full mb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Left Section */}
         <div className="mb-8 ">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+// import home_bg from '../home_assets/Home image.jpeg'
 
 const CompanyDetailsForm = () => {
   const initialState = {
@@ -80,18 +81,22 @@ const CompanyDetailsForm = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      {/* <img src={home_bg} alt="" /> */}
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6 relative">
-        
         {/* Close Button */}
-        <button 
-          onClick={() => window.history.back()} 
-          className="absolute top-4 right-4 w-10 h-10 text-gray-600 hover:text-gray-900 text-4xl font-bold bg-gray-300 hover:bg-gray-400 rounded-full"
+        <button
+          onClick={() => window.history.back()}
+          className="absolute top-4 right-4 w-10 h-10 text-blue-700 hover:text-gray-900 text-4xl font-bold bg-cyan-300 hover:bg-gray-400 rounded-full"
         >
           ×
         </button>
 
-        <h1 className="text-2xl font-bold text-center text-gray-800">Company Details</h1>
-        <p className="text-gray-600 text-center mb-6">Share Business Details To Proceed further</p>
+        <h1 className="text-2xl font-bold text-center text-gray-800">
+          Company Details
+        </h1>
+        <p className="text-gray-600 text-center mb-6">
+          Share Business Details To Proceed further
+        </p>
 
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -125,25 +130,80 @@ const CompanyDetailsForm = () => {
               </select>
 
               <label className="block font-medium mt-4">Address</label>
-              <input name="street" type="text" placeholder="Street" value={data.address.street} onChange={(e) => handleNestedChange(e, "address")} className="border border-gray-300 rounded-md w-full p-2 mt-1" />
-              <input name="city" type="text" placeholder="City" value={data.address.city} onChange={(e) => handleNestedChange(e, "address")} className="border border-gray-300 rounded-md w-full p-2 mt-2" />
-              <input name="state" type="text" placeholder="State" value={data.address.state} onChange={(e) => handleNestedChange(e, "address")} className="border border-gray-300 rounded-md w-full p-2 mt-2" />
+              <input
+                name="street"
+                type="text"
+                placeholder="Street"
+                value={data.address.street}
+                onChange={(e) => handleNestedChange(e, "address")}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
+              <input
+                name="city"
+                type="text"
+                placeholder="City"
+                value={data.address.city}
+                onChange={(e) => handleNestedChange(e, "address")}
+                className="border border-gray-300 rounded-md w-full p-2 mt-2"
+              />
+              <input
+                name="state"
+                type="text"
+                placeholder="State"
+                value={data.address.state}
+                onChange={(e) => handleNestedChange(e, "address")}
+                className="border border-gray-300 rounded-md w-full p-2 mt-2"
+              />
 
               <label className="block font-medium mt-4">Website</label>
-              <input name="website" type="text" placeholder="Website" value={data.website} onChange={handleChange} className="border border-gray-300 rounded-md w-full p-2 mt-1" />
+              <input
+                name="website"
+                type="text"
+                placeholder="Website"
+                value={data.website}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
             </div>
 
             {/* Right Side */}
             <div>
               <label className="block font-medium">Business Name</label>
-              <input name="businessName" type="text" placeholder="Business Name" value={data.businessName} onChange={handleChange} className="border border-gray-300 rounded-md w-full p-2 mt-1" />
+              <input
+                name="businessName"
+                type="text"
+                placeholder="Business Name"
+                value={data.businessName}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
 
               <label className="block font-medium mt-4">Location</label>
-              <input name="country" type="text" placeholder="Country" value={data.location.country} onChange={(e) => handleNestedChange(e, "location")} className="border border-gray-300 rounded-md w-full p-2 mt-1" />
-              <input name="city" type="text" placeholder="City" value={data.location.city} onChange={(e) => handleNestedChange(e, "location")} className="border border-gray-300 rounded-md w-full p-2 mt-2" />
+              <input
+                name="country"
+                type="text"
+                placeholder="Country"
+                value={data.location.country}
+                onChange={(e) => handleNestedChange(e, "location")}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
+              <input
+                name="city"
+                type="text"
+                placeholder="City"
+                value={data.location.city}
+                onChange={(e) => handleNestedChange(e, "location")}
+                className="border border-gray-300 rounded-md w-full p-2 mt-2"
+              />
 
               <label className="block font-medium mt-4">About Company</label>
-              <textarea name="aboutCompany" placeholder="About Company" value={data.aboutCompany} onChange={handleChange} className="border border-gray-300 rounded-md w-full p-2 mt-1 h-24"></textarea>
+              <textarea
+                name="aboutCompany"
+                placeholder="About Company"
+                value={data.aboutCompany}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1 h-24"
+              ></textarea>
             </div>
           </div>
 
@@ -151,43 +211,63 @@ const CompanyDetailsForm = () => {
           <div className="mt-6">
             <label className="block font-medium">Secondary Business</label>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
-              {["Retail", "IT", "Finance", "Healthcare", "Education", "Manufacturing"].map((business) => (
+              {[
+                "Retail",
+                "IT",
+                "Finance",
+                "Healthcare",
+                "Education",
+                "Manufacturing",
+              ].map((business) => (
                 <label key={business} className="flex items-center">
-                  <input type="checkbox" name={business} checked={data.secondaryBusiness.includes(business)} onChange={handleCheckboxChange} className="mr-2" />
+                  <input
+                    type="checkbox"
+                    name={business}
+                    checked={data.secondaryBusiness.includes(business)}
+                    onChange={handleCheckboxChange}
+                    className="mr-2"
+                  />
                   {business}
                 </label>
               ))}
             </div>
           </div>
 
-
-              {/* Services / Products */}
-              <div className="mt-6">
-  {data.serviceProducts.map((service, index) => (
-    <input 
-      key={index} 
-      type="text" 
-      placeholder={`Service / Product ${index + 1}`} // Corrected placeholder
-      value={service} 
-      onChange={(e) => handleServiceChange(index, e.target.value)} 
-      className="border border-gray-300 rounded-md w-full p-2 mt-2" 
-    />
-  ))}
-  <button 
-    type="button" 
-    onClick={addServiceField} 
-    className="mt-2 text-blue-600 underline"
-  >
-    + Add More
-  </button>
-</div>
-
-
-
+          {/* Services / Products */}
+          <div className="mt-6">
+            {data.serviceProducts.map((service, index) => (
+              <input
+                key={index}
+                type="text"
+                placeholder={`Service / Product ${index + 1}`} // Corrected placeholder
+                value={service}
+                onChange={(e) => handleServiceChange(index, e.target.value)}
+                className="border border-gray-300 rounded-md w-full p-2 mt-2"
+              />
+            ))}
+            <button
+              type="button"
+              onClick={addServiceField}
+              className="mt-2 text-blue-600 underline cursor-pointer"
+            >
+              + Add More
+            </button>
+          </div>
 
           <div className="flex justify-between mt-6">
-            <button type="button" onClick={handleReset} className="bg-gray-500 text-white font-semibold py-2 px-6 rounded-lg">Reset</button>
-            <button type="submit" className="bg-orange-600 text-black font-semibold py-2 px-6 rounded-lg">Register</button>
+            <button
+              type="button"
+              onClick={handleReset}
+              className="bg-gray-500 text-white font-semibold py-2 px-6 rounded-lg cursor-pointer"
+            >
+              Reset
+            </button>
+            <button
+              type="submit"
+              className="bg-orange-600 text-black font-semibold py-2 px-6 rounded-lg cursor-pointer"
+            >
+              Register
+            </button>
           </div>
         </form>
       </div>
