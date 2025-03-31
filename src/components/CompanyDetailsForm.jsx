@@ -96,19 +96,20 @@ const CompanyDetailsForm = () => {
               >
                 <option value="">Select</option>
                 <option>IT Services</option>
-                <option>Food</option>
+                <option>Food and Beverages</option>
+                <option>Beauty and Wellness</option>
                 <option>Finance</option>
                 <option>Retail</option>
                 <option>Healthcare</option>
                 <option>Accessories</option>
                 <option>Education</option>
-                <option>Real Estate</option>
+                <option>Wedding and Events</option>
                 <option>Manufacturing</option>
                 <option>Consulting</option>
                 <option>Marketing</option>
                 <option>Telecommunications</option>
                 <option>Energy</option>
-                <option>Transportation</option>
+                <option>Logistic Services/Transport</option>
                 <option>Hospitality</option>
               </select>
 

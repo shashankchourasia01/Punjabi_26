@@ -30,7 +30,7 @@ import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
-import blue_bg from '../main_assets/blue_600_background.png'
+import blue_bg from '../main_assets/blue_800_background.png'
 import { useState } from "react";
 
 
@@ -123,7 +123,7 @@ const handleSubmit = (e) => {
       {/* Main Content */}
       <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-20 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover <span className="text-orange-600">Punjabi</span>
+          Discover <span className="text-blue-700">Punjabi</span>
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">Businesses And Pages!</h1>
@@ -230,7 +230,7 @@ const handleSubmit = (e) => {
       <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
         <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
             <button key = {"food"} onClick={() => handleCategoryClick("Food")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={dining}
               alt="Food & Beverages"
@@ -247,11 +247,11 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Beauty & wellness")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full    bg-orange-600">
             <img
               src={spa}
               alt="Food & Beverages"
-              className="w-16 h-16 object-contain rounded-full"
+              className="w-16 h-16 object-contain rounded-full "
             />
           </div>
             </button>
@@ -262,7 +262,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Apparel & Accessories")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={clothing_store}
               alt="Food & Beverages"
@@ -277,7 +277,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Education")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={cap}
               alt="Food & Beverages"
@@ -292,7 +292,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Health")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={health}
               alt="Food & Beverages"
@@ -307,7 +307,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Wedding and Events")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={church}
               alt="Food & Beverages"
@@ -322,7 +322,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("Logistic Services")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={bus}
               alt="Food & Beverages"
@@ -337,7 +337,7 @@ const handleSubmit = (e) => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key = {"food"} onClick={() => handleCategoryClick("more")}> 
-          <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+          <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={more_icon}
               alt="Food & Beverages"
@@ -353,7 +353,7 @@ const handleSubmit = (e) => {
 
       {/* 500k+  3  */}
 
-      <div className="bg-blue-700 py-22 flex justify-around items-center w-full relative">
+      <div className="bg-blue-800 py-22 flex justify-around items-center w-full relative">
         <div className="stat relative text-center">
           <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
             500+
@@ -391,7 +391,7 @@ const handleSubmit = (e) => {
           <h2 className="text-4xl font-bold text-orange-600 ml-20">
             Featured Business
           </h2>
-          <button className="bg-orange-600 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-orange-500 ">
+          <button className="bg-orange-600 text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-orange-500 ">
             Explore More
           </button>
         </div>
@@ -402,40 +402,40 @@ const handleSubmit = (e) => {
           <div className="text-center">
             <img src={first} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
           </div>
 
           {/* <!-- Card 2 --> */}
           <div className="text-center">
             <img src={second} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
           </div>
 
           {/* <!-- Card 3 --> */}
           <div className="text-center">
             <img src={third} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
           </div>
         </div>
 
         {/* <!-- Slider Icons --> */}
         <div className="flex justify-center gap-6 mt-20">
-          <button className="bg-orange-600 p-9  rounded-full shadow-md">
+          <button className="bg-orange-600 p-9  rounded-full shadow-md cursor-pointer hover:bg-orange-700">
             {" "}
-            <img src={left_arrow} alt="" />
+            <img src={left_arrow} alt="" className="" />
           </button>
-          <button className="bg-orange-600 p-9 rounded-full shadow-md">
+          <button className="bg-orange-600 p-9 rounded-full shadow-md cursor-pointer hover:bg-white">
             {" "}
             <img src={right_arrow} alt="" />
           </button>
@@ -512,10 +512,10 @@ const handleSubmit = (e) => {
 
           {/* mid image */}
           <div className="relative flex items-center justify-center w-[40rem]">
-            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] left-[6rem]"></div>
-            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] right-[6rem]"></div>
-            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
-            <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] left-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] right-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+            <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] right-[6rem]"></div>
             <img
               src={Group_11}
               alt="Woman using a blender"
@@ -567,7 +567,7 @@ const handleSubmit = (e) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Section */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-orange-600 mb-4 pt-20">
+            <h1 className="text-4xl md:text-5xl font-semibold text-orange-700 mb-4 pt-20">
               How It Works ?
             </h1>
             <p className="text-gray-700 mb-6 pt-10 text-2xl">
@@ -575,15 +575,15 @@ const handleSubmit = (e) => {
               search for businesses more effortless and smooth.
             </p>
             <div className="relative">
-              <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-600"></div>
+              <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-700"></div>
 
               {/* Step 1 */}
               <div className="flex items-start mb-10 mt-20">
-                <div className="w-15 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-15 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   1
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-orange-600">
+                  <h3 className="text-3xl font-semibold text-orange-700">
                     Search
                   </h3>
                   <p className="text-gray-600 text-lg">
@@ -595,11 +595,11 @@ const handleSubmit = (e) => {
 
               {/* Step 2 */}
               <div className="flex items-start mb-10">
-                <div className="w-12 h-10 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-12 h-10 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   2
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-orange-600">
+                  <h3 className="text-3xl font-semibold text-orange-700">
                     Discover
                   </h3>
                   <p className="text-gray-600 text-lg">
@@ -611,11 +611,11 @@ const handleSubmit = (e) => {
 
               {/* Step 3 */}
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                <div className="w-12 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                   3
                 </div>
                 <div className="ml-12">
-                  <h3 className="text-3xl font-semibold text-orange-600">
+                  <h3 className="text-3xl font-semibold text-orange-700">
                     Connect
                   </h3>
                   <p className="text-gray-600 text-xl">
@@ -653,7 +653,7 @@ const handleSubmit = (e) => {
             {/* Button */}
             <div className="absolute bottom-[-170px] ml-75">
               <button
-                className="bg-orange-600 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-700 transition"
+                className="bg-orange-700 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-800 transition"
                 onClick={() =>
                   document
                     .getElementById("searchBox")

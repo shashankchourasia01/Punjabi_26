@@ -57,7 +57,7 @@ function Register() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full">
       {/* Left Section (Registration Form) */}
-      <div className="w-full md:w-1/2 bg-blue-700 flex flex-col items-center justify-center px-6 py-10">
+      <div className="w-full md:w-1/2 bg-blue-800 flex flex-col items-center justify-center px-6 py-10">
         <img
           src={logo}
           alt="Logo"
@@ -120,7 +120,7 @@ function Register() {
 
           <button
             type="submit"
-            className="w-full bg-orange-600 text-black font-semibold py-3 rounded-full hover:bg-orange-700 transition"
+            className="w-full bg-orange-700 text-black font-semibold py-3 rounded-full hover:bg-orange-700 transition"
           >
             Verify & Register
           </button>
@@ -130,7 +130,7 @@ function Register() {
 
         <p className="text-gray-300 text-sm mt-4">
           Already have an account?{" "}
-          <Link to="/Login" className="text-yellow-300 hover:underline">
+          <Link to="/Login" className="text-orange-700 hover:underline">
             Sign Up
           </Link>{" "}
         </p>

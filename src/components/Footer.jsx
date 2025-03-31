@@ -4,7 +4,7 @@ import email from '../home_assets/formkit_email.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white mt-auto pt-[4rem] w-full mb-0">
+    <footer className="bg-blue-800 text-white mt-auto pt-[4rem] w-full mb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Left Section */}
         <div className="mb-8 ">
@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="py-8 grid grid-cols-3 gap-8 ">
             {/* Pages Section */}
             <ul>
-              <li className="font-bold text-orange-600 mb-2 text-2xl">Pages</li>
+              <li className="font-bold text-orange-700 mb-2 text-2xl">Pages</li>
               <li className="text-gray-300 text-xl">About</li>
               <li className="text-gray-300 text-xl">Featured</li>
               <li className="text-gray-300 text-xl">Explore</li>
@@ -21,7 +21,7 @@ const Footer = () => {
 
             {/* Business Section */}
             <ul>
-              <li className="font-bold text-orange-600 mb-2 text-2xl">Business</li>
+              <li className="font-bold text-orange-700 mb-2 text-2xl">Business</li>
               <li className="text-gray-300 text-xl">Add Business</li>
               <li className="text-gray-300 text-xl">Explore</li>
               <li className="text-gray-300 text-xl">Why Us</li>
@@ -29,7 +29,7 @@ const Footer = () => {
 
             {/* Social Section */}
             <ul>
-              <li className="font-bold text-orange-600 mb-2 text-2xl">Social</li>
+              <li className="font-bold text-orange-700 mb-2 text-2xl">Social</li>
               <li className="text-gray-300 text-xl">Facebook</li>
               <li className="text-gray-300 text-xl">Instagram</li>
               <li className="text-gray-300 text-xl">Twitter</li>
