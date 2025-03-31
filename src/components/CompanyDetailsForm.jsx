@@ -112,7 +112,7 @@ const CompanyDetailsForm = () => {
                 <option>Finance</option>
                 <option>Retail</option>
                 <option>Healthcare</option>
-                <option>Accessories</option>
+                <option>Apparel & Accessories</option>
                 <option>Education</option>
                 <option>Wedding and Events</option>
                 <option>Manufacturing</option>
@@ -120,7 +120,7 @@ const CompanyDetailsForm = () => {
                 <option>Marketing</option>
                 <option>Telecommunications</option>
                 <option>Energy</option>
-                <option>Logistic Services/Transport</option>
+                <option>Logistic Services</option>
                 <option>Hospitality</option>
               </select>
 

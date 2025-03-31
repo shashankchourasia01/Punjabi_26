@@ -291,7 +291,7 @@ const handleSubmit = (e) => {
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key = {"food"} onClick={() => handleCategoryClick("Health")}> 
+          <button key = {"food"} onClick={() => handleCategoryClick("Healthcare")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={health}
@@ -301,7 +301,7 @@ const handleSubmit = (e) => {
           </div>
             </button>
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-            Health
+            Healthcare
           </p>
         </div>
 
