@@ -144,7 +144,7 @@ const handleSubmit = (e) => {
             {/* Search Input */}
             <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Search Businesses..."
                 value={query}
                 onChange={handleInputChange}
                 className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
@@ -336,7 +336,7 @@ const handleSubmit = (e) => {
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key = {"food"} onClick={() => handleCategoryClick("more")}> 
+          <button key = {"food"} onClick={() => handleCategoryClick("More")}> 
           <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
             <img
               src={more_icon}
@@ -402,30 +402,30 @@ const handleSubmit = (e) => {
           <div className="text-center">
             <img src={first} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Indian Hotels</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Click to visit</p>
           </div>
 
           {/* <!-- Card 2 --> */}
           <div className="text-center">
             <img src={second} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Indian Food</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Click to visit </p>
           </div>
 
           {/* <!-- Card 3 --> */}
           <div className="text-center">
             <img src={third} alt="" className="w-110 h-70" />
             <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-              <h3 className="font-bold text-orange-600">Lorem Ipsum</h3>
+              <h3 className="font-bold text-orange-600">Assesories Store</h3>
               <div className="text-yellow-400">★★★★★</div>
             </div>
-            <p className="text-orange-700 text-2xl mt-5">Lorem Ipsum</p>
+            <p className="text-orange-700 text-2xl mt-5">Click to visit</p>
           </div>
         </div>
 

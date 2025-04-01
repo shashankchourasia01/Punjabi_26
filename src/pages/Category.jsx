@@ -48,12 +48,12 @@ const CategoryPage = () => {
       <h2 className="text-center text-[2rem] mt-8 bg-blue-800 text-white p-4 rounded-lg">
         Businesses in {categoryName}
       </h2>
-      <div className="grid md:grid-cols-2 gap-6 mt-6">
+      <div className="grid md:grid-cols-3 gap-6 mt-6">
         {businesses.length > 0 ? (
           businesses.map((business) => (
             <Card
               key={business._id}
-              className="w-[90%] md:w-[70%] lg:w-[50%] mx-auto relative overflow-hidden rounded-lg shadow-md cursor-pointer"
+              className="w-[95%] md:w-[80%] lg:w-[60%] mx-auto relative overflow-hidden rounded-lg shadow-md cursor-pointer"
               onClick={() => toggleCard(business._id)}
             >
               <img
