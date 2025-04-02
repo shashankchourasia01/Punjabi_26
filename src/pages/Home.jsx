@@ -94,7 +94,7 @@ const Home = () => {
       {/* Main Content */}
       <div className="flex  relative bottom-[5rem] z-10  flex-col justify-center items-center text-white text-center h-full px-6  mr-160 ml-20">
         <h1 className="text-5xl font-bold">
-          List & Grow Your <span className="text-blue-700">Business</span>
+          List & Grow Your Business 
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">with Punjabi Pages!</h1>
