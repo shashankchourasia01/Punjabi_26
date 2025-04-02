@@ -38,7 +38,7 @@ const Home = () => {
         </Link>
 
         {/* Nav Links */}
-        <div className="hidden md:flex space-x-10   ">
+        <div className="flex justify-center ml-4 items-center space-x-10 w-[100%]">
           <button
             onClick={() => navigate("/companyDetails")}
             className="text-white font-semibold hover:text-gray-900"
@@ -61,7 +61,7 @@ const Home = () => {
 
         {/* Dashboard Button */}
 
-        <div className="flex justify-center items-center h-10 w-35 ml-140 cursor-pointer rounded-lg border-2 border-yellow-400">
+        <div className="flex justify-center items-center h-10  mr-6 cursor-pointer rounded-lg border-2 border-yellow-400">
           <button
           onClick={() => navigate("/dashboard")}
           className="text-white text-lg font-semibold cursor-pointer">
