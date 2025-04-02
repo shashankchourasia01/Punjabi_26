@@ -231,7 +231,7 @@ const Home = () => {
 
       {/* List Business page  */}
 
-      <section className="bg-gradient-to-b from-[#004080] to-[#002954] text-white py-12 px-4 md:px-12">
+      <section className="bg-gradient-to-b from-[#004080] to-[#002954] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
@@ -247,11 +247,11 @@ const Home = () => {
         </div>
 
         {/* Features Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-60 max-w-5xl mx-auto">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 w-[100%] ">
           {/* Feature 1 */}
-          <div className="text-center relative">
+          <div className="text-center relative ">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div>{" "}
+              <div className="absolute top-6 w-full h-full "></div>{" "}
               {/* Cutting the upper part */}
               <img
                 src={location}
@@ -269,6 +269,9 @@ const Home = () => {
           </div>
 
           {/* Feature 2 */}
+        
+
+       
           <div className="text-center relative">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
               <div className="absolute -top-6 w-full h-full "></div>{" "}

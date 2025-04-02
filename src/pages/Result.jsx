@@ -629,7 +629,7 @@ const Result = () => {
 
           {/* How it works  7 */}
 
-          <div id="howWorks" className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10">
+          <div id="howWorks" className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10 ]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Left Section */}
               <div>
@@ -640,12 +640,12 @@ const Result = () => {
                   We’ve designed our user-friendly system to make your <br />
                   search for businesses more effortless and smooth.
                 </p>
-                <div className="relative">
-                  <div className="absolute left-4 top-2 h-full w-[2px] bg-black"></div>
+                <div className="relative z-[10]">
+                  <div className="absolute left-4 bottom-8 h-full w-[2px] bg-black z-[-1] ml-[0.3rem]"></div>
 
                   {/* Step 1 */}
-                  <div className="flex items-start mb-10 mt-20">
-                    <div className="w-15 h-12 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
+                  <div className="flex items-start mb-10 mt-20 z-[10]">
+                    <div className="w-15 h-12 bg-[#FFA032] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       1
                     </div>
                     <div className="ml-12">
@@ -661,7 +661,7 @@ const Result = () => {
 
                   {/* Step 2 */}
                   <div className="flex items-start mb-10">
-                    <div className="w-12 h-10 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-10 bg-[#FFA032] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       2
                     </div>
                     <div className="ml-12">
@@ -677,7 +677,7 @@ const Result = () => {
 
                   {/* Step 3 */}
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-12 bg-[#FFA032] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       3
                     </div>
                     <div className="ml-12">
