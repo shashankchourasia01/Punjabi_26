@@ -1,23 +1,23 @@
 import React from "react";
-import paji from "../home_assets/result main image.jpeg";
+import paji from "../home_assets/result_new1.jpg";
 import logo from "../home_assets/punjabi logo.png";
 import menu from "../home_assets/Menu Logo.png";
 import search_icon from "../home_assets/search icon.png";
-import bus from "../result_assets/bus.png";
-import cap from "../result_assets/cap.png";
-import church from "../result_assets/church.png";
-import more_icon from "../result_assets/more_icon.png";
-import health from "../result_assets/solar_health-bold.png";
-import dining from "../result_assets/dining.png";
-import clothing_store from "../result_assets/clothing_store.png";
-import spa from "../result_assets/spa.png";
+import bus from "../result_assets/bus_new.png";
+import cap from "../result_assets/cap_new.png";
+import church from "../result_assets/temple_new.png";
+import more_icon from "../result_assets/more_new.png";
+import health from "../result_assets/health_new.png";
+import dining from "../result_assets/cup_new.png";
+import clothing_store from "../result_assets/cloth_new.png";
+import spa from "../result_assets/flower_new.png";
 import Footer from "../components/Footer";
 import first from "../result_assets/1 card.png";
 import second from "../result_assets/2 card.png";
 import third from "../result_assets/3 card.png";
 import left_arrow from "../result_assets/left_arrow.png";
 import right_arrow from "../result_assets/right_arrow.png";
-import rectangle from "../result_assets/rectangle.png";
+import rectangle from "../result_assets/rectangle_new.png";
 import girl from "../result_assets/girl (1).png";
 // import green_bg from "../result_assets/green_bg.png";
 import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
@@ -30,7 +30,7 @@ import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
-import blue_bg from "../main_assets/blue_800_background.png";
+import blue_bg from "../main_assets/blue_bg.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -136,7 +136,7 @@ const Result = () => {
       {/* Main Content */}
       <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-20 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover <span className="text-blue-700">Punjabi</span>
+          Discover Punjabi 
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">Businesses And Pages!</h1>
@@ -157,7 +157,7 @@ const Result = () => {
             {/* Search Input */}
             <input
               type="text"
-              placeholder="Search Businesses..."
+              placeholder="Search the Businesses..."
               name="primaryBusiness"
               onChange={handleChange}
               className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
@@ -173,7 +173,7 @@ const Result = () => {
             />
 
             {/* Search Button */}
-            <button className="bg-orange-600 text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
+            <button className="bg-[#FF9E2F] text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
               <img src={search_icon} alt="Search" className="w-[50px]" />
             </button>
           </form>
@@ -285,7 +285,7 @@ const Result = () => {
           <div id="explore" className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
             <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
               <button key={"food"} onClick={() => handleCategoryClick("Food")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+              <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={dining}
                     alt="Food & Beverages"
@@ -303,7 +303,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Beauty & Wellness")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={spa}
                     alt="Food & Beverages"
@@ -321,7 +321,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Apparel & Accessories")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={clothing_store}
                     alt="Food & Beverages"
@@ -339,7 +339,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Education")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={cap}
                     alt="Food & Beverages"
@@ -357,7 +357,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Health")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={health}
                     alt="Food & Beverages"
@@ -375,7 +375,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Wedding and Events")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={church}
                     alt="Food & Beverages"
@@ -393,7 +393,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Logistic Services")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={bus}
                     alt="Food & Beverages"
@@ -408,7 +408,7 @@ const Result = () => {
 
             <div className="flex items-center justify center flex-col mt-10 w-40">
               <button key={"food"} onClick={() => handleCategoryClick("more")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={more_icon}
                     alt="Food & Beverages"
@@ -424,26 +424,26 @@ const Result = () => {
 
           {/* 500k+  3  */}
 
-          <div className="bg-blue-700 py-22 flex justify-around items-center w-full relative">
+          <div className=" bg-gradient-to-b from-[#004080] to-[#01346B] py-22 flex justify-around items-center w-full relative">
             <div className="stat relative text-center">
               <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 500+
               </div>
-              <div className="text text-white mt-10">Lorem Ipsum</div>
+              <div className="text text-white mt-10">Businesses</div>
             </div>
 
             <div className="stat relative text-center">
               <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 40K
               </div>
-              <div className="text text-white mt-10">Lorem Ipsum</div>
+              <div className="text text-white mt-10">Users</div>
             </div>
 
             <div className="stat relative text-center">
               <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 200+
               </div>
-              <div className="text text-white mt-10">Lorem Ipsum</div>
+              <div className="text text-white mt-10">Premium Usrs</div>
             </div>
 
             <div className="stat relative text-center">
@@ -459,10 +459,10 @@ const Result = () => {
           <div className="bg-white p-10">
             {/*  Header Section  */}
             <div id="featuredBusiness" className="flex justify-between items-center mb-6 mt-18">
-              <h2 className="text-4xl font-bold text-orange-600 ml-20">
+              <h2 className="text-4xl font-bold text-[#01346B] ml-20">
                 Featured Business
               </h2>
-              <button className="bg-orange-600 text-black px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95 hover:bg-orange-500 ">
+              <button className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  ">
                 Explore More
               </button>
             </div>
@@ -473,40 +473,40 @@ const Result = () => {
               <div className="text-center">
                 <img src={first} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-orange-600">Indian Hotels</h3>
-                  <div className="text-orange-600">★★★★★</div>
+                  <h3 className="font-bold text-black">Indian Hotels</h3>
+                  <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-blue-700 text-2xl mt-5">Click to visit</p>
+                <p className="text-black text-2xl mt-5">Click to visit</p>
               </div>
 
               {/* <!-- Card 2 --> */}
               <div className="text-center">
                 <img src={second} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-orange-600">Indian Food</h3>
-                  <div className="text-orange-600">★★★★★</div>
+                  <h3 className="font-bold text-black">Indian Food</h3>
+                  <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-blue-600 text-2xl mt-5">Click to visit</p>
+                <p className="text-black text-2xl mt-5">Click to visit</p>
               </div>
 
               {/* <!-- Card 3 --> */}
               <div className="text-center">
                 <img src={third} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-orange-600">Accessories</h3>
-                  <div className="text-orange-600">★★★★★</div>
+                  <h3 className="font-bold text-black">Accessories</h3>
+                  <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-blue-600 text-2xl mt-5">Click to visit</p>
+                <p className="text-black text-2xl mt-5">Click to visit</p>
               </div>
             </div>
 
             {/* <!-- Slider Icons --> */}
             <div className="flex justify-center gap-6 mt-20">
-              <button className="bg-orange-600 p-9  rounded-full shadow-md cursor-pointer">
+              <button className="border-4 text-[#01346B] p-9  rounded-full shadow-md cursor-pointer">
                 {" "}
                 <img src={left_arrow} alt="" />
               </button>
-              <button className="bg-orange-600 p-9 rounded-full shadow-md cursor-pointer">
+              <button className="border-4 text-[#01346B] p-9 rounded-full shadow-md cursor-pointer">
                 {" "}
                 <img src={right_arrow} alt="" />
               </button>
@@ -544,7 +544,7 @@ const Result = () => {
                 </p>
 
                 <button
-                  className="mt-4 px-6 py-3 cursor-pointer bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-500 transition"
+                  className="mt-4 px-6 py-3 cursor-pointer bg-[#02336B] text-white font-semibold rounded-md  transition"
                   onClick={() => navigate("/companyDetails")}
                 >
                   List Now
@@ -583,10 +583,10 @@ const Result = () => {
 
               {/* mid image */}
               <div className="relative flex items-center justify-center w-[40rem]">
-                <div className="absolute w-[120px] h-[120px] border-3 text-white  rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] right-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49]  rounded-[50%] bg-[#004080]  z-10 top-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 top-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
                 <img
                   src={Group_11}
                   alt="Woman using a blender"
@@ -633,23 +633,23 @@ const Result = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Left Section */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-semibold text-orange-700 mb-4 pt-20">
+                <h1 className="text-4xl md:text-5xl font-semibold text-[#01346B] mb-4 pt-20">
                   How It Works ?
                 </h1>
-                <p className="text-gray-700 mb-6 pt-10 text-2xl">
+                <p className="text-[#646464] mb-6 pt-10 text-2xl">
                   We’ve designed our user-friendly system to make your <br />
                   search for businesses more effortless and smooth.
                 </p>
                 <div className="relative">
-                  <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-700"></div>
+                  <div className="absolute left-4 top-2 h-full w-[2px] bg-black"></div>
 
                   {/* Step 1 */}
                   <div className="flex items-start mb-10 mt-20">
-                    <div className="w-15 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-15 h-12 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       1
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-700">
+                      <h3 className="text-3xl font-semibold text-[#01346B]">
                         Search
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -661,11 +661,11 @@ const Result = () => {
 
                   {/* Step 2 */}
                   <div className="flex items-start mb-10">
-                    <div className="w-12 h-10 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-10 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       2
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-700">
+                      <h3 className="text-3xl font-semibold text-[#01346B]">
                         Discover
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -677,11 +677,11 @@ const Result = () => {
 
                   {/* Step 3 */}
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-12 bg-gradient-to-b from-[#FFA032] to-[#FFFFFF] text-black flex items-center justify-center rounded-full text-lg font-semibold">
                       3
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-700">
+                      <h3 className="text-3xl font-semibold text-[#01346B]">
                         Connect
                       </h3>
                       <p className="text-gray-600 text-xl">
@@ -719,7 +719,7 @@ const Result = () => {
                 {/* Button */}
                 <div className="absolute bottom-[-170px] ml-75">
                   <button
-                    className="bg-orange-600 text-black px-12 py-6 rounded-md text-lg font-semibold shadow-md hover:bg-orange-700 transition"
+                    className="bg-[#01346B] text-white px-12 py-6 rounded-md text-xl font-semibold shadow-md hover:bg-orange-700 transition"
                     onClick={() =>
                       document
                         .getElementById("searchBox")
@@ -734,7 +734,7 @@ const Result = () => {
           </div>
 
           {/* second last page 8 */}
-          <div className="relative bg-[#1D4ED8] py-20 px-6 md:px-16 lg:px-24 ">
+          <div className="relative bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] py-20 px-6 md:px-16 lg:px-24 ">
             {/* Background Image */}
             <img
               src={blue_bg}
@@ -760,7 +760,7 @@ const Result = () => {
               {/* Right Side - Heading & Text */}
               <div className="text-white text-center lg:text-left max-w-lg">
                 <h2 className="text-3xl md:text-5xl font-bold">
-                  Discover <span className="text-orange-700">Punjabi</span>{" "}
+                  Discover <span className="text-yellow-500">Punjabi</span>{" "}
                   Businesses And Pages!
                 </h2>
                 <p className="mt-4 text-lg md:text-xl">

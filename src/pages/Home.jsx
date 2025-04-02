@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import home from "../home_assets/Home image.jpeg";
+import home from "../main_assets/new_home_bg.jpg";
 import logo from "../home_assets/punjabi logo.png";
 import menu from "../home_assets/Menu Logo.png";
-import man from "../home_assets/Man Image.png";
+import girl from "../main_assets/orange_girl.png";
 import people from "../home_assets/people.png";
 import location from "../home_assets/location icon.png";
 import arcti from "../home_assets/arcticons_boost.png";
@@ -175,28 +175,28 @@ const Home = () => {
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 bg-orange-700 text-white flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 bg-[#FF9E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
-            <span className="mt-4 text-2xl font-semibold text-blue-800">
+            <span className="mt-4 text-2xl font-semibold text-black">
               List Your Business
             </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-700 flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#FF9E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
-            <span className="mt-4 text-2xl font-semibold text-blue-700">
+            <span className="mt-4 text-2xl font-semibold text-black">
               Verify Your Business
             </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-700 flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
-            <span className="mt-4 text-2xl font-semibold text-blue-700">Target Customer</span>
+            <span className="mt-4 text-2xl font-semibold text-black">Target Customer</span>
           </div>
         </div>
 
@@ -204,10 +204,10 @@ const Home = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
           {/* <!-- Left Text --> */}
           <div className="md:w-1/2 mt-30">
-            <h1 className="text-5xl font-bold text-orange-700 ml-20">
+            <h1 className="text-5xl font-bold text-[#01346B] ml-20">
               List Your Business Details
             </h1>
-            <p className="mt-4 ml-20 text-orange-700 text-2xl">
+            <p className="mt-4 ml-20 text-[#646464] text-2xl">
               To begin, you need to create an account on <br />
               Punjabi Pages. Simply visit the Sign-Up page and <br />
               enter your details. Once submitted,you'll receive <br />
@@ -220,9 +220,9 @@ const Home = () => {
           {/* <!-- Right Image --> */}
           <div className="md:w-1/2 flex justify-center">
             <img
-              src={man}
+              src={girl}
               alt="Businessman"
-              className="ml-10"
+              className="mr-60"
               // class="w-64 md:w-80 rounded-lg"
             />
           </div>
@@ -231,7 +231,7 @@ const Home = () => {
 
       {/* List Business page  */}
 
-      <section className="bg-blue-800 text-white py-12 px-4 md:px-12">
+      <section className="bg-gradient-to-b from-[#004080] to-[#002954] text-white py-12 px-4 md:px-12">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
@@ -315,7 +315,7 @@ const Home = () => {
       <section className="bg-[#FFFDF5] py-16 px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-orange-700 mt-18 mr-118">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#01346B] mt-18 mr-118">
             Explore Answers to your Question!
           </h2>
         </div>
@@ -324,10 +324,10 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-6xl mx-auto mt-25">
           {/* FAQ Item 1 */}
           <div className=" p-6  ">
-            <h2 className="text-3xl font-semibold text-orange-700">
+            <h2 className="text-3xl font-semibold text-[#454545]">
               Q. Lorem ipsum dolor sit amet?
             </h2>
-            <p className="text-blue-800 mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-xl">
               Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
               aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
               proin congue arcu.
@@ -336,10 +336,10 @@ const Home = () => {
 
           {/* FAQ Item 2 */}
           <div className=" p-6 ">
-            <h3 className="text-3xl font-semibold text-orange-700">
+            <h3 className="text-3xl font-semibold text-[#454545]">
               Q. Lorem ipsum dolor sit amet?
             </h3>
-            <p className="text-blue-800 mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-xl">
               Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
               aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
               proin congue arcu.
@@ -348,10 +348,10 @@ const Home = () => {
 
           {/* FAQ Item 3 */}
           <div className=" p-6  ">
-            <h3 className="text-3xl font-semibold text-orange-700">
+            <h3 className="text-3xl font-semibold text-[#454545]">
               Q. Lorem ipsum dolor sit amet?
             </h3>
-            <p className="text-blue-800 mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-xl">
               Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
               aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
               proin congue arcu.
@@ -360,10 +360,10 @@ const Home = () => {
 
           {/* FAQ Item 4 */}
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-orange-700">
+            <h3 className="text-3xl font-semibold text-[#454545]">
               Q. Lorem ipsum dolor sit amet?
             </h3>
-            <p className="text-blue-800 mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-xl">
               Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
               aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
               proin congue arcu.
