@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import StoreContextProvider from "./context/StoreContext";
 import Category from "./pages/Category"; 
+import Dashboard from "./components/Dashboard";
 //import SearchResults from "./pages/SearchResults";
 
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/result" element={<Result />} />
             <Route path="/companyDetails" element={<CompanyDetails />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} /> 
             <Route path="/category/:categoryName" element={<Category />} />

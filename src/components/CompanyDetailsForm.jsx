@@ -116,7 +116,7 @@ const CompanyDetailsForm = () => {
                 <option>Beauty & Wellness</option>
                 <option>Finance</option>
                 <option>Retail</option>
-                <option>Healthcare</option>
+                <option>Health</option>
                 <option>Apparel & Accessories</option>
                 <option>Education</option>
                 <option>Wedding and Events</option>

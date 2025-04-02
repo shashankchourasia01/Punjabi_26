@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import home from "../home_assets/Home image.jpeg";
 import logo from "../home_assets/punjabi logo.png";
 import menu from "../home_assets/Menu Logo.png";
-import man from "../home_assets/Man Image.png"
-import people from '../home_assets/people.png'
-import location from '../home_assets/location icon.png'
-import arcti from '../home_assets/arcticons_boost.png'
+import man from "../home_assets/Man Image.png";
+import people from "../home_assets/people.png";
+import location from "../home_assets/location icon.png";
+import arcti from "../home_assets/arcticons_boost.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -20,20 +20,27 @@ const Home = () => {
     navigate("/result");
   };
 
+  // function to navigate to dashboard page
+  const goToDashboard = () => {
+    navigate("/dashboard");
+  };
 
   return (
     <div className="relative h-screen z-[10]">
       {/* Navbar */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Punjabi Logo" className="w-16 rounded-full ml-15" />
+          <img
+            src={logo}
+            alt="Punjabi Logo"
+            className="w-16 rounded-full ml-15"
+          />
         </Link>
 
         {/* Nav Links */}
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-10   ">
           <button
             onClick={() => navigate("/companyDetails")}
-
             className="text-white font-semibold hover:text-gray-900"
           >
             Add a Business
@@ -52,10 +59,25 @@ const Home = () => {
           </Link>
         </div>
 
+        {/* Dashboard Button */}
+
+        <div className="flex justify-center items-center h-10 w-35 ml-140 cursor-pointer rounded-lg border-2 border-yellow-400">
+          <button
+          onClick={() => navigate("/dashboard")}
+          className="text-white text-lg font-semibold cursor-pointer">
+            Dashboard
+          </button>
+        </div>
+
         {/* Menu Icon */}
-        <img onClick={() => {
-          setShowForm(true)
-        }} src={menu} alt="Menu Logo" className="w-12 rounded-full mr-15" />
+        <img
+          onClick={() => {
+            setShowForm(true);
+          }}
+          src={menu}
+          alt="Menu Logo"
+          className="w-12 rounded-full mr-15"
+        />
       </div>
 
       {/* Background Image */}
@@ -82,7 +104,6 @@ const Home = () => {
           customers today!
         </h4>
       </div>
-
 
       {/* Registration Form (Only Visible When ShowForm is True) */}
 
@@ -146,15 +167,9 @@ const Home = () => {
         </div>
       )}
 
-
-
       <div className="absolute top-[79%] bg-green-800 w-[100%] h-[20%] border-green-800  opacity-100  mix-blend-overlay z-[-10] bg-gradient-to-r from-green-800 from-30% via-green-200 via-30% to-green-800 to-80% blur-2xl"></div>
 
-
-
       {/* List Business Detail */}
-
-
 
       <div className=" relative container mx-auto px-6 py-5 bg-[#FFFDF5]  mt-5">
         {/* <!-- Progress Steps --> */}
@@ -163,14 +178,18 @@ const Home = () => {
             <div className="w-22 h-22 bg-orange-700 text-white flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
-            <span className="mt-2 text-2xl font-semibold">List Your Business</span>
+            <span className="mt-2 text-2xl font-semibold">
+              List Your Business
+            </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
             <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-700 flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
-            <span className="mt-2 text-2xl font-semibold">Verify Your Business</span>
+            <span className="mt-2 text-2xl font-semibold">
+              Verify Your Business
+            </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
@@ -202,13 +221,13 @@ const Home = () => {
           <div className="md:w-1/2 flex justify-center">
             <img
               src={man}
-              alt="Businessman" className="ml-10"
-            // class="w-64 md:w-80 rounded-lg"
+              alt="Businessman"
+              className="ml-10"
+              // class="w-64 md:w-80 rounded-lg"
             />
           </div>
         </div>
       </div>
-
 
       {/* List Business page  */}
 
@@ -216,25 +235,32 @@ const Home = () => {
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
-            Why List Your <span className="text-orange-600">Business</span> with Us?
+            Why List Your <span className="text-orange-600">Business</span> with
+            Us?
           </h1>
           <p className="text-2xl text-gray-300 mt-12 ml-15 leading-relaxed">
-            Are you a Punjabi business owner in Australia? Increase your visibility and attract more
-            customers by listing your business on Punjabi Pages – the leading directory for
-            Punjabi-owned businesses across Australia.
+            Are you a Punjabi business owner in Australia? Increase your
+            visibility and attract more customers by listing your business on
+            Punjabi Pages – the leading directory for Punjabi-owned businesses
+            across Australia.
           </p>
         </div>
 
         {/* Features Section */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-60 max-w-5xl mx-auto">
-
-
           {/* Feature 1 */}
           <div className="text-center relative">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div> {/* Cutting the upper part */}
-              <img src={location} alt="Reach Local Customers" className="w-18 h-18 mb-4 relative z-10" />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">Reach Local Customers</h3>
+              <div className="absolute -top-6 w-full h-full "></div>{" "}
+              {/* Cutting the upper part */}
+              <img
+                src={location}
+                alt="Reach Local Customers"
+                className="w-18 h-18 mb-4 relative z-10"
+              />
+              <h3 className="text-lg font-semibold mt-2 relative z-10">
+                Reach Local Customers
+              </h3>
               <p className="text-gray-300 text-sm relative z-10">
                 Get discovered by people searching <br />
                 for businesses like yours.
@@ -245,9 +271,16 @@ const Home = () => {
           {/* Feature 2 */}
           <div className="text-center relative">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div> {/* Cutting the upper part */}
-              <img src={arcti} alt="Boost Online Presence" className="w-18 h-18 mb-4 relative z-10" />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">Boost Online Presence</h3>
+              <div className="absolute -top-6 w-full h-full "></div>{" "}
+              {/* Cutting the upper part */}
+              <img
+                src={arcti}
+                alt="Boost Online Presence"
+                className="w-18 h-18 mb-4 relative z-10"
+              />
+              <h3 className="text-lg font-semibold mt-2 relative z-10">
+                Boost Online Presence
+              </h3>
               <p className="text-gray-300 text-sm relative z-10">
                 Improve your brand visibility and <br />
                 credibility. No hidden charges!
@@ -258,9 +291,16 @@ const Home = () => {
           {/* Feature 3 */}
           <div className="text-center relative">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div> {/* Cutting the upper part */}
-              <img src={people} alt="Targeted Audience" className="w-18 h-18 mb-4 relative z-10" />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">Targeted Audience</h3>
+              <div className="absolute -top-6 w-full h-full "></div>{" "}
+              {/* Cutting the upper part */}
+              <img
+                src={people}
+                alt="Targeted Audience"
+                className="w-18 h-18 mb-4 relative z-10"
+              />
+              <h3 className="text-lg font-semibold mt-2 relative z-10">
+                Targeted Audience
+              </h3>
               <p className="text-gray-300 text-sm relative z-10">
                 Connect with the Punjabi community <br />
                 looking for services they trust.
@@ -269,7 +309,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
 
       {/* Question page */}
 
@@ -333,11 +372,8 @@ const Home = () => {
         </div>
       </section>
 
-
-
       {/* Footer section */}
       <Footer></Footer>
-
     </div>
   );
 };
