@@ -1,6 +1,5 @@
-import React from 'react';
-import email from '../home_assets/formkit_email.png';
-
+import React from "react";
+import email from "../home_assets/formkit_email.png";
 
 const Footer = () => {
   return (
@@ -8,32 +7,95 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Left Section */}
         <div className="mb-8 ">
-          <h2 className="text-4xl font-semibold mb-4">Get Yourself Discovered!</h2>
+          <h2 className="text-4xl font-semibold mb-4">
+            Get Yourself Discovered!
+          </h2>
           <div className="py-8 grid grid-cols-3 gap-8 ">
             {/* Pages Section */}
             <ul>
               <li className="font-bold text-orange-700 mb-2 text-2xl">Pages</li>
-              <li className="text-gray-300 text-xl">About</li>
-              <li className="text-gray-300 text-xl">Featured</li>
-              <li className="text-gray-300 text-xl">Explore</li>
-              <li className="text-gray-300 text-xl">How It Works</li>
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("searchBox")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                About
+              </li>
+
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("featuredBusiness")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Featured
+              </li>
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("explore")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Explore
+              </li>
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("howWorks")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                How its Works
+              </li>
             </ul>
 
             {/* Business Section */}
             <ul>
-              <li className="font-bold text-orange-700 mb-2 text-2xl">Business</li>
-              <li className="text-gray-300 text-xl">Add Business</li>
-              <li className="text-gray-300 text-xl">Explore</li>
-              <li className="text-gray-300 text-xl">Why Us</li>
+              <li className="font-bold text-orange-700 mb-2 text-2xl">
+                Business
+              </li>
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("addBusiness")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Add Business
+              </li>
+              <li
+                className="text-gray-300 text-xl cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("featuredBusiness")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Explore
+              </li>
+              <li className="text-gray-300 text-xl cursor-pointer">Why Us</li>
             </ul>
 
             {/* Social Section */}
             <ul>
-              <li className="font-bold text-orange-700 mb-2 text-2xl">Social</li>
-              <li className="text-gray-300 text-xl">Facebook</li>
-              <li className="text-gray-300 text-xl">Instagram</li>
-              <li className="text-gray-300 text-xl">Twitter</li>
-              <li className="text-gray-300 text-xl">LinkedIn</li>
+              <li className="font-bold text-orange-700 mb-2 text-2xl">
+                Social
+              </li>
+              <li className="text-gray-300 text-xl cursor-pointer">Facebook</li>
+              <li className="text-gray-300 text-xl cursor-pointer">
+                Instagram
+              </li>
+              <li className="text-gray-300 text-xl cursor-pointer">Twitter</li>
+              <li className="text-gray-300 text-xl cursor-pointer">LinkedIn</li>
             </ul>
           </div>
         </div>
@@ -59,7 +121,6 @@ const Footer = () => {
         Copyright © 2025, Punjabipages.in | All rights reserved.
       </div>
     </footer>
-
   );
 };
 

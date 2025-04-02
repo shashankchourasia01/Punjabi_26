@@ -282,10 +282,10 @@ const Result = () => {
         </div>
       ) : (
         <div>
-          <div className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
+          <div id="explore" className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
             <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
               <button key={"food"} onClick={() => handleCategoryClick("Food")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={dining}
                     alt="Food & Beverages"
@@ -303,7 +303,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Beauty & Wellness")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={spa}
                     alt="Food & Beverages"
@@ -321,7 +321,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Apparel & Accessories")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={clothing_store}
                     alt="Food & Beverages"
@@ -339,7 +339,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Education")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={cap}
                     alt="Food & Beverages"
@@ -357,7 +357,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Health")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={health}
                     alt="Food & Beverages"
@@ -375,7 +375,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Wedding and Events")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={church}
                     alt="Food & Beverages"
@@ -393,7 +393,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Logistic Services")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={bus}
                     alt="Food & Beverages"
@@ -408,7 +408,7 @@ const Result = () => {
 
             <div className="flex items-center justify center flex-col mt-10 w-40">
               <button key={"food"} onClick={() => handleCategoryClick("more")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full border-4  border-black bg-orange-600">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full  bg-orange-600">
                   <img
                     src={more_icon}
                     alt="Food & Beverages"
@@ -458,7 +458,7 @@ const Result = () => {
 
           <div className="bg-white p-10">
             {/*  Header Section  */}
-            <div className="flex justify-between items-center mb-6 mt-18">
+            <div id="featuredBusiness" className="flex justify-between items-center mb-6 mt-18">
               <h2 className="text-4xl font-bold text-orange-600 ml-20">
                 Featured Business
               </h2>
@@ -473,40 +473,40 @@ const Result = () => {
               <div className="text-center">
                 <img src={first} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold">Lorem Ipsum</h3>
-                  <div className="text-yellow-400">★★★★★</div>
+                  <h3 className="font-bold text-orange-600">Indian Hotels</h3>
+                  <div className="text-orange-600">★★★★★</div>
                 </div>
-                <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+                <p className="text-blue-700 text-2xl mt-5">Click to visit</p>
               </div>
 
               {/* <!-- Card 2 --> */}
               <div className="text-center">
                 <img src={second} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold">Lorem Ipsum</h3>
-                  <div className="text-yellow-400">★★★★★</div>
+                  <h3 className="font-bold text-orange-600">Indian Food</h3>
+                  <div className="text-orange-600">★★★★★</div>
                 </div>
-                <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+                <p className="text-blue-600 text-2xl mt-5">Click to visit</p>
               </div>
 
               {/* <!-- Card 3 --> */}
               <div className="text-center">
                 <img src={third} alt="" className="w-110 h-70" />
                 <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold">Lorem Ipsum</h3>
-                  <div className="text-yellow-400">★★★★★</div>
+                  <h3 className="font-bold text-orange-600">Accessories</h3>
+                  <div className="text-orange-600">★★★★★</div>
                 </div>
-                <p className="text-gray-500 text-2xl mt-5">Lorem Ipsum</p>
+                <p className="text-blue-600 text-2xl mt-5">Click to visit</p>
               </div>
             </div>
 
             {/* <!-- Slider Icons --> */}
             <div className="flex justify-center gap-6 mt-20">
-              <button className="bg-orange-600 p-9  rounded-full shadow-md">
+              <button className="bg-orange-600 p-9  rounded-full shadow-md cursor-pointer">
                 {" "}
                 <img src={left_arrow} alt="" />
               </button>
-              <button className="bg-orange-600 p-9 rounded-full shadow-md">
+              <button className="bg-orange-600 p-9 rounded-full shadow-md cursor-pointer">
                 {" "}
                 <img src={right_arrow} alt="" />
               </button>
@@ -515,7 +515,7 @@ const Result = () => {
 
           {/* List your business 5 */}
 
-          <div className="relative bg-white w-full flex items-center justify-center min-h-screen p-6">
+          <div id="addBusiness" className="relative bg-white w-full flex items-center justify-center min-h-screen p-6">
             {/* Background Image */}
             <img
               src={rectangle}
@@ -544,7 +544,7 @@ const Result = () => {
                 </p>
 
                 <button
-                  className="mt-4 px-6 py-3 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-500 transition"
+                  className="mt-4 px-6 py-3 cursor-pointer bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-500 transition"
                   onClick={() => navigate("/companyDetails")}
                 >
                   List Now
@@ -553,7 +553,7 @@ const Result = () => {
             </div>
           </div>
 
-          {/* Green bg 6*/}
+          {/* Blue bg 6*/}
 
           <div className="relative z-0">
             <div className="mt-16">
@@ -565,16 +565,16 @@ const Result = () => {
 
               <div className="flex flex-col items-center justify-center w-[20rem] gap-y-80">
                 <div className="text-white">
-                  <h1>Highly Affordable</h1>
-                  <p>
+                  <h1 className="text-2xl">Highly Affordable</h1>
+                  <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
                   </p>
                 </div>
 
-                <div className="text-white">
-                  <h1>Highly Affordable</h1>
-                  <p>
+                <div className="text-white ">
+                <h1 className="text-2xl">Highly Affordable</h1>
+                  <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
                   </p>
@@ -583,10 +583,10 @@ const Result = () => {
 
               {/* mid image */}
               <div className="relative flex items-center justify-center w-[40rem]">
-                <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#185231]  z-10 top-[-1.5rem] right-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-2 border-yellow-400 rounded-[50%] bg-[#164329]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-white  rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 top-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-white rounded-[50%] bg-orange-700  z-10 bottom-[-1.5rem] right-[6rem]"></div>
                 <img
                   src={Group_11}
                   alt="Woman using a blender"
@@ -609,16 +609,16 @@ const Result = () => {
               {/* right */}
               <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
                 <div>
-                  <h1>Highly Affordable</h1>
-                  <p>
+                <h1 className="text-2xl">Highly Affordable</h1>
+                  <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
                   </p>
                 </div>
 
                 <div>
-                  <h1>Highly Affordable</h1>
-                  <p>
+                <h1 className="text-2xl">Highly Affordable</h1>
+                  <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
                   </p>
@@ -629,11 +629,11 @@ const Result = () => {
 
           {/* How it works  7 */}
 
-          <div className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10">
+          <div id="howWorks" className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Left Section */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-semibold text-orange-600 mb-4 pt-20">
+                <h1 className="text-4xl md:text-5xl font-semibold text-orange-700 mb-4 pt-20">
                   How It Works ?
                 </h1>
                 <p className="text-gray-700 mb-6 pt-10 text-2xl">
@@ -641,15 +641,15 @@ const Result = () => {
                   search for businesses more effortless and smooth.
                 </p>
                 <div className="relative">
-                  <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-600"></div>
+                  <div className="absolute left-4 top-2 h-full w-[2px] bg-orange-700"></div>
 
                   {/* Step 1 */}
                   <div className="flex items-start mb-10 mt-20">
-                    <div className="w-15 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-15 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                       1
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-600">
+                      <h3 className="text-3xl font-semibold text-orange-700">
                         Search
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -661,11 +661,11 @@ const Result = () => {
 
                   {/* Step 2 */}
                   <div className="flex items-start mb-10">
-                    <div className="w-12 h-10 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-10 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                       2
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-600">
+                      <h3 className="text-3xl font-semibold text-orange-700">
                         Discover
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -677,11 +677,11 @@ const Result = () => {
 
                   {/* Step 3 */}
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-orange-600 text-white flex items-center justify-center rounded-full text-lg font-semibold">
+                    <div className="w-12 h-12 bg-orange-700 text-white flex items-center justify-center rounded-full text-lg font-semibold">
                       3
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-orange-600">
+                      <h3 className="text-3xl font-semibold text-orange-700">
                         Connect
                       </h3>
                       <p className="text-gray-600 text-xl">
@@ -711,8 +711,8 @@ const Result = () => {
                     className="w-full h-62 object-cover rounded-md mb-3"
                   />
                   <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                    <h5 className="text-lg mr-18">Lorem Ipsum</h5>
-                    <div className="text-yellow-400">★★★★★</div>
+                    <h5 className="text-lg mr-18">Indian Food</h5>
+                    <div className="text-orange-700">★★★★★</div>
                   </div>
                 </div>
 
@@ -760,7 +760,7 @@ const Result = () => {
               {/* Right Side - Heading & Text */}
               <div className="text-white text-center lg:text-left max-w-lg">
                 <h2 className="text-3xl md:text-5xl font-bold">
-                  Discover <span className="text-yellow-400">Punjabi</span>{" "}
+                  Discover <span className="text-orange-700">Punjabi</span>{" "}
                   Businesses And Pages!
                 </h2>
                 <p className="mt-4 text-lg md:text-xl">

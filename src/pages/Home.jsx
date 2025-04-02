@@ -178,7 +178,7 @@ const Home = () => {
             <div className="w-22 h-22 bg-orange-700 text-white flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
-            <span className="mt-2 text-2xl font-semibold">
+            <span className="mt-4 text-2xl font-semibold text-blue-800">
               List Your Business
             </span>
           </div>
@@ -187,7 +187,7 @@ const Home = () => {
             <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-700 flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
-            <span className="mt-2 text-2xl font-semibold">
+            <span className="mt-4 text-2xl font-semibold text-blue-700">
               Verify Your Business
             </span>
           </div>
@@ -196,7 +196,7 @@ const Home = () => {
             <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-orange-700 flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
-            <span className="mt-2 text-2xl font-semibold">Target Customer</span>
+            <span className="mt-4 text-2xl font-semibold text-blue-700">Target Customer</span>
           </div>
         </div>
 
