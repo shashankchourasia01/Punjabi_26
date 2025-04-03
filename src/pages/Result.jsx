@@ -73,6 +73,11 @@ const Result = () => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
+  //Go to more page
+  const handleCategoryClickToMore = () => {
+    navigate("/more"); // Navigate to More.jsx page
+  };
+
   const handleCategoryClick = (category) => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
   };
@@ -406,20 +411,20 @@ const Result = () => {
               </p>
             </div>
 
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button key={"food"} onClick={() => handleCategoryClick("more")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
-                  <img
-                    src={more_icon}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                More
-              </p>
-            </div>
+            <div className="flex items-center justify-center flex-col mt-10 w-40">
+      <button key={"food"} onClick={handleCategoryClickToMore}>
+        <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+          <img
+            src={more_icon}
+            alt="Food & Beverages"
+            className="w-16 h-16 object-contain rounded-full"
+          />
+        </div>
+      </button>
+      <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+        More
+      </p>
+    </div>
           </div>
 
           {/* 500k+  3  */}
