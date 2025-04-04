@@ -25,6 +25,11 @@ const Home = () => {
     navigate("/dashboard");
   };
 
+  // Function to navigate to blogs page
+  const goToBlogs = () => {
+    navigate("/blogs");
+  };
+
   return (
     <div className="relative h-screen z-[10]">
       {/* Navbar */}
@@ -184,7 +189,7 @@ const Home = () => {
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FF9E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-gradient-to-b from-[#FFA43C] to-[#FFFFFF] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
             <span className="mt-4 text-2xl font-semibold text-black">
