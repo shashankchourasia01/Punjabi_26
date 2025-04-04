@@ -82,7 +82,7 @@ function Login({setShowLogin}) {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full overflow-hidden">
       {/* Left Section */}
-      <div className="w-full md:w-1/2 bg-blue-800 flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-10">
+      <div className="w-full md:w-1/2 bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-10">
         {/* Logo */}
         <img src={logo} alt="Logo" className="w-16 sm:w-20 mb-3 sm:mb-4 rounded-full cursor-pointer"
         onClick={() => navigate("/result")}
@@ -110,7 +110,7 @@ function Login({setShowLogin}) {
             placeholder="Password"
             className="w-full p-2 sm:p-3 border rounded-md mb-3 sm:mb-4 text-gray-700 bg-white text-sm sm:text-base"
           />
-          <button type="submit" className="w-full bg-orange-700 text-black font-semibold py-2 sm:py-3 rounded-full hover:bg-orange-700 transition text-sm sm:text-base">
+          <button type="submit" className="w-full bg-[#FF9E2F] text-black font-semibold py-2 sm:py-3 rounded-full hover:bg-orange-700 transition text-sm sm:text-base">
             Sign In
           </button>
         </form>
@@ -143,13 +143,13 @@ function Login({setShowLogin}) {
         {/* Links */}
         <p className="text-gray-300 text-xs sm:text-sm mt-3 sm:mt-4">
           Forgot password?{" "}
-          <a href="#" className="text-orange-700 hover:underline">
+          <a href="#" className="text-[#FF9E2F] hover:underline">
             Help
           </a>
         </p>
         <p className="text-gray-300 text-xs sm:text-sm">
           Don't have an account?{" "}
-          <Link to="/register" className="text-orange-700 hover:underline">
+          <Link to="/register" className="text-[#FF9E2F] hover:underline">
             Sign Up
           </Link>{" "}
           for <strong>FREE</strong>

@@ -175,7 +175,7 @@ const Home = () => {
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 bg-[#FF9E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#FF9E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
             <span className="mt-4 text-2xl font-semibold text-black">

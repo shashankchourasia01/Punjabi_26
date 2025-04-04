@@ -45,7 +45,7 @@ const CategoryPage = () => {
       >
         <X className="w-5 h-5" />
       </button>
-      <h2 className="text-center text-[2rem] mt-8 bg-blue-800 text-white p-4 rounded-lg">
+      <h2 className="text-center text-[2rem] mt-8 bg-[#002248] text-white p-4 rounded-lg">
         Businesses in {categoryName}
       </h2>
       <div className="grid md:grid-cols-3 gap-6 mt-6">
