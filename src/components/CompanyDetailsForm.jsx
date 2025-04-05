@@ -15,6 +15,8 @@ const CompanyDetailsForm = () => {
     serviceProducts: ["", ""], // Initial 2 fields for services/products
   };
 
+  const [img, setImg] = useState(false);
+
   const [data, setData] = useState(initialState);
 
   // Reset form fields
@@ -63,8 +65,36 @@ const CompanyDetailsForm = () => {
     }));
   };
 
+  const handleSubmitImage = async (e) => {
+    e.preventDefault();
 
-   //  Handle Business Image Upload
+    const form = e.target;
+    const fileInput = form.querySelector('input[type="file"]');
+  
+    const file = fileInput.files[0];
+  
+    if (!file) {
+      alert("Please select a file before uploading.");
+      return;
+    }
+  
+    const formData = new FormData();
+    formData.append("profileImage", file);
+  
+    try {
+      const res = await fetch("http://localhost:5000/upload", {
+        method: "POST",
+        body: formData,
+        credentials: "include",
+      });
+      setImg(true);
+      const data = await res.json();
+      console.log("Upload response:", data);
+    } catch (err) {
+      console.error("Upload failed:", err);
+    }
+  }
+  //  Handle Business Image Upload
   //  const handleBusinessImageChange = (e) => {
   //   const file = e.target.files[0];
   //   if (file) {
@@ -112,6 +142,20 @@ const CompanyDetailsForm = () => {
         <p className="text-gray-600 text-center mb-6">
           Share Business Details To Proceed further
         </p>
+
+        <form onSubmit={handleSubmitImage} encType="multipart/form-data" className="mb-4 flex gap-x-4">
+        {/* <label htmlFor="image" className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white">click here to choose image</label> */}
+  <input
+    type="file"
+    id="image"
+    name="profileImage"
+    className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white"
+    
+  />
+  <button type="submit" className="bg-orange-600 text-white rounded-md px-4 py-2">
+    {img?"Image Uploaded":"Upload Image"}
+  </button>
+        </form>
 
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -211,6 +255,9 @@ const CompanyDetailsForm = () => {
                 className="border border-gray-300 rounded-md w-full p-2 mt-2"
               />
 
+              {/* <label htmlFor="image"></label> */}
+
+
               {/* <label className="block font-medium mt-4">Business Image</label>
 
               <input
@@ -290,6 +337,8 @@ const CompanyDetailsForm = () => {
             </button>
           </div>
 
+          
+
           <div className="flex justify-between mt-6">
             <button
               type="button"
@@ -306,6 +355,11 @@ const CompanyDetailsForm = () => {
             </button>
           </div>
         </form>
+
+        {/* <form onSubmit={handleSubmitImage} encType="multipart/form-data" >
+          <input type="file" id="image" name="profileImage" />
+          <button type="submit" onSubmit={handleSubmitImage} className="bg-orange-600 rounded-md p-4">upload</button>
+        </form> */}
       </div>
     </div>
   );
