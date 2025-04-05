@@ -31,7 +31,7 @@ import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
 import blue_bg from "../main_assets/blue_bg.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Result = () => {

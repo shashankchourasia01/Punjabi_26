@@ -130,18 +130,20 @@ const CompanyDetailsForm = () => {
                 <option>Food and Beverages</option>
                 <option>Beauty & Wellness</option>
                 <option>Finance</option>
-                <option>Retail</option>
+                <option>Recritment</option>
                 <option>Health</option>
                 <option>Apparel & Accessories</option>
                 <option>Education</option>
                 <option>Wedding and Events</option>
-                <option>Manufacturing</option>
-                <option>Consulting</option>
-                <option>Marketing</option>
-                <option>Telecommunications</option>
-                <option>Energy</option>
+                <option>Fitness</option>
+                <option>Clothing</option>
+                <option>Automotive</option>
+                <option>Transport</option>
+                <option>Travel</option>
+                <option>Kid</option>
                 <option>Logistic Services</option>
-                <option>Hospitality</option>
+                <option>Law</option>
+                <option>Gurdwara</option>
               </select>
 
               <label className="block font-medium mt-4">Address</label>
