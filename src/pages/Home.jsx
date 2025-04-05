@@ -68,8 +68,9 @@ const Home = () => {
 
         <div className="flex justify-center items-center h-10  mr-6 cursor-pointer rounded-lg border-2 border-yellow-400">
           <button
-          onClick={() => navigate("/dashboard")}
-          className="text-white text-lg font-semibold cursor-pointer">
+            onClick={() => navigate("/dashboard")}
+            className="text-white text-lg font-semibold cursor-pointer"
+          >
             Dashboard
           </button>
         </div>
@@ -99,7 +100,7 @@ const Home = () => {
       {/* Main Content */}
       <div className="flex  relative bottom-[5rem] z-10  flex-col justify-center items-center text-white text-center h-full px-6  mr-160 ml-20">
         <h1 className="text-5xl font-bold">
-          List & Grow Your Business 
+          List & Grow Your Business
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">with Punjabi Pages!</h1>
@@ -164,7 +165,7 @@ const Home = () => {
           </button>
           <p className="text-center mt-2">
             Already registered?{" "}
-            <button className="text-red-600" onClick={() => navigate("/login")}>
+            <button className="text-red-600 cursor-pointer" onClick={() => navigate("/login")}>
               {" "}
               Sign in
             </button>
@@ -201,7 +202,9 @@ const Home = () => {
             <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
-            <span className="mt-4 text-2xl font-semibold text-black">Target Customer</span>
+            <span className="mt-4 text-2xl font-semibold text-black">
+              Target Customer
+            </span>
           </div>
         </div>
 
@@ -274,9 +277,7 @@ const Home = () => {
           </div>
 
           {/* Feature 2 */}
-        
 
-       
           <div className="text-center relative">
             <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
               <div className="absolute -top-6 w-full h-full "></div>{" "}
@@ -333,48 +334,95 @@ const Home = () => {
           {/* FAQ Item 1 */}
           <div className=" p-6  ">
             <h2 className="text-3xl font-semibold text-[#454545]">
-              Q. Lorem ipsum dolor sit amet?
+              Q. What is Panjabi Pages?
             </h2>
             <p className="text-[#454545] mt-2 text-xl">
-              Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
-              aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
-              proin congue arcu.
+              Panjabi Pages is a business directory app designed to help the
+              Punjabi community discover and connect with local businesses,
+              services, and cultural events. From restaurants to professionals,
+              everything is curated with the Punjabi lifestyle in mind.
             </p>
           </div>
 
           {/* FAQ Item 2 */}
           <div className=" p-6 ">
             <h3 className="text-3xl font-semibold text-[#454545]">
-              Q. Lorem ipsum dolor sit amet?
+              Q. Is Panjabi Pages only for Punjabi-owned businesses?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
-              Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
-              aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
-              proin congue arcu.
+              No, any business that serves or supports the Punjabi community is
+              welcome to list. Our goal is to build a strong, helpful network
+              for everyone in the community.
             </p>
           </div>
 
           {/* FAQ Item 3 */}
           <div className=" p-6  ">
             <h3 className="text-3xl font-semibold text-[#454545]">
-              Q. Lorem ipsum dolor sit amet?
+              Q. How can I list my business on Panjabi Pages?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
-              Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
-              aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
-              proin congue arcu.
+              Simply tap the “Add Your Business” button on the app, fill out the
+              form with your details, and submit. Once verified, your listing
+              will go live.
             </p>
           </div>
 
           {/* FAQ Item 4 */}
           <div className=" p-6">
             <h3 className="text-3xl font-semibold text-[#454545]">
-              Q. Lorem ipsum dolor sit amet?
+              Q. Is there a fee to list a business?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
-              Lorem ipsum dolor sit amet consectetur. Purus ultrices dignissim
-              aliquam lectus quam sem eu eget nisi. Erat tortor urna in augue
-              proin congue arcu.
+              Basic listings are free. We also offer premium plans for extra
+              visibility, featured placements, and promotional tools.
+            </p>
+          </div>
+
+          {/* FAQ Item 5 */}
+          <div className=" p-6">
+            <h3 className="text-3xl font-semibold text-[#454545]">
+              Q. Can I search by location or business category?
+            </h3>
+            <p className="text-[#454545] mt-2 text-xl">
+              Yes, you can filter by location, business type, and even specific
+              services to find exactly what you're looking for.
+            </p>
+          </div>
+
+          {/* FAQ Item 6 */}
+
+          <div className=" p-6">
+            <h3 className="text-3xl font-semibold text-[#454545]">
+              Q. Can I leave reviews for businesses?
+            </h3>
+            <p className="text-[#454545] mt-2 text-xl">
+              Absolutely! Reviews help others in the community make informed
+              decisions, and businesses appreciate your honest feedback.
+            </p>
+          </div>
+
+          {/* FAQ Item 7 */}
+
+          <div className=" p-6">
+            <h3 className="text-3xl font-semibold text-[#454545]">
+              Q. Is the app available on both Android and iOS?
+            </h3>
+            <p className="text-[#454545] mt-2 text-xl">
+              Yes, Panjabi Pages is available on both platforms so you can
+              access it anytime, anywhere.
+            </p>
+          </div>
+
+          {/* FAQ Item 8 */}
+
+          <div className=" p-6">
+            <h3 className="text-3xl font-semibold text-[#454545]">
+              Q. How do I update my business details?
+            </h3>
+            <p className="text-[#454545] mt-2 text-xl">
+              You can log in to your account and edit your listing anytime. Our
+              team also reviews changes for quality and accuracy.
             </p>
           </div>
         </div>

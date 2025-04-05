@@ -237,7 +237,7 @@ const Result = () => {
           </button>
           <p className="text-center mt-2">
             Already registered?{" "}
-            <button className="text-red-600" onClick={() => navigate("/login")}>
+            <button className="text-red-600 cursor-pointer" onClick={() => navigate("/login")}>
               {" "}
               Sign in
             </button>
