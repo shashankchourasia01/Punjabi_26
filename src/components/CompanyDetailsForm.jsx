@@ -8,6 +8,7 @@ const CompanyDetailsForm = () => {
     businessName: "",
     address: { street: "", city: "", state: "" },
     location: { country: "", city: "" },
+    // businessImage: "",
     website: "",
     aboutCompany: "",
     secondaryBusiness: [],
@@ -61,6 +62,20 @@ const CompanyDetailsForm = () => {
       serviceProducts: [...prev.serviceProducts, ""],
     }));
   };
+
+
+   //  Handle Business Image Upload
+  //  const handleBusinessImageChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     setData((prev) => ({
+  //       ...prev,
+  //       businessImage: file,
+  //     }));
+  //   }
+  // };
+
+
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -195,6 +210,27 @@ const CompanyDetailsForm = () => {
                 onChange={(e) => handleNestedChange(e, "location")}
                 className="border border-gray-300 rounded-md w-full p-2 mt-2"
               />
+
+              {/* <label className="block font-medium mt-4">Business Image</label>
+
+              <input
+                id="businessImageUpload"
+                name="businessImage"
+                type="file"
+                accept="image/*"
+                // onChange={(e) => handleNestedChange(e, "businessImage")}
+                onChange={handleBusinessImageChange}
+                className="hidden"
+              />
+
+              <label
+                htmlFor="businessImageUpload"
+                className="cursor-pointer inline-block mt-2"
+              >
+                <div className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-lg border border-gray-300">
+                  +
+                </div>
+              </label> */}
 
               <label className="block font-medium mt-4">About Company</label>
               <textarea
