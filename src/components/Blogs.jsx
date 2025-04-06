@@ -104,12 +104,25 @@ const Blogs = () => {
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
-              <option value="">Select Category</option>
-              <option value="Business">Business</option>
-              <option value="Food">Food</option>
-              <option value="Events">Events</option>
-              <option value="Lifestyle">Lifestyle</option>
-              <option value="Tips">Tips</option>
+              <option>IT Services</option>
+                <option>Food and Beverages</option>
+                <option>Beauty & Wellness</option>
+                <option>Finance</option>
+                <option>Recritment</option>
+                <option>Health</option>
+                <option>Apparel & Accessories</option>
+                <option>Education</option>
+                <option>Wedding and Events</option>
+                <option>Fitness</option>
+                <option>Clothing</option>
+                <option>Automotive</option>
+                <option>Transport</option>
+                <option>Travel</option>
+                <option>Kid</option>
+                <option>Logistic Services</option>
+                <option>Law</option>
+                <option>Gurdwara</option>
+                <option>More</option>
             </select>
             <textarea
               name="content"

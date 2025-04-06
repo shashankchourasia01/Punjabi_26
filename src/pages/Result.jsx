@@ -594,10 +594,10 @@ const Result = () => {
 
               {/* mid image */}
               <div className="relative flex items-center justify-center w-[40rem]">
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49]  rounded-[50%] bg-[#004080]  z-10 top-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 top-[-1.5rem] right-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#004080]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49]  rounded-[50%] bg-[#013D7B]  z-10 top-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 top-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
                 <img
                   src={Group_11}
                   alt="Woman using a blender"
