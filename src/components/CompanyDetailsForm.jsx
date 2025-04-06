@@ -188,6 +188,7 @@ const CompanyDetailsForm = () => {
                 <option>Logistic Services</option>
                 <option>Law</option>
                 <option>Gurdwara</option>
+                <option>More</option>
               </select>
 
               <label className="block font-medium mt-4">Address</label>

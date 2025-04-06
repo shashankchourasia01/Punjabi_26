@@ -1,11 +1,11 @@
 import React from "react";
-import food from "../more_assets/salad 2.png";
-import health from "../more_assets/healthcare 2.png";
+// import food from "../more_assets/salad 2.png";
+// import health from "../more_assets/healthcare 2.png";
 import clothing from "../more_assets/laundry.png";
-import beauty from "../more_assets/beauty-product 2.png";
+// import beauty from "../more_assets/beauty-product 2.png";
 import fitness from "../more_assets/dumbbell 1.png";
 import finance from "../more_assets/budget 1.png";
-import event from "../more_assets/event 1.png";
+// import event from "../more_assets/event 1.png";
 import kid from "../more_assets/playtime 1.png";
 import recruitment from '../more_assets/talent-search 1.png'
 import automotive from '../more_assets/automotive 1.png'
@@ -22,6 +22,10 @@ import { IoClose } from "react-icons/io5"; // Import close icon from react-icons
 const More = () => {
 
     const navigate = useNavigate();
+
+    const handleCategoryClick = (category) => {
+      navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
+    };
     
   return (
     <div >
@@ -37,7 +41,7 @@ const More = () => {
         id="explore"
         className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 "
       >
-        <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
+        {/* <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
           <button key={"food"}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
@@ -50,9 +54,9 @@ const More = () => {
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Food & Beverages
           </p>
-        </div>
+        </div> */}
 
-        <div className="flex items-center justify center flex-col mt-10 w-40">
+        {/* <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key={"food"}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
@@ -65,10 +69,10 @@ const More = () => {
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Beauty & Wellness
           </p>
-        </div>
+        </div> */}
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Clothing")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={clothing}
@@ -83,7 +87,7 @@ const More = () => {
         </div>
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Fitness")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={fitness}
@@ -97,7 +101,7 @@ const More = () => {
           </p>
         </div>
 
-        <div className="flex items-center justify center flex-col mt-10 w-40">
+        {/* <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key={"food"}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
@@ -125,10 +129,10 @@ const More = () => {
           <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
             Wedding and Events
           </p>
-        </div>
+        </div> */}
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Finance")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={finance}
@@ -143,7 +147,7 @@ const More = () => {
         </div>
 
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Kid")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={kid}
@@ -160,7 +164,7 @@ const More = () => {
         {/* 9 */}
 
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Recritment")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={recruitment}
@@ -176,7 +180,7 @@ const More = () => {
 
         {/* 10 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Automotive")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={automotive}
@@ -192,7 +196,7 @@ const More = () => {
 
         {/* 11 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Transport")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={transport}
@@ -208,7 +212,7 @@ const More = () => {
 
         {/* 12 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Education")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={education}
@@ -224,7 +228,7 @@ const More = () => {
 
         {/* 13 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Travel")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={travel}
@@ -240,7 +244,7 @@ const More = () => {
 
         {/* 14 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Law")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={law}
@@ -256,7 +260,7 @@ const More = () => {
 
         {/* 15 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("Gurdwara")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={gurdwara}
@@ -272,7 +276,7 @@ const More = () => {
 
         {/* 16 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
-          <button key={"food"}>
+          <button key={"food"} onClick={() => handleCategoryClick("More")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
                 src={more}

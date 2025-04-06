@@ -467,7 +467,13 @@ const Result = () => {
               <h2 className="text-4xl font-bold text-[#01346B] ml-20">
                 Featured Business
               </h2>
-              <button className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  ">
+              <button className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  "
+              onClick={() =>
+                document
+                  .getElementById("searchBox")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              >
                 Explore More
               </button>
             </div>
