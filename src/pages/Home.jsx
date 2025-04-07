@@ -50,25 +50,25 @@ const Home = () => {
           >
             Add a Business
           </button>
-          <Link
-            to="/result"
+          <button
+            onClick={goToResultPage}
             className="text-white font-semibold hover:text-gray-900"
           >
             Our Services
-          </Link>
-          <Link
-            to="/blogs"
+          </button>
+          <button
+            onClick={goToBlogs}
             className="text-white font-semibold hover:text-gray-900"
           >
             Blogs
-          </Link>
+          </button>
         </div>
 
         {/* Dashboard Button */}
 
         <div className="flex justify-center items-center h-10  mr-6 cursor-pointer rounded-lg border-2 border-yellow-400">
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={goToDashboard}
             className="text-white text-lg font-semibold cursor-pointer"
           >
             Dashboard
@@ -174,6 +174,7 @@ const Home = () => {
       )}
 
       <div className="absolute top-[79%] bg-green-800 w-[100%] h-[20%] border-green-800  opacity-100  mix-blend-overlay z-[-10] bg-gradient-to-r from-green-800 from-30% via-green-200 via-30% to-green-800 to-80% blur-2xl"></div>
+  
 
       {/* List Business Detail */}
 
@@ -422,7 +423,7 @@ const Home = () => {
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
               You can log in to your account and edit your listing anytime. Our
-              team also reviews changes for quality and accuracy.
+              team also reviews changes for quality and accuracy.
             </p>
           </div>
         </div>
