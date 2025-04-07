@@ -1,7 +1,12 @@
 import React from "react";
 import email from "../home_assets/formkit_email.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const goToAddBusiness = () => {
+    navigate("/companyDetails");
+  };
+
   return (
     <footer className="bg-[#FF9E2F] text-black mt-auto pt-[4rem] w-full mb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -18,7 +23,7 @@ const Footer = () => {
                 className="text-black text-xl cursor-pointer"
                 onClick={() =>
                   document
-                    .getElementById("searchBox")
+                    .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
@@ -59,19 +64,13 @@ const Footer = () => {
 
             {/* Business Section */}
             <ul>
-              <li className="font-bold text-black mb-2 text-2xl">
-                Business
+              <li className="font-bold text-black mb-2 text-2xl">Business</li>
+              <li className="text-black text-xl cursor-pointer">
+                <Link to="/companyDetails" onClick={goToAddBusiness}>
+                  Add Business
+                </Link>
               </li>
-              <li
-                className="text-black text-xl cursor-pointer"
-                onClick={() =>
-                  document
-                    .getElementById("addBusiness")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Add Business
-              </li>
+
               <li
                 className="text-black text-xl cursor-pointer"
                 onClick={() =>
@@ -87,13 +86,9 @@ const Footer = () => {
 
             {/* Social Section */}
             <ul>
-              <li className="font-bold text-black mb-2 text-2xl">
-                Social
-              </li>
+              <li className="font-bold text-black mb-2 text-2xl">Social</li>
               <li className="text-black text-xl cursor-pointer">Facebook</li>
-              <li className="text-black text-xl cursor-pointer">
-                Instagram
-              </li>
+              <li className="text-black text-xl cursor-pointer">Instagram</li>
               <li className="text-black text-xl cursor-pointer">Twitter</li>
               <li className="text-black text-xl cursor-pointer">LinkedIn</li>
             </ul>

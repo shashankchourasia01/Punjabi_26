@@ -83,7 +83,7 @@ const Result = () => {
   };
 
   return (
-    <div className="relative h-screen z-[10]">
+    <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
         <Link to="/" className="flex items-center">
@@ -141,7 +141,7 @@ const Result = () => {
       {/* Main Content */}
       <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-20 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover Punjabi 
+          Discover Punjabi
           <br />
         </h1>
         <h1 className="text-5xl font-bold mt-4">Businesses And Pages!</h1>
@@ -237,7 +237,10 @@ const Result = () => {
           </button>
           <p className="text-center mt-2">
             Already registered?{" "}
-            <button className="text-red-600 cursor-pointer" onClick={() => navigate("/login")}>
+            <button
+              className="text-red-600 cursor-pointer"
+              onClick={() => navigate("/login")}
+            >
               {" "}
               Sign in
             </button>
@@ -287,10 +290,13 @@ const Result = () => {
         </div>
       ) : (
         <div>
-          <div id="explore" className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40">
+          <div
+            id="explore"
+            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40"
+          >
             <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
               <button key={"food"} onClick={() => handleCategoryClick("Food")}>
-              <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
                   <img
                     src={dining}
                     alt="Food & Beverages"
@@ -412,19 +418,19 @@ const Result = () => {
             </div>
 
             <div className="flex items-center justify-center flex-col mt-10 w-40">
-      <button key={"food"} onClick={handleCategoryClickToMore}>
-        <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
-          <img
-            src={more_icon}
-            alt="Food & Beverages"
-            className="w-16 h-16 object-contain rounded-full"
-          />
-        </div>
-      </button>
-      <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-        More
-      </p>
-    </div>
+              <button key={"food"} onClick={handleCategoryClickToMore}>
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                  <img
+                    src={more_icon}
+                    alt="Food & Beverages"
+                    className="w-16 h-16 object-contain rounded-full"
+                  />
+                </div>
+              </button>
+              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
+                More
+              </p>
+            </div>
           </div>
 
           {/* 500k+  3  */}
@@ -463,16 +469,20 @@ const Result = () => {
 
           <div className="bg-white p-10">
             {/*  Header Section  */}
-            <div id="featuredBusiness" className="flex justify-between items-center mb-6 mt-18">
+            <div
+              id="featuredBusiness"
+              className="flex justify-between items-center mb-6 mt-18"
+            >
               <h2 className="text-4xl font-bold text-[#01346B] ml-20">
                 Featured Business
               </h2>
-              <button className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  "
-              onClick={() =>
-                document
-                  .getElementById("searchBox")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              <button
+                className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  "
+                onClick={() =>
+                  document
+                    .getElementById("searchBox")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Explore More
               </button>
@@ -526,7 +536,10 @@ const Result = () => {
 
           {/* List your business 5 */}
 
-          <div id="addBusiness" className="relative bg-white w-full flex items-center justify-center min-h-screen p-6">
+          <div
+            id="addBusiness"
+            className="relative bg-white w-full flex items-center justify-center min-h-screen p-6"
+          >
             {/* Background Image */}
             <img
               src={rectangle}
@@ -584,7 +597,7 @@ const Result = () => {
                 </div>
 
                 <div className="text-white ">
-                <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">Highly Affordable</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
@@ -620,7 +633,7 @@ const Result = () => {
               {/* right */}
               <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
                 <div>
-                <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">Highly Affordable</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
@@ -628,7 +641,7 @@ const Result = () => {
                 </div>
 
                 <div>
-                <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">Highly Affordable</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
@@ -640,7 +653,10 @@ const Result = () => {
 
           {/* How it works  7 */}
 
-          <div id="howWorks" className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10 ]">
+          <div
+            id="howWorks"
+            className="bg-[#fdfaf3] px-6 lg:px-20 py-24 min-h-screen mb-10 ]"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Left Section */}
               <div>
@@ -729,16 +745,11 @@ const Result = () => {
 
                 {/* Button */}
                 <div className="absolute bottom-[-170px] ml-75">
-                  <button
-                    className="bg-[#01346B] text-white px-12 py-6 rounded-md text-xl font-semibold shadow-md hover:bg-orange-700 transition"
-                    onClick={() =>
-                      document
-                        .getElementById("searchBox")
-                        .scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    Search more
-                  </button>
+                  <Link to="/more">
+                    <button className="bg-[#01346B] text-white px-12 py-6 rounded-md text-xl font-semibold shadow-md hover:bg-orange-700 transition">
+                      Search more
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
