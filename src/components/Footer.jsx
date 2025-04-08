@@ -38,7 +38,7 @@ const Footer = () => {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Featured
+                Featured Business
               </li>
               <li
                 className="text-black text-xl cursor-pointer"
