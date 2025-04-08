@@ -10,6 +10,7 @@ import Category from "./pages/Category";
 import Dashboard from "./components/Dashboard";
 import More from "./components/More";
 import Blogs from "./components/Blogs";
+import Explore from "./components/Explore";
 //import SearchResults from "./pages/SearchResults";
 
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/category/:categoryName" element={<Category />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/more" element={<More />} />
+            <Route path="/explore_more" element={<Explore />} />
             
           </Routes>
         </main>

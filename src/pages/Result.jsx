@@ -19,7 +19,6 @@ import left_arrow from "../result_assets/left_arrow.png";
 import right_arrow from "../result_assets/right_arrow.png";
 import rectangle from "../result_assets/rectangle_new.png";
 import girl from "../result_assets/girl (1).png";
-// import green_bg from "../result_assets/green_bg.png";
 import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
 import left_phone from "../result_assets/left_phone.png";
 import right_phone from "../result_assets/right_phone.png";
@@ -37,6 +36,10 @@ import axios from "axios";
 const Result = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+
+  // weather
+  const [wLocation, wSetLocation] = useState("");
+  const [weather, setWeather] = useState(null);
 
   //const location = useLocation("");
   const [primaryBusiness, setprimaryBusiness] = useState("");
@@ -78,8 +81,38 @@ const Result = () => {
     navigate("/more"); // Navigate to More.jsx page
   };
 
+  // Go to explore more page
+  const handleCategoryClickToExplore = () => {
+    navigate("/explore_more");
+  };
+
   const handleCategoryClick = (category) => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
+  };
+
+  // weather
+
+  const handleWeatherChange = (e) => {
+    setLocation(e.target.value);
+  };
+
+  const handleWeatherSubmit = async (e) => {
+    e.preventDefault();
+
+    const apiKey = "f69ee6d52e37c6d325586aa8562b7b04";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.main) {
+        wSetLocation(data);
+      } else {
+        alert("City not found!");
+      }
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+    }
   };
 
   return (
@@ -183,6 +216,44 @@ const Result = () => {
             </button>
           </form>
         </div>
+      </div>
+
+      {/* Weather checker */}
+
+      <div
+        id="weatherBox"
+        className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
+      >
+        {/* Weather Search Input */}
+        <form onSubmit={handleWeatherSubmit} className="flex">
+          {/* Location Input */}
+          <input
+            type="text"
+            placeholder="Search the Weather..."
+            name="location"
+            onChange={handleWeatherChange}
+            className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
+          />
+
+          {/* Search Button */}
+          <button className="bg-[#FF9E2F] text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
+            <img src={search_icon} alt="Search" className="w-[50px] " />
+          </button>
+        </form>
+
+        {/* Display Weather Information */}
+        {weather && (
+          <div className="absolute z-10 mt-[100px] ml-40 bg-white w-[1200px] rounded-b-2xl shadow-lg p-5 text-black">
+            <h2 className="text-xl font-semibold mb-2">
+              Weather in {weather.name}
+            </h2>
+            <p className="mb-1">🌡️ Temperature: {weather.main.temp}°C</p>
+            <p className="mb-1">
+              🌤️ Condition: {weather.weather[0].description}
+            </p>
+            <p>💧 Humidity: {weather.main.humidity}%</p>
+          </div>
+        )}
       </div>
 
       {showForm && (
@@ -477,12 +548,8 @@ const Result = () => {
                 Featured Business
               </h2>
               <button
-                className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95  "
-                onClick={() =>
-                  document
-                    .getElementById("searchBox")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={handleCategoryClickToExplore}
+                className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95"
               >
                 Explore More
               </button>

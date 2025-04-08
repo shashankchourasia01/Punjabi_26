@@ -1,7 +1,7 @@
 import React from "react";
 // import food from "../more_assets/salad 2.png";
 // import health from "../more_assets/healthcare 2.png";
-import clothing from "../more_assets/laundry.png";
+import clothing from "../more_assets/clothing_more.png";
 // import beauty from "../more_assets/beauty-product 2.png";
 import fitness from "../more_assets/dumbbell 1.png";
 import finance from "../more_assets/budget 1.png";
@@ -10,13 +10,13 @@ import kid from "../more_assets/playtime 1.png";
 import recruitment from '../more_assets/talent-search 1.png'
 import automotive from '../more_assets/automotive 1.png'
 import transport from '../more_assets/warehouse 1.png'
-import education from '../more_assets/graduation-hat 1.png'
 import travel from '../more_assets/travel 1.png'
 import law from '../more_assets/legal 1.png'
 import gurdwara from '../more_assets/amritsar 1.png'
-import more from '../more_assets/menu-bar 2.png'
 import { useNavigate } from "react-router-dom";
-import { IoClose } from "react-icons/io5"; // Import close icon from react-icons
+import { IoClose } from "react-icons/io5";
+import cap from "../result_assets/cap_new.png";
+import more_icon from "../result_assets/more_new.png";
 
 
 const More = () => {
@@ -215,7 +215,7 @@ const More = () => {
           <button key={"food"} onClick={() => handleCategoryClick("Education")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
-                src={education}
+                src={cap}
                 alt="Food & Beverages"
                 className="w-16 h-16 object-contain rounded-full"
               />
@@ -279,7 +279,7 @@ const More = () => {
           <button key={"food"} onClick={() => handleCategoryClick("More")}>
             <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
               <img
-                src={more}
+                src={more_icon}
                 alt="Food & Beverages"
                 className="w-16 h-16 object-contain rounded-full"
               />
