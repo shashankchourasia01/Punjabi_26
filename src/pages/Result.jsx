@@ -115,31 +115,29 @@ const Result = () => {
     }
   };
 
-
   const isLoggedIn = () => {
     // Get all cookies from the browser
     const cookies = document.cookie; // Example: "accessToken=abc123; refreshToken=xyz456"
-  
+
     // Find the accessToken from the cookies
     const accessTokenCookie = cookies
       .split("; ")
-      .find(row => row.startsWith("accessToken="));
-  
+      .find((row) => row.startsWith("accessToken="));
+
     // Extract token value
     const accessToken = accessTokenCookie
       ? accessTokenCookie.split("=")[1]
       : null;
-  
+
     //console.log("Access Token:", accessToken);
-  
+
     if (!accessToken) {
       alert("Please log in first");
       return false;
     }
-  
+
     return true;
   };
-  
 
   return (
     <div id="about" className="relative h-screen z-[10]">
@@ -158,10 +156,10 @@ const Result = () => {
           <button
             className="text-white font-semibold hover:text-gray-900"
             onClick={() => {
-              if(isLoggedIn()){
-                navigate("/companyDetails")
+              if (isLoggedIn()) {
+                navigate("/companyDetails");
               }
-              }}
+            }}
           >
             Add a Business
           </button>
@@ -594,7 +592,14 @@ const Result = () => {
                   <h3 className="font-bold text-black">Indian Hotels</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-black text-2xl mt-5">Click to visit</p>
+                <p
+                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
+                  onClick={() =>
+                    window.open("https://www.najcos.com/", "_blank")
+                  }
+                >
+                  Click to visit
+                </p>
               </div>
 
               {/* <!-- Card 2 --> */}
@@ -604,7 +609,12 @@ const Result = () => {
                   <h3 className="font-bold text-black">Indian Food</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-black text-2xl mt-5">Click to visit</p>
+                <p
+                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
+                  onClick={() => window.open("https://jaipursweets.com.au/", "_blank")}
+                >
+                  Click to visit
+                </p>
               </div>
 
               {/* <!-- Card 3 --> */}
@@ -614,7 +624,12 @@ const Result = () => {
                   <h3 className="font-bold text-black">Accessories</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p className="text-black text-2xl mt-5">Click to visit</p>
+                <p
+                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
+                  onClick={() => window.open("https://eoniancare.com.au/", "_blank")}
+                >
+                  Click to visit
+                </p>
               </div>
             </div>
 
@@ -667,10 +682,10 @@ const Result = () => {
                 <button
                   className="mt-4 px-6 py-3 cursor-pointer bg-[#02336B] text-white font-semibold rounded-md  transition"
                   onClick={() => {
-                    if(isLoggedIn()){
-                      navigate("/companyDetails")
+                    if (isLoggedIn()) {
+                      navigate("/companyDetails");
                     }
-                    }}
+                  }}
                 >
                   List Now
                 </button>
