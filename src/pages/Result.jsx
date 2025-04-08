@@ -36,7 +36,7 @@ import axios from "axios";
 const Result = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
-
+  //const [LoggedIn, setLoggedIn] = useState(false);
   // weather
   const [wLocation, wSetLocation] = useState("");
   const [weather, setWeather] = useState(null);
@@ -115,6 +115,32 @@ const Result = () => {
     }
   };
 
+
+  const isLoggedIn = () => {
+    // Get all cookies from the browser
+    const cookies = document.cookie; // Example: "accessToken=abc123; refreshToken=xyz456"
+  
+    // Find the accessToken from the cookies
+    const accessTokenCookie = cookies
+      .split("; ")
+      .find(row => row.startsWith("accessToken="));
+  
+    // Extract token value
+    const accessToken = accessTokenCookie
+      ? accessTokenCookie.split("=")[1]
+      : null;
+  
+    //console.log("Access Token:", accessToken);
+  
+    if (!accessToken) {
+      alert("Please log in first");
+      return false;
+    }
+  
+    return true;
+  };
+  
+
   return (
     <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
@@ -131,7 +157,11 @@ const Result = () => {
         <div className="hidden md:flex space-x-10 pr-30">
           <button
             className="text-white font-semibold hover:text-gray-900"
-            onClick={() => navigate("/companyDetails")}
+            onClick={() => {
+              if(isLoggedIn()){
+                navigate("/companyDetails")
+              }
+              }}
           >
             Add a Business
           </button>
@@ -636,7 +666,11 @@ const Result = () => {
 
                 <button
                   className="mt-4 px-6 py-3 cursor-pointer bg-[#02336B] text-white font-semibold rounded-md  transition"
-                  onClick={() => navigate("/companyDetails")}
+                  onClick={() => {
+                    if(isLoggedIn()){
+                      navigate("/companyDetails")
+                    }
+                    }}
                 >
                   List Now
                 </button>

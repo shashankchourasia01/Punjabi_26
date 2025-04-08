@@ -43,32 +43,36 @@ function Login({setShowLogin}) {
 
   //use url for login component
   const onLogin = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     let newUrl = url;
-    if (currState==="Login") {
-      newUrl += "/api/users/login"
-      }
-      else{
-        newUrl += "/api/users/register"
-      }
-      const response = await axios.post(newUrl,data, {withCredentials: true})
-      //console.log(response);
-      
-      if (response.status == 200) {
-        console.log("LoggedIN");
-        
-        setToken(response.data.token);
-        localStorage.setItem("token", response.data.token);
-        console.log(response.data.token);
-        
-        //setShowLogin(false);
+  
+    if (currState === "Login") {
+      newUrl += "/api/users/login";
+    } else {
+      newUrl += "/api/users/register";
+    }
+  
+    try {
+      const response = await axios.post(newUrl, data, { withCredentials: true });
+  
+      if (response.status === 200) {
+        const { token, refreshToken } = response.data;
+  
+        console.log("Logged in successfully");
+        localStorage.setItem("token", token);
+        if (refreshToken) {
+          localStorage.setItem("refreshToken", refreshToken);
+        }
+  
+        setToken(token);
         navigate("/result");
       }
-      else{
-        alert(response.data.message)
-      }
-
-  }
+    } catch (error) {
+      console.error(error);
+      alert(error?.response?.data?.message || "Login failed");
+    }
+  };
+  
 
 
 

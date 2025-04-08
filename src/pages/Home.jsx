@@ -30,6 +30,31 @@ const Home = () => {
     navigate("/blogs");
   };
 
+  const isLoggedIn = () => {
+    // Get all cookies from the browser
+    const cookies = document.cookie; // Example: "accessToken=abc123; refreshToken=xyz456"
+  
+    // Find the accessToken from the cookies
+    const accessTokenCookie = cookies
+      .split("; ")
+      .find(row => row.startsWith("acessToken="));
+  
+    // Extract token value
+    const accessToken = accessTokenCookie
+      ? accessTokenCookie.split("=")[1]
+      : null;
+  
+   // console.log("Access Token:", accessToken);
+  
+    if (!accessToken) {
+      alert("Please log in first");
+      return false;
+    }
+  
+    return true;
+  };
+  
+
   return (
     <div className="relative h-screen z-[10]">
       {/* Navbar */}
@@ -45,7 +70,11 @@ const Home = () => {
         {/* Nav Links */}
         <div className="flex justify-center ml-4 items-center space-x-10 w-[100%]">
           <button
-            onClick={() => navigate("/companyDetails")}
+            onClick={() => {
+              if(isLoggedIn()){
+                navigate("/companyDetails")
+              }
+              }}
             className="text-white font-semibold hover:text-gray-900"
           >
             Add a Business
