@@ -4,6 +4,8 @@ import axios from "axios";
 import { Star, X } from "lucide-react";
 import { Card, CardContent } from "../components/ui/Card";
 import { Button } from "../components/ui/Button";
+import premium from "../explore_assets/premium.png";
+import verified from "../explore_assets/verified.png";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
@@ -134,49 +136,81 @@ const CategoryPage = () => {
         }`}
       >
         <div className="flex w-full rounded-xl overflow-hidden relative">
-          {/* Left Side with Green Background and Image */}
-          <div className="w-1/2 bg-[#004225] relative flex flex-col items-center justify-center p-4">
-            {/* Semi-circle effect */}
-            <div className="absolute left-0 top-0 h-full w-full rounded-r-full bg-[#004225] -z-10" />
-            <img
-              src={businessPopup.imageUrl}
-              alt="business"
-              className="w-[90%] h-[250px] object-cover rounded-lg z-10"
-            />
-            <div className="flex gap-4 mt-4 z-10">
-              <span className="flex items-center gap-1 bg-yellow-600 text-white px-4 py-1 rounded-full font-semibold text-sm">
-                👑 Premium
+          {/* Left Side with Blue Background and Image */}
+          <div className="w-1/2  relative flex flex-col items-center justify-center p-4">
+            {/* Semi-circle effect on left */}
+            <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#004080]" />
+
+            {/* Image with Fashion Fab label and stars */}
+            <div className="relative z-10">
+              <img
+                src={businessPopup.imageUrl}
+                alt="business"
+                className="w-[90%] h-[250px] object-cover rounded-lg"
+              />
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#185432] text-white px-6 py-1 font-bold text-sm whitespace-nowrap min-w-[340px] flex justify-between items-center">
+                <span>Fashion Fab</span>
+                <span className="text-yellow-400 text-lg">★★★★☆</span>
+              </div>
+            </div>
+
+            {/* Premium and Verified badges */}
+            <div className="flex gap-2 mt-8 z-10">
+              <span className="flex items-center gap-1 bg-[#185432] text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+                <img src={premium} alt="Premium" className="w-8 h-6" />
+                Premium
               </span>
-              <span className="flex items-center gap-1 bg-green-600 text-white px-4 py-1 rounded-full font-semibold text-sm">
-                ✅ Verified
+              <span className="flex items-center gap-1 bg-[#185432] text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+                <img src={verified} alt="Verified" className="w-8 h-6" />
+                Verified
               </span>
             </div>
           </div>
 
           {/* Right Side Info */}
           <div className="w-1/2 p-6 flex flex-col justify-between">
-            <div>
-              <p className="mb-2">
-                <strong>Business Name:</strong> {businessPopup.aboutCompany}
-              </p>
-              <p className="mb-2">
-                <strong>Address:</strong> {businessPopup.address.street},{" "}
-                {businessPopup.address.city}
-              </p>
-              <p className="mb-2">
-                <strong>Services:</strong>{" "}
-                {businessPopup.serviceProducts.map((e, i) => (
-                  <span key={i} className="mx-1">
-                    |{e}|
-                  </span>
-                ))}
-              </p>
-              <p className="mb-2">
-                <strong>Phone:</strong> {/* Add phone if available */}
-              </p>
-              <p className="mb-2">
-                <strong>Email:</strong> {/* Add email if available */}
-              </p>
+            <div className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-800">Clothing</h2>
+
+              <div>
+                <p className="font-semibold text-gray-700">Business Name:</p>
+                <p className="text-gray-600">{businessPopup.aboutCompany}</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700">Working Hours:</p>
+                <p className="text-gray-600">
+                  {/* Add working hours if available */}
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700">Address:</p>
+                <p className="text-gray-600">
+                  {businessPopup.address.street}, {businessPopup.address.city}
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700">Services:</p>
+                <p className="text-gray-600">
+                  {businessPopup.serviceProducts.map((e, i) => (
+                    <span key={i} className="mx-1">
+                      |{e}|
+                    </span>
+                  ))}
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700">Phone:</p>
+                <p className="text-gray-600">{/* Add phone if available */}</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700">Email:</p>
+                <p className="text-gray-600">{/* Add email if available */}</p>
+              </div>
             </div>
 
             {/* Action Buttons */}
@@ -186,15 +220,12 @@ const CategoryPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="bg-[#4a7c59] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#3d644a]">
+                <button className="bg-[#FF9E2F] text-white font-semibold px-5 py-2 rounded-md cursor-pointer">
                   Visit Website
                 </button>
               </a>
 
-              <button
-                onClick={() => setDetail(false)}
-                className="bg-[#4a7c59] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#3d644a]"
-              >
+              <button className="bg-[#FF9E2F] text-white font-semibold px-5 py-2 rounded-md cursor-pointer">
                 Get Direction
               </button>
             </div>
