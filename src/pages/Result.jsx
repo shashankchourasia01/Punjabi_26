@@ -38,7 +38,7 @@ const Result = () => {
   const [showForm, setShowForm] = useState(false);
   //const [LoggedIn, setLoggedIn] = useState(false);
   // weather
-  const [wLocation, wSetLocation] = useState("");
+  // const [wLocation, wSetLocation] = useState("");
   const [weather, setWeather] = useState(null);
 
   //const location = useLocation("");
@@ -90,9 +90,9 @@ const Result = () => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
   };
 
-  // weather
 
-  const handleWeatherChange = (e) => {
+   // weather
+   const handleWeatherChange = (e) => {
     setLocation(e.target.value);
   };
 
@@ -106,7 +106,7 @@ const Result = () => {
       const response = await fetch(url);
       const data = await response.json();
       if (data.main) {
-        wSetLocation(data);
+        setWeather(data); // Changed from setLocation to setWeather
       } else {
         alert("City not found!");
       }
@@ -114,6 +114,8 @@ const Result = () => {
       console.error("Error fetching weather data:", error);
     }
   };
+
+  
 
   const isLoggedIn = () => {
     // Get all cookies from the browser
@@ -248,7 +250,8 @@ const Result = () => {
 
       {/* Weather checker */}
 
-      <div
+      <div>
+        <div
         id="weatherBox"
         className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
       >
@@ -283,6 +286,7 @@ const Result = () => {
           </div>
         )}
       </div>
+    </div>
 
       {showForm && (
         <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
