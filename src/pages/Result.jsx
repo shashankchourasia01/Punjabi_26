@@ -32,6 +32,7 @@ import Group_11 from "../result_assets/Group 11.png";
 import blue_bg from "../main_assets/blue_bg.png";
 import { useState } from "react";
 import axios from "axios";
+import { X } from "lucide-react";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const Result = () => {
   // weather
   // const [wLocation, wSetLocation] = useState("");
   const [weather, setWeather] = useState(null);
+  const [showWeather, setShowWeather] = useState(true);
 
   //const location = useLocation("");
   const [primaryBusiness, setprimaryBusiness] = useState("");
@@ -90,9 +92,8 @@ const Result = () => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
   };
 
-
-   // weather
-   const handleWeatherChange = (e) => {
+  // weather
+  const handleWeatherChange = (e) => {
     setLocation(e.target.value);
   };
 
@@ -114,8 +115,6 @@ const Result = () => {
       console.error("Error fetching weather data:", error);
     }
   };
-
-  
 
   const isLoggedIn = () => {
     // Get all cookies from the browser
@@ -252,41 +251,57 @@ const Result = () => {
 
       <div>
         <div
-        id="weatherBox"
-        className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
-      >
-        {/* Weather Search Input */}
-        <form onSubmit={handleWeatherSubmit} className="flex">
-          {/* Location Input */}
-          <input
-            type="text"
-            placeholder="Search the Weather..."
-            name="location"
-            onChange={handleWeatherChange}
-            className="w-[800px] p-3 rounded-2xl focus:outline-none text-black border border-gray-300 m-2"
-          />
+          id="weatherBox"
+          className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
+        >
+          {/* Weather Search Input */}
+          <form onSubmit={handleWeatherSubmit} className="flex">
+            {/* Location Input */}
+            <input
+              type="text"
+              placeholder="Search the Weather..."
+              name="location"
+              onChange={handleWeatherChange}
+              className="w-[800px] p-3 rounded-2xl focus:outline-none text-black border border-gray-300 m-2"
+            />
 
-          {/* Search Button */}
-          <button className="bg-[#FF9E2F] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
-            <img src={search_icon} alt="Search" className="w-[50px] " />
-          </button>
-        </form>
+            {/* Search Button */}
+            <button className="bg-[#FF9E2F] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
+              <img src={search_icon} alt="Search" className="w-[50px] " />
+            </button>
+          </form>
 
-        {/* Display Weather Information */}
-        {weather && (
-          <div className="absolute z-10 mt-[100px] ml-40 bg-white w-[1200px] rounded-b-2xl shadow-lg p-5 text-black">
-            <h2 className="text-xl font-semibold mb-2">
-              Weather in {weather.name}
-            </h2>
-            <p className="mb-1">🌡️ Temperature: {weather.main.temp}°C</p>
-            <p className="mb-1">
-              🌤️ Condition: {weather.weather[0].description}
-            </p>
-            <p>💧 Humidity: {weather.main.humidity}%</p>
-          </div>
-        )}
+          {/* Display Weather Information */}
+          {weather && (
+            <div
+              id="weather_search"
+              className="absolute z-10 mt-[100px] bg-white w-[1200px] rounded-b-2xl shadow-lg p-5 text-black"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => {
+                  setWeather(null); // clear weather result
+                  document
+                    .getElementById("weather_search")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="absolute top-3 right-3 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <h2 className="text-xl font-semibold mb-2">
+                Weather in {weather.name}
+              </h2>
+              <p className="mb-1">🌡️ Temperature: {weather.main.temp}°C</p>
+              <p className="mb-1">
+                🌤️ Condition: {weather.weather[0].description}
+              </p>
+              <p>💧 Humidity: {weather.main.humidity}%</p>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
 
       {showForm && (
         <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">

@@ -17,6 +17,7 @@ const CategoryPage = () => {
     address: {},
     serviceProducts: [],
     imageUrl: "",
+    website: "",
   });
 
   useEffect(() => {
@@ -63,6 +64,7 @@ const CategoryPage = () => {
                   address: business.address,
                   serviceProducts: business.serviceProducts,
                   imageUrl: business.imageUrl,
+                  website: business.website,
                 });
               }}
             >
@@ -127,32 +129,76 @@ const CategoryPage = () => {
       <div
         className={`${
           detail
-            ? "block w-[60%] mx-auto bg-white z-[10] absolute top-35 left-50 right-50 shadow-2xl transition duration-300 delay-150 ease-in"
+            ? "block w-[70%] mx-auto bg-white z-[10] absolute top-30 left-0 right-0 rounded-xl shadow-2xl transition duration-300 delay-150 ease-in"
             : "opacity-0"
         }`}
       >
-        <div className="overflow-hidden rounded-lg cursor-pointer flex flex-col justify-center items-start p-8">
-          <p>
-            <strong>Name</strong>: {businessPopup.aboutCompany}
-          </p>
-          <p>
-            <strong>Services</strong>:{" "}
-            {businessPopup.serviceProducts.map((e, i) => (
-              <span key={i}>|{e}| </span>
-            ))}
-          </p>
-          <p>
-            <strong>Address</strong>: {businessPopup.address.street},{" "}
-            {businessPopup.address.city}
-          </p>
-        </div>
-        <div className="flex justify-center items-center">
-          <button
-            onClick={() => setDetail(false)}
-            className="bg-blue-600 p-8 h-8 flex justify-center items-center m-8"
-          >
-            Back
-          </button>
+        <div className="flex w-full rounded-xl overflow-hidden relative">
+          {/* Left Side with Green Background and Image */}
+          <div className="w-1/2 bg-[#004225] relative flex flex-col items-center justify-center p-4">
+            {/* Semi-circle effect */}
+            <div className="absolute left-0 top-0 h-full w-full rounded-r-full bg-[#004225] -z-10" />
+            <img
+              src={businessPopup.imageUrl}
+              alt="business"
+              className="w-[90%] h-[250px] object-cover rounded-lg z-10"
+            />
+            <div className="flex gap-4 mt-4 z-10">
+              <span className="flex items-center gap-1 bg-yellow-600 text-white px-4 py-1 rounded-full font-semibold text-sm">
+                👑 Premium
+              </span>
+              <span className="flex items-center gap-1 bg-green-600 text-white px-4 py-1 rounded-full font-semibold text-sm">
+                ✅ Verified
+              </span>
+            </div>
+          </div>
+
+          {/* Right Side Info */}
+          <div className="w-1/2 p-6 flex flex-col justify-between">
+            <div>
+              <p className="mb-2">
+                <strong>Business Name:</strong> {businessPopup.aboutCompany}
+              </p>
+              <p className="mb-2">
+                <strong>Address:</strong> {businessPopup.address.street},{" "}
+                {businessPopup.address.city}
+              </p>
+              <p className="mb-2">
+                <strong>Services:</strong>{" "}
+                {businessPopup.serviceProducts.map((e, i) => (
+                  <span key={i} className="mx-1">
+                    |{e}|
+                  </span>
+                ))}
+              </p>
+              <p className="mb-2">
+                <strong>Phone:</strong> {/* Add phone if available */}
+              </p>
+              <p className="mb-2">
+                <strong>Email:</strong> {/* Add email if available */}
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex justify-between mt-6">
+              <a
+                href={businessPopup.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-[#4a7c59] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#3d644a]">
+                  Visit Website
+                </button>
+              </a>
+
+              <button
+                onClick={() => setDetail(false)}
+                className="bg-[#4a7c59] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#3d644a]"
+              >
+                Get Direction
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
