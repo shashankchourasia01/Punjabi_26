@@ -260,11 +260,11 @@ const Result = () => {
             placeholder="Search the Weather..."
             name="location"
             onChange={handleWeatherChange}
-            className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
+            className="w-[800px] p-3 rounded-2xl focus:outline-none text-black border border-gray-300 m-2"
           />
 
           {/* Search Button */}
-          <button className="bg-[#FF9E2F] text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
+          <button className="bg-[#FF9E2F] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
             <img src={search_icon} alt="Search" className="w-[50px] " />
           </button>
         </form>
@@ -350,41 +350,51 @@ const Result = () => {
       {/* 8 options */}
 
       {search ? (
-        <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mt-50 mb-20">
-            {results.data.map((el) => (
-              <div
-                key={el.id}
-                className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
-              >
-                <div className="bg-blue-800 h-40 flex items-center justify-center text-white">
-                  <img
-                    src={el.image || "https://via.placeholder.com/150"}
-                    alt={el.businessName}
-                    className="w-70 h-34 object-cover  border-2 border-white shadow-md"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="text-xl font-semibold text-orange-800">
-                    {el.businessName} - {el.address.street}{" "}
-                  </h3>
-                  <p className="text-gray-600 mt-2">
-                    <a
-                      href={el.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 underline"
-                    >
-                      Visit Website
-                    </a>
-                  </p>
+        <div className="relative">
+          {/* Close Icon */}
+          <button
+            onClick={() => (window.location.href = "/result")}
+            className="absolute top-4 right-4 z-10 text-black text-2xl font-bold bg-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-gray-100"
+          >
+            &times;
+          </button>
 
-                  <button className="mt-4 px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700">
-                    View Details
-                  </button>
+          <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 mt-20 mb-20">
+              {results.data.map((el) => (
+                <div
+                  key={el.id}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
+                >
+                  <div className="bg-gradient-to-b from-[#004080] to-[#002954] h-40 flex items-center justify-center text-white">
+                    <img
+                      src={el.image || "https://via.placeholder.com/150"}
+                      alt={el.businessName}
+                      className="w-70 h-34 object-cover  border-2 border-white shadow-md"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h3 className="text-xl font-semibold text-black">
+                      {el.businessName} - {el.address.street}{" "}
+                    </h3>
+                    <p className="text-gray-600 mt-2">
+                      <a
+                        href={el.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#002954] underline"
+                      >
+                        Visit Website
+                      </a>
+                    </p>
+
+                    <button className="mt-4 px-4 py-2 bg-[#FF9E2F] text-white rounded-lg ">
+                      View Details
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       ) : (
@@ -611,7 +621,9 @@ const Result = () => {
                 </div>
                 <p
                   className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                  onClick={() => window.open("https://jaipursweets.com.au/", "_blank")}
+                  onClick={() =>
+                    window.open("https://jaipursweets.com.au/", "_blank")
+                  }
                 >
                   Click to visit
                 </p>
@@ -626,7 +638,9 @@ const Result = () => {
                 </div>
                 <p
                   className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                  onClick={() => window.open("https://eoniancare.com.au/", "_blank")}
+                  onClick={() =>
+                    window.open("https://eoniancare.com.au/", "_blank")
+                  }
                 >
                   Click to visit
                 </p>
