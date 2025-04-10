@@ -156,11 +156,11 @@ const CategoryPage = () => {
 
             {/* Premium and Verified badges */}
             <div className="flex gap-2 mt-8 z-10">
-              <span className="flex items-center gap-1 bg-[#185432] text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+              <span className="flex items-center gap-1 bg-[#185432] bg-opacity-25 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
                 <img src={premium} alt="Premium" className="w-8 h-6" />
                 Premium
               </span>
-              <span className="flex items-center gap-1 bg-[#185432] text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+              <span className="flex items-center gap-1 bg-[#185432] bg-opacity-25 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
                 <img src={verified} alt="Verified" className="w-8 h-6" />
                 Verified
               </span>
