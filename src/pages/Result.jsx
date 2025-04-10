@@ -621,14 +621,12 @@ const Result = () => {
                   <h3 className="font-bold text-black">Indian Hotels</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p
-                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                  onClick={() =>
-                    window.open("https://www.najcos.com/", "_blank")
-                  }
+                <Link
+                  to="/explore_more"
+                  className="text-black text-2xl mt-8 cursor-pointer hover:underline"
                 >
-                  Click to visit
-                </p>
+                  Click to Explore
+                </Link>
               </div>
 
               {/* <!-- Card 2 --> */}
@@ -638,14 +636,12 @@ const Result = () => {
                   <h3 className="font-bold text-black">Indian Food</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p
+                <Link
+                  to="/explore_more"
                   className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                  onClick={() =>
-                    window.open("https://jaipursweets.com.au/", "_blank")
-                  }
                 >
-                  Click to visit
-                </p>
+                  Click to Explore
+                </Link>
               </div>
 
               {/* <!-- Card 3 --> */}
@@ -655,14 +651,12 @@ const Result = () => {
                   <h3 className="font-bold text-black">Accessories</h3>
                   <div className="text-yellow-300">★★★★★</div>
                 </div>
-                <p
+                <Link
+                  to="/explore_more"
                   className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                  onClick={() =>
-                    window.open("https://eoniancare.com.au/", "_blank")
-                  }
                 >
-                  Click to visit
-                </p>
+                  Click to Explore
+                </Link>
               </div>
             </div>
 
