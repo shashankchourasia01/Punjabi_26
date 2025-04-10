@@ -311,14 +311,14 @@ const Explore = () => {
               {/* Left Side with Blue Background and Image */}
               <div className="w-1/2  relative flex flex-col items-center justify-center p-4">
                 {/* Semi-circle effect on left */}
-                <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#185432]" />
+                <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#D72E33]" />
 
                 {/* Image with Fashion Fab label and stars */}
                 <div className="relative z-10">
                   <img
                     src={selectedBusiness.image}
                     alt="business"
-                    className="w-full h-[280px] object-cover rounded-lg mt-5"
+                    className="w-full h-[280px] object-cover rounded-lg "
                   />
                   <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#185432] opacity-90  text-white px-6 py-1 font-bold text-sm whitespace-nowrap w-full min-w-[340px] flex justify-between items-center">
                     <span>{selectedBusiness.aboutCompany}</span>

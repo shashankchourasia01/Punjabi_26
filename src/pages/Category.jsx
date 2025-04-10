@@ -139,7 +139,7 @@ const CategoryPage = () => {
           {/* Left Side with Blue Background and Image */}
           <div className="w-1/2  relative flex flex-col items-center justify-center p-4">
             {/* Semi-circle effect on left */}
-            <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#004080]" />
+            <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#D72E33]" />
 
             {/* Image with Fashion Fab label and stars */}
             <div className="relative z-10">
@@ -148,7 +148,7 @@ const CategoryPage = () => {
                 alt="business"
                 className="w-[90%] h-[250px] object-cover rounded-lg"
               />
-              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#185432] text-white px-6 py-1 font-bold text-sm whitespace-nowrap min-w-[340px] flex justify-between items-center">
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#185432] opacity-90 text-white px-6 py-1 font-bold text-sm whitespace-nowrap min-w-[340px] flex justify-between items-center">
                 <span>Fashion Fab</span>
                 <span className="text-yellow-400 text-lg">★★★★☆</span>
               </div>
@@ -156,11 +156,11 @@ const CategoryPage = () => {
 
             {/* Premium and Verified badges */}
             <div className="flex gap-2 mt-8 z-10">
-              <span className="flex items-center gap-1 bg-[#185432] bg-opacity-25 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+              <span className="flex items-center gap-1 bg-[#185432] opacity-90 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
                 <img src={premium} alt="Premium" className="w-8 h-6" />
                 Premium
               </span>
-              <span className="flex items-center gap-1 bg-[#185432] bg-opacity-25 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
+              <span className="flex items-center gap-1 bg-[#185432] opacity-90 text-yellow-500 px-6 py-2 rounded-md font-semibold text-sm">
                 <img src={verified} alt="Verified" className="w-8 h-6" />
                 Verified
               </span>

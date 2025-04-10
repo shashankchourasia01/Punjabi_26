@@ -1,6 +1,6 @@
 import React from "react";
 import paji from "../home_assets/result_new1.jpg";
-import logo from "../home_assets/punjabi logo.png";
+import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
 import search_icon from "../home_assets/search icon.png";
 import bus from "../result_assets/bus_new.png";
@@ -240,7 +240,7 @@ const Result = () => {
             />
 
             {/* Search Button */}
-            <button className="bg-[#FF9E2F] text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
+            <button className="bg-[#F09918] text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
               <img src={search_icon} alt="Search" className="w-[50px]" />
             </button>
           </form>
@@ -266,7 +266,7 @@ const Result = () => {
             />
 
             {/* Search Button */}
-            <button className="bg-[#FF9E2F] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
+            <button className="bg-[#F09918] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
               <img src={search_icon} alt="Search" className="w-[50px] " />
             </button>
           </form>
@@ -424,7 +424,7 @@ const Result = () => {
           >
             <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
               <button key={"food"} onClick={() => handleCategoryClick("Food")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={dining}
                     alt="Food & Beverages"
@@ -442,7 +442,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Beauty & Wellness")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={spa}
                     alt="Food & Beverages"
@@ -460,7 +460,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Apparel & Accessories")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={clothing_store}
                     alt="Food & Beverages"
@@ -478,7 +478,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Education")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={cap}
                     alt="Food & Beverages"
@@ -496,7 +496,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Health")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={health}
                     alt="Food & Beverages"
@@ -514,7 +514,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Wedding and Events")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={church}
                     alt="Food & Beverages"
@@ -532,7 +532,7 @@ const Result = () => {
                 key={"food"}
                 onClick={() => handleCategoryClick("Logistic Services")}
               >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={bus}
                     alt="Food & Beverages"
@@ -547,7 +547,7 @@ const Result = () => {
 
             <div className="flex items-center justify-center flex-col mt-10 w-40">
               <button key={"food"} onClick={handleCategoryClickToMore}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#FF9E2F] to-[#FFFFFF]">
+                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
                   <img
                     src={more_icon}
                     alt="Food & Beverages"
@@ -563,7 +563,7 @@ const Result = () => {
 
           {/* 500k+  3  */}
 
-          <div className=" bg-gradient-to-b from-[#004080] to-[#01346B] py-22 flex justify-around items-center w-full relative">
+          <div className=" bg-[#1575C2] py-22 flex justify-around items-center w-full relative">
             <div className="stat relative text-center">
               <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 500+
@@ -601,12 +601,12 @@ const Result = () => {
               id="featuredBusiness"
               className="flex justify-between items-center mb-6 mt-18"
             >
-              <h2 className="text-4xl font-bold text-[#01346B] ml-20">
+              <h2 className="text-4xl font-bold text-[#F09918] ml-20">
                 Featured Business
               </h2>
               <button
                 onClick={handleCategoryClickToExplore}
-                className="bg-[#01346B] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95"
+                className="bg-[#F09918] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95"
               >
                 Explore More
               </button>
@@ -707,7 +707,7 @@ const Result = () => {
                 </p>
 
                 <button
-                  className="mt-4 px-6 py-3 cursor-pointer bg-[#02336B] text-white font-semibold rounded-md  transition"
+                  className="mt-4 px-6 py-3 cursor-pointer bg-[#D72E2F] text-white font-semibold rounded-md  transition"
                   onClick={() => {
                     if (isLoggedIn()) {
                       navigate("/companyDetails");
@@ -889,7 +889,7 @@ const Result = () => {
                 {/* Button */}
                 <div className="absolute bottom-[-170px] ml-75">
                   <Link to="/more">
-                    <button className="bg-[#01346B] text-white px-12 py-6 rounded-md text-xl font-semibold shadow-md hover:bg-orange-700 transition">
+                    <button className="bg-[#D72E2F] text-white px-12 py-6 rounded-md text-xl font-semibold shadow-md hover:bg-orange-700 transition">
                       Search more
                     </button>
                   </Link>
@@ -899,7 +899,7 @@ const Result = () => {
           </div>
 
           {/* second last page 8 */}
-          <div className="relative bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] py-20 px-6 md:px-16 lg:px-24 ">
+          <div className="relative bg-[#1575C2] py-20 px-6 md:px-16 lg:px-24 ">
             {/* Background Image */}
             <img
               src={blue_bg}

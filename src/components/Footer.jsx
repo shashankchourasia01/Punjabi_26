@@ -1,14 +1,18 @@
 import React from "react";
 import email from "../home_assets/formkit_email.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const goToAddBusiness = () => {
+
+    const navigate = useNavigate();
+
     navigate("/companyDetails");
   };
 
   return (
-    <footer className="bg-[#FF9E2F] text-black mt-auto pt-[4rem] w-full mb-0">
+    <footer className="bg-[#F09918] text-black mt-auto pt-[4rem] w-full mb-0">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Left Section */}
         <div className="mb-8 ">

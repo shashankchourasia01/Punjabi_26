@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import logo from "../main_assets/punjabi logo.png";
+import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
 
 const Dashboard = () => {

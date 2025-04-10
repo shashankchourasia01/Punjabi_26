@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import home from "../main_assets/new_home_bg.jpg";
-import logo from "../home_assets/punjabi logo.png";
+import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
 import girl from "../main_assets/orange_girl.png";
 import people from "../home_assets/people.png";
@@ -211,7 +211,7 @@ const Home = () => {
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FF9E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#D72E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
             <span className="mt-4 text-2xl font-semibold text-black">
@@ -220,7 +220,7 @@ const Home = () => {
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-gradient-to-b from-[#FFA43C] to-[#FFFFFF] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#D72E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
             <span className="mt-4 text-2xl font-semibold text-black">
@@ -229,7 +229,7 @@ const Home = () => {
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#FDF6E3] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#D72E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
             <span className="mt-4 text-2xl font-semibold text-black">
@@ -242,7 +242,7 @@ const Home = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
           {/* <!-- Left Text --> */}
           <div className="md:w-1/2 mt-30">
-            <h1 className="text-5xl font-bold text-[#01346B] ml-20">
+            <h1 className="text-5xl font-bold text-[#F09918] ml-20">
               List Your Business Details
             </h1>
             <p className="mt-4 ml-20 text-[#646464] text-2xl">
@@ -269,11 +269,11 @@ const Home = () => {
 
       {/* List Business page  */}
 
-      <section className="bg-gradient-to-b from-[#004080] to-[#002954] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
+    <section className="bg-[#1575C2] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
-            Why List Your <span className="text-orange-600">Business</span> with
+            Why List Your <span className="text-[#F09918]">Business</span> with
             Us?
           </h1>
           <p className="text-2xl text-gray-300 mt-12 ml-15 leading-relaxed">
@@ -354,7 +354,7 @@ const Home = () => {
       <section className="bg-[#FFFDF5] py-16 px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#01346B] mt-18 mr-118">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#D72E2F] mt-18 mr-118">
             Explore Answers to your Question!
           </h2>
         </div>
@@ -363,7 +363,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-6xl mx-auto mt-25">
           {/* FAQ Item 1 */}
           <div className=" p-6  ">
-            <h2 className="text-3xl font-semibold text-[#454545]">
+            <h2 className="text-3xl font-semibold text-[#F09918]">
               Q. What is Panjabi Pages?
             </h2>
             <p className="text-[#454545] mt-2 text-xl">
@@ -376,7 +376,7 @@ const Home = () => {
 
           {/* FAQ Item 2 */}
           <div className=" p-6 ">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. Is Panjabi Pages only for Punjabi-owned businesses?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -388,7 +388,7 @@ const Home = () => {
 
           {/* FAQ Item 3 */}
           <div className=" p-6  ">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. How can I list my business on Panjabi Pages?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -400,7 +400,7 @@ const Home = () => {
 
           {/* FAQ Item 4 */}
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. Is there a fee to list a business?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -411,7 +411,7 @@ const Home = () => {
 
           {/* FAQ Item 5 */}
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. Can I search by location or business category?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -423,7 +423,7 @@ const Home = () => {
           {/* FAQ Item 6 */}
 
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. Can I leave reviews for businesses?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -435,7 +435,7 @@ const Home = () => {
           {/* FAQ Item 7 */}
 
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. Is the app available on both Android and iOS?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
@@ -447,7 +447,7 @@ const Home = () => {
           {/* FAQ Item 8 */}
 
           <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#454545]">
+            <h3 className="text-3xl font-semibold text-[#F09918]">
               Q. How do I update my business details?
             </h3>
             <p className="text-[#454545] mt-2 text-xl">
