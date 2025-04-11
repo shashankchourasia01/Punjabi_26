@@ -2,7 +2,7 @@
 
 import React, { useContext,  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../main_assets/punjabi logo.png'
+import logo from '../explore_assets/new_logo.jpeg'
 import pagi from '../main_assets/pagi1.jpeg';
 import google from '../main_assets/google_icon.png'
 import x from '../main_assets/x_icon.png'
