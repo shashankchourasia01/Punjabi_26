@@ -48,7 +48,7 @@ const CategoryPage = () => {
       >
         <X className="w-5 h-5" />
       </button>
-      <h2 className="text-center text-[2rem] mt-8 bg-[#002248] text-white p-4 rounded-lg">
+      <h2 className="text-center text-[2rem] mt-8 bg-[#1077BC] text-white p-4 rounded-lg">
         Businesses in {categoryName}
       </h2>
       <div
@@ -67,6 +67,9 @@ const CategoryPage = () => {
                   serviceProducts: business.serviceProducts,
                   imageUrl: business.imageUrl,
                   website: business.website,
+                  workingHour: business.workingHour,
+                  email: business.email,
+                  phone: business.phone,
                 });
               }}
             >
@@ -139,7 +142,7 @@ const CategoryPage = () => {
           {/* Left Side with Blue Background and Image */}
           <div className="w-1/2  relative flex flex-col items-center justify-center p-4">
             {/* Semi-circle effect on left */}
-            <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#D72E33]" />
+            <div className="absolute -left-1/2 top-0 h-full w-full rounded-r-full bg-[#D72E2F]" />
 
             {/* Image with Fashion Fab label and stars */}
             <div className="relative z-10">
@@ -180,7 +183,7 @@ const CategoryPage = () => {
               <div>
                 <p className="font-semibold text-gray-700">Working Hours:</p>
                 <p className="text-gray-600">
-                  {/* Add working hours if available */}
+                  {businessPopup.workingHour}
                 </p>
               </div>
 
@@ -204,12 +207,12 @@ const CategoryPage = () => {
 
               <div>
                 <p className="font-semibold text-gray-700">Phone:</p>
-                <p className="text-gray-600">{/* Add phone if available */}</p>
+                <p className="text-gray-600">{businessPopup.phone}</p>
               </div>
 
               <div>
                 <p className="font-semibold text-gray-700">Email:</p>
-                <p className="text-gray-600">{/* Add email if available */}</p>
+                <p className="text-gray-600">{businessPopup.email}</p>
               </div>
             </div>
 

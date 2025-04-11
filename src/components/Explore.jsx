@@ -201,7 +201,7 @@ const Explore = () => {
       </button>
 
       <h1 className="text-3xl font-bold mb-4 text-gray-800">
-        <span className="bg-gradient-to-r from-[#004080] to-[#002954] bg-clip-text text-transparent">
+        <span className="bg-[#D72E2F] bg-clip-text text-transparent">
           Recently Added Business
         </span>
       </h1>
@@ -237,7 +237,7 @@ const Explore = () => {
 
       {/* Popular Business Section */}
       <h1 className="text-3xl font-bold mb-4 mt-30 text-gray-800">
-        <span className="bg-gradient-to-r from-[#004080] to-[#002954] bg-clip-text text-transparent">
+        <span className="bg-[#D72E2F] bg-clip-text text-transparent">
           Popular Business
         </span>
       </h1>
@@ -271,7 +271,7 @@ const Explore = () => {
 
       {/* Featured Business Section */}
       <h1 className="text-3xl font-bold mt-30 mb-4 text-gray-800">
-        <span className="bg-gradient-to-r from-[#004080] to-[#002954] bg-clip-text text-transparent">
+        <span className="bg-[#D72E2F] bg-clip-text text-transparent">
           Featured Business
         </span>
       </h1>
@@ -305,7 +305,7 @@ const Explore = () => {
 
       {/* Popup Section */}
       {showPopup && selectedBusiness && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div className="fixed  inset-0 bg-white bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="w-full max-w-4xl bg-white rounded-xl shadow-2xl overflow-hidden relative">
             <div className="flex w-full">
               {/* Left Side with Blue Background and Image */}

@@ -13,6 +13,9 @@ const CompanyDetailsForm = () => {
     aboutCompany: "",
     secondaryBusiness: [],
     serviceProducts: ["", ""], // Initial 2 fields for services/products
+    workingHour: "",
+    email: "",
+    phone: "",
   };
 
   const [img, setImg] = useState(false);
@@ -70,17 +73,17 @@ const CompanyDetailsForm = () => {
 
     const form = e.target;
     const fileInput = form.querySelector('input[type="file"]');
-  
+
     const file = fileInput.files[0];
-  
+
     if (!file) {
       alert("Please select a file before uploading.");
       return;
     }
-  
+
     const formData = new FormData();
     formData.append("profileImage", file);
-  
+
     try {
       const res = await fetch("http://localhost:5000/upload", {
         method: "POST",
@@ -93,7 +96,7 @@ const CompanyDetailsForm = () => {
     } catch (err) {
       console.error("Upload failed:", err);
     }
-  }
+  };
   //  Handle Business Image Upload
   //  const handleBusinessImageChange = (e) => {
   //   const file = e.target.files[0];
@@ -104,8 +107,6 @@ const CompanyDetailsForm = () => {
   //     }));
   //   }
   // };
-
-
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -143,18 +144,24 @@ const CompanyDetailsForm = () => {
           Share Business Details To Proceed further
         </p>
 
-        <form onSubmit={handleSubmitImage} encType="multipart/form-data" className="mb-4 flex gap-x-4">
-        {/* <label htmlFor="image" className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white">click here to choose image</label> */}
-  <input
-    type="file"
-    id="image"
-    name="profileImage"
-    className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white"
-    
-  />
-  <button type="submit" className="bg-orange-600 text-white rounded-md px-4 py-2">
-    {img?"Image Uploaded":"Upload Image"}
-  </button>
+        <form
+          onSubmit={handleSubmitImage}
+          encType="multipart/form-data"
+          className="mb-4 flex gap-x-4"
+        >
+          {/* <label htmlFor="image" className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white">click here to choose image</label> */}
+          <input
+            type="file"
+            id="image"
+            name="profileImage"
+            className="block mb-2 bg-blue-800 rounded-md px-4 py-2 text-white"
+          />
+          <button
+            type="submit"
+            className="bg-orange-600 text-white rounded-md px-4 py-2"
+          >
+            {img ? "Image Uploaded" : "Upload Image"}
+          </button>
         </form>
 
         <form onSubmit={handleSubmit}>
@@ -226,6 +233,16 @@ const CompanyDetailsForm = () => {
                 onChange={handleChange}
                 className="border border-gray-300 rounded-md w-full p-2 mt-1"
               />
+
+              <label className="block font-medium mt-4">Working Hour</label>
+              <input
+                name="workingHour"
+                type="text"
+                placeholder="working hour"
+                value={data.workingHour}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
             </div>
 
             {/* Right Side */}
@@ -260,7 +277,6 @@ const CompanyDetailsForm = () => {
 
               {/* <label htmlFor="image"></label> */}
 
-
               {/* <label className="block font-medium mt-4">Business Image</label>
 
               <input
@@ -290,6 +306,26 @@ const CompanyDetailsForm = () => {
                 onChange={handleChange}
                 className="border border-gray-300 rounded-md w-full p-2 mt-1 h-24"
               ></textarea>
+
+              <label className="block font-medium">Email</label>
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={data.email}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
+
+              <label className="block font-medium">Phone</label>
+              <input
+                name="phone"
+                type="phone"
+                placeholder="phone"
+                value={data.phone}
+                onChange={handleChange}
+                className="border border-gray-300 rounded-md w-full p-2 mt-1"
+              />
             </div>
           </div>
 
@@ -339,8 +375,6 @@ const CompanyDetailsForm = () => {
               + Add More
             </button>
           </div>
-
-          
 
           <div className="flex justify-between mt-6">
             <button

@@ -269,7 +269,7 @@ const Home = () => {
 
       {/* List Business page  */}
 
-    <section className="bg-[#1575C2] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
+    <section className="bg-[#1077BC] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">

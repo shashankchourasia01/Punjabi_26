@@ -385,7 +385,7 @@ const Result = () => {
                   key={el.id}
                   className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
                 >
-                  <div className="bg-gradient-to-b from-[#004080] to-[#002954] h-40 flex items-center justify-center text-white">
+                  <div className="bg-[#1077BC] h-40 flex items-center justify-center text-white">
                     <img
                       src={el.image || "https://via.placeholder.com/150"}
                       alt={el.businessName}
@@ -407,7 +407,7 @@ const Result = () => {
                       </a>
                     </p>
 
-                    <button className="mt-4 px-4 py-2 bg-[#FF9E2F] text-white rounded-lg ">
+                    <button className="mt-4 px-4 py-2 bg-[#F09918] text-white rounded-lg ">
                       View Details
                     </button>
                   </div>
@@ -563,7 +563,7 @@ const Result = () => {
 
           {/* 500k+  3  */}
 
-          <div className=" bg-[#1575C2] py-22 flex justify-around items-center w-full relative">
+          <div className=" bg-[#1077BC] py-22 flex justify-around items-center w-full relative">
             <div className="stat relative text-center">
               <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 500+
@@ -803,7 +803,7 @@ const Result = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               {/* Left Section */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-semibold text-[#01346B] mb-4 pt-20">
+                <h1 className="text-4xl md:text-5xl font-semibold text-[#D72E2F] mb-4 pt-20">
                   How It Works ?
                 </h1>
                 <p className="text-[#646464] mb-6 pt-10 text-2xl">
@@ -819,7 +819,7 @@ const Result = () => {
                       1
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-[#01346B]">
+                      <h3 className="text-3xl font-semibold text-[#D72E2F]">
                         Search
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -835,7 +835,7 @@ const Result = () => {
                       2
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-[#01346B]">
+                      <h3 className="text-3xl font-semibold text-[#D72E2F]">
                         Discover
                       </h3>
                       <p className="text-gray-600 text-lg">
@@ -851,7 +851,7 @@ const Result = () => {
                       3
                     </div>
                     <div className="ml-12">
-                      <h3 className="text-3xl font-semibold text-[#01346B]">
+                      <h3 className="text-3xl font-semibold text-[#D72E2F]">
                         Connect
                       </h3>
                       <p className="text-gray-600 text-xl">
