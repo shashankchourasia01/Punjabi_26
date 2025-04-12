@@ -12,7 +12,7 @@ const CompanyDetailsForm = () => {
     website: "",
     aboutCompany: "",
     secondaryBusiness: [],
-    serviceProducts: ["", ""], // Initial 2 fields for services/products
+    serviceProducts: [], // Initial 2 fields for services/products
     workingHour: "",
     email: "",
     phone: "",

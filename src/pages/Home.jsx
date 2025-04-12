@@ -40,14 +40,14 @@ const Home = () => {
     // Find the accessToken from the cookies
     const accessTokenCookie = cookies
       .split("; ")
-      .find((row) => row.startsWith("acessToken="));
+      .find((row) => row.startsWith("accessToken="));
 
     // Extract token value
     const accessToken = accessTokenCookie
       ? accessTokenCookie.split("=")[1]
       : null;
 
-    // console.log("Access Token:", accessToken);
+    //console.log("Access Token:", accessToken);
 
     if (!accessToken) {
       alert("Please log in first");

@@ -70,7 +70,9 @@ const CategoryPage = () => {
                   workingHour: business.workingHour,
                   email: business.email,
                   phone: business.phone,
-                });
+                })
+                console.log(businessPopup.serviceProducts);
+                ;
               }}
             >
               <img
@@ -197,9 +199,9 @@ const CategoryPage = () => {
               <div>
                 <p className="font-semibold text-gray-700">Services:</p>
                 <p className="text-gray-600">
-                  {businessPopup.serviceProducts.map((e, i) => (
-                    <span key={i} className="mx-1">
-                      |{e}|
+                  {businessPopup.serviceProducts?.map((e,i) => (
+                    <span key={i} className="text-gray-600">
+                      {e}
                     </span>
                   ))}
                 </p>
