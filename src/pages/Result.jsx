@@ -33,6 +33,8 @@ import blue_bg from "../main_assets/blue_bg.png";
 import { useState } from "react";
 import axios from "axios";
 import { X } from "lucide-react";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../store/authSlice";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -138,6 +140,24 @@ const Result = () => {
     }
 
     return true;
+  };
+
+  //login
+  const isUserLoggedIn = useSelector((state) => state.auth.status); // Check if user is logged in
+  const dispatch = useDispatch();
+
+  //logout
+  const handleLogout = async () => {
+    dispatch(logout());
+    const response = await axios.post(
+      "http://localhost:5000/api/users/logout",
+      {},
+      { withCredentials: true }
+    );
+    console.log(response);
+    if (response.status == 200) {
+      navigate("/");
+    }
   };
 
   return (
@@ -306,63 +326,12 @@ const Result = () => {
       {showForm && (
         <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
           {/* Close Button */}
-          <button
-            onClick={() => setShowForm(false)}
-            className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-black rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold"
-          >
-            ×
-          </button>
-
-          <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
-            Register Here
-          </h5>
-          <input
-            type="text"
-            placeholder="Name"
-            className="w-full h-10 p-1 border mb-3 shadow-2xl rounded-md border-gray-300 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Company / Business Name"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Mobile"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Locality"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <div className="flex items-center mb-3">
-            <input type="checkbox" className="mr-2" />
-            <span>
-              I agree to all the{" "}
-              <a href="#" className="text-blue-600">
-                Terms of Use
-              </a>
-            </span>
-          </div>
-          <button className="w-full bg-orange-600 text-white p-2 font-bold">
-            Submit
-          </button>
-          <p className="text-center mt-2">
-            Already registered?{" "}
-            <button
-              className="text-red-600 cursor-pointer"
-              onClick={() => navigate("/login")}
-            >
-              {" "}
-              Sign in
-            </button>
-          </p>
+          {isUserLoggedIn ? (
+            <div onClick={handleLogout}>Logout</div>
+          ) : (
+            <div onClick={() => navigate("/login")}>login</div>
+          )}
+           
         </div>
       )}
 

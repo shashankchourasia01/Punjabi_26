@@ -8,6 +8,8 @@ import google from '../main_assets/google_icon.png'
 import x from '../main_assets/x_icon.png'
 import { StoreContext } from "../context/StoreContext";
 import axios from 'axios'
+import  { useDispatch } from "react-redux";
+import { login, logout } from "../store/authSlice";
 
 
 
@@ -19,6 +21,9 @@ function Login({setShowLogin}) {
   const navigate = useNavigate();
   //Fetch url from StoreContext
   const {url,setToken} = useContext(StoreContext)
+
+
+  const dispatch = useDispatch();
 
   
   //State variable to check Email and Password
@@ -57,6 +62,7 @@ function Login({setShowLogin}) {
   
       if (response.status === 200) {
         const { token, refreshToken } = response.data;
+        dispatch(login(response.data));
   
         console.log("Logged in successfully");
         localStorage.setItem("token", token);

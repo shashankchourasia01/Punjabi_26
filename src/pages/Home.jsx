@@ -8,8 +8,11 @@ import location from "../home_assets/location icon.png";
 import arcti from "../home_assets/arcticons_boost.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../store/authSlice";
+import axios from 'axios';
+
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -33,27 +36,44 @@ const Home = () => {
   const isLoggedIn = () => {
     // Get all cookies from the browser
     const cookies = document.cookie; // Example: "accessToken=abc123; refreshToken=xyz456"
-  
+
     // Find the accessToken from the cookies
     const accessTokenCookie = cookies
       .split("; ")
-      .find(row => row.startsWith("acessToken="));
-  
+      .find((row) => row.startsWith("acessToken="));
+
     // Extract token value
     const accessToken = accessTokenCookie
       ? accessTokenCookie.split("=")[1]
       : null;
-  
-   // console.log("Access Token:", accessToken);
-  
+
+    // console.log("Access Token:", accessToken);
+
     if (!accessToken) {
       alert("Please log in first");
       return false;
     }
-  
+
     return true;
   };
-  
+
+  //login
+  const isUserLoggedIn = useSelector((state) => state.auth.status); // Check if user is logged in
+  const dispatch = useDispatch();
+
+  //logout
+  const handleLogout = async () => {
+    dispatch(logout());
+    const response = await axios.post(
+      "http://localhost:5000/api/users/logout",
+      {},
+      { withCredentials: true }
+    );
+    console.log(response);
+    if (response.status == 200) {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="relative h-screen z-[10]">
@@ -71,10 +91,10 @@ const Home = () => {
         <div className="flex justify-center ml-4 items-center space-x-10 w-[100%]">
           <button
             onClick={() => {
-              if(isLoggedIn()){
-                navigate("/companyDetails")
+              if (isLoggedIn()) {
+                navigate("/companyDetails");
               }
-              }}
+            }}
             className="text-white font-semibold hover:text-gray-900"
           >
             Add a Business
@@ -145,65 +165,16 @@ const Home = () => {
       {showForm && (
         <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
           {/* Close Button */}
-          <button
-            onClick={() => setShowForm(false)}
-            className="absolute top-2 right-2 bg-gray-300 hover:bg-gray-400 text-black rounded-full w-7 h-7 flex items-center justify-center text-lg font-bold"
-          >
-            ×
-          </button>
-
-          <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
-            Register Here
-          </h5>
-          <input
-            type="text"
-            placeholder="Name"
-            className="w-full h-10 p-1 border mb-3 shadow-2xl rounded-md border-gray-300 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Company / Business Name"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Mobile"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <input
-            type="text"
-            placeholder="Locality"
-            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 h-10 placeholder:text-[12px] pl-5"
-          />
-          <div className="flex items-center mb-3">
-            <input type="checkbox" className="mr-2" />
-            <span>
-              I agree to all the{" "}
-              <a href="#" className="text-blue-700">
-                Terms of Use
-              </a>
-            </span>
-          </div>
-          <button className="w-full bg-orange-600 text-white p-2 font-bold">
-            Submit
-          </button>
-          <p className="text-center mt-2">
-            Already registered?{" "}
-            <button className="text-red-600 cursor-pointer" onClick={() => navigate("/login")}>
-              {" "}
-              Sign in
-            </button>
-          </p>
+          {isUserLoggedIn ? (
+            <div onClick={handleLogout}>Logout</div>
+          ) : (
+            <div onClick={() => navigate("/login")}>login</div>
+          )}
+           
         </div>
       )}
 
       <div className="absolute top-[79%] bg-green-800 w-[100%] h-[20%] border-green-800  opacity-100  mix-blend-overlay z-[-10] bg-gradient-to-r from-green-800 from-30% via-green-200 via-30% to-green-800 to-80% blur-2xl"></div>
-  
 
       {/* List Business Detail */}
 
@@ -269,7 +240,7 @@ const Home = () => {
 
       {/* List Business page  */}
 
-    <section className="bg-[#1077BC] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
+      <section className="bg-[#1077BC] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
