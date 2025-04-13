@@ -589,21 +589,21 @@ const Result = () => {
             <img
               src={rectangle}
               alt="Background"
-              className="absolute  w-[1400px] mx-auto top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/20 z-[5] h-[451px]"
+              className="absolute  w-[1400px] mx-auto top-[15rem] left-1/2 -translate-x-1/2 -translate-y-1/20 z-[5] h-[451px]"
             />
 
             <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">
               {/* Left Section - Girl Image */}
-              <div className="w-full md:w-1/2 flex justify-center z-[10]">
+              <div className="w-full md:w-1/2 flex justify-center z-[10] ">
                 <img
                   src={girl}
                   alt="Woman using a blender"
-                  className="w-full max-w-md md:max-w-lg"
+                  className="w-full max-w-md md:max-w-lg mt-10  absolute top-[25.6rem] left-[30rem] transform -translate-x-1/2 -translate-y-1/2"
                 />
               </div>
 
               {/* Right Section - Business Info */}
-              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative z-[10]">
+              <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left p-6 relative z-[10] mt-20">
                 <h2 className="text-2xl md:text-3xl font-bold text-black">
                   List Your Business for FREE Today!
                 </h2>

@@ -235,7 +235,7 @@ const Home = () => {
 
       {/* List Business Detail */}
 
-      <div className="relative container mx-auto px-6 py-5 bg-[#FFFDF5]">
+      <div className="relative container mx-auto px-6 bg-[#FFFDF5]">
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
@@ -267,7 +267,7 @@ const Home = () => {
         </div>
 
         {/* <!-- Content Section --> */}
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+        <div className="flex flex-row justify-between p-0">
           {/* <!-- Left Text --> */}
           <div className="md:w-1/2 mt-30">
             <h1 className="text-5xl font-bold text-[#F09918] ml-20">
@@ -284,7 +284,7 @@ const Home = () => {
           </div>
 
           {/* <!-- Right Image --> */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="flex justify-center mb-[-0.6rem]">
             <img src={girl} alt="Businessman" className="mr-60" />
           </div>
         </div>
@@ -292,7 +292,7 @@ const Home = () => {
 
       {/* List Business page  */}
 
-      <section className="bg-[#1077BC] text-white py-12 px-4 md:px-12 flex items-center justify-center flex-col">
+      <section className="bg-[#1077BC] text-white py-12 px-4 flex items-center justify-center flex-col">
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
