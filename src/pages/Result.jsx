@@ -1,5 +1,5 @@
 import React from "react";
-import paji from "../home_assets/result_new1.jpg";
+import paji from "../home_assets/new_home_bg.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
 import search_icon from "../home_assets/search icon.png";

@@ -14,7 +14,6 @@ import verified from "../explore_assets/verified.png"; // Add these assets
 const Explore = () => {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-  
 
   // Business data array
   const businesses = [
@@ -180,8 +179,6 @@ const Explore = () => {
 
   return (
     <div className="p-6 relative mt-15">
-      
-
       <h1 className="text-3xl font-bold mb-4 text-gray-800">
         <span className="bg-[#D72E2F] bg-clip-text text-transparent">
           Recently Added Business
@@ -189,8 +186,6 @@ const Explore = () => {
       </h1>
 
       <div className="flex justify-between w-[100%] mx-auto gap-26 pb-4 mt-10">
-        {" "}
-        {/* Changed to justify-between and full width */}
         {businesses.slice(0, 3).map((business) => (
           <div
             key={business.id}
@@ -198,13 +193,28 @@ const Explore = () => {
             onClick={() => handleCardClick(business)}
           >
             <img
-              className="w-full h-64 object-cover"
+              className="w-full h-[280px] object-cover"
               src={business.image}
               alt={business.title}
             />
 
-            
-            
+            {/* Rating and About Company Section */}
+            {/* <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#185432] opacity-90 text-white px-6 py-1 font-bold text-sm whitespace-nowrap w-full min-w-[340px] flex justify-between items-center">
+              <span>{business.aboutCompany}</span>
+              <span className="text-yellow-400 text-lg">{business.rating}</span>
+            </div> */}
+
+            {/* Premium and Verified badges */}
+            <div className="flex gap-2 z-10 -mt-18">
+              <span className="flex items-center ml-10 gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={premium} alt="Premium" className="w-8 h-6" />
+                Premium
+              </span>
+              <span className="flex items-center gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={verified} alt="Verified" className="w-8 h-6" />
+                Verified
+              </span>
+            </div>
           </div>
         ))}
       </div>
@@ -224,12 +234,28 @@ const Explore = () => {
             onClick={() => handleCardClick(business)}
           >
             <img
-              className="w-full h-64 object-cover"
+              className="w-full h-[280px] object-cover"
               src={business.image}
               alt={business.title}
             />
 
-           
+            {/* Rating and About Company Section */}
+            {/* <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#185432] opacity-90 text-white px-6 py-1 font-bold text-sm whitespace-nowrap w-full min-w-[340px] flex justify-between items-center">
+        <span>{business.aboutCompany}</span>
+        <span className="text-yellow-400 text-lg">{business.rating}</span>
+      </div> */}
+
+            {/* Premium and Verified badges */}
+            <div className="flex gap-2 z-10 -mt-14">
+              <span className="flex items-center ml-10 gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={premium} alt="Premium" className="w-8 h-6" />
+                Premium
+              </span>
+              <span className="flex items-center gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={verified} alt="Verified" className="w-8 h-6" />
+                Verified
+              </span>
+            </div>
           </div>
         ))}
       </div>
@@ -249,12 +275,28 @@ const Explore = () => {
             onClick={() => handleCardClick(business)}
           >
             <img
-              className="w-full h-64 object-cover"
+              className="w-full h-[280px] object-cover"
               src={business.image}
               alt={business.title}
             />
 
-            
+            {/* Rating and About Company Section */}
+            {/* <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#185432] opacity-90 text-white px-6 py-1 font-bold text-sm whitespace-nowrap w-full min-w-[340px] flex justify-between items-center">
+        <span>{business.aboutCompany}</span>
+        <span className="text-yellow-400 text-lg">{business.rating}</span>
+      </div> */}
+
+            {/* Premium and Verified badges */}
+            <div className="flex gap-2 z-10 -mt-14">
+              <span className="flex items-center ml-10 gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={premium} alt="Premium" className="w-8 h-6" />
+                Premium
+              </span>
+              <span className="flex items-center gap-1 bg-[#185432] opacity-90 text-yellow-500 px-8 py-2 rounded-md font-semibold text-sm">
+                <img src={verified} alt="Verified" className="w-8 h-6" />
+                Verified
+              </span>
+            </div>
           </div>
         ))}
       </div>

@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
 import axios from "axios";
+import google from "../main_assets/google_icon.png";
+import x from "../main_assets/x_icon.png";
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -74,6 +76,14 @@ const Home = () => {
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = "https://accounts.google.com/signin"; // Replace with your OAuth URL
+  };
+
+  const handleTwitterLogin = () => {
+    window.location.href = "https://twitter.com/i/oauth2/authorize"; // Replace with your OAuth URL
+  };
+
   return (
     <div className="relative h-screen z-[10]">
       {/* Navbar */}
@@ -114,7 +124,7 @@ const Home = () => {
 
         {/* Dashboard Button */}
 
-        <div className="flex justify-center items-center h-10  mr-6 cursor-pointer rounded-lg border-2 border-yellow-400">
+        <div className="flex justify-center items-center h-12 w-40  mr-4 cursor-pointer rounded-lg border-2 border-yellow-400">
           <button
             onClick={goToDashboard}
             className="text-white text-lg font-semibold cursor-pointer"
@@ -167,7 +177,57 @@ const Home = () => {
           ) : (
             <div onClick={() => navigate("/login")}>Login</div>
           )}
-           
+
+          {/* login form */}
+          <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+            <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
+              Login Here
+            </h5>
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300  h-10 placeholder:text-[12px] pl-5"
+            />
+            <input
+              type="text"
+              placeholder="Password"
+              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300  h-10 placeholder:text-[12px] pl-5"
+            />
+
+            <button
+              onClick={goToResultPage}
+              className="w-full rounded-2xl bg-yellow-400 text-white p-2 font-bold"
+            >
+              Sign in
+            </button>
+
+            {/* Social Login Buttons */}
+            <button
+              onClick={handleGoogleLogin}
+              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-3 sm:mt-4 bg-white hover:bg-gray-100 transition text-sm sm:text-base"
+            >
+              <img src={google} alt="Google" className="w-4 sm:w-5" />
+              <span>Sign in with Google</span>
+            </button>
+
+            <button
+              onClick={handleTwitterLogin}
+              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-2 sm:mt-3 bg-white hover:bg-gray-100 transition text-sm sm:text-base"
+            >
+              <img src={x} alt="Twitter" className="w-4 sm:w-5" />
+              <span>Sign in with Twitter</span>
+            </button>
+
+            <p className="text-black text-xs mt-5  sm:text-sm">
+              Don't have an account?{" "}
+              <Link to="/register" className="text-[#F09918] hover:underline">
+                Sign Up
+              </Link>{" "}
+              for <strong>FREE</strong>
+            </p>
+          </div>
+          {/* last div of form */}
         </div>
       )}
 
@@ -225,11 +285,7 @@ const Home = () => {
 
           {/* <!-- Right Image --> */}
           <div className="md:w-1/2 flex justify-center">
-            <img
-              src={girl}
-              alt="Businessman"
-              className="mr-60"
-            />
+            <img src={girl} alt="Businessman" className="mr-60" />
           </div>
         </div>
       </div>
