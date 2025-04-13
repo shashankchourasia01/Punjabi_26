@@ -117,7 +117,7 @@ const Footer = () => {
 
       {/* Bottom Copyright Section */}
       <div className="mt-4 bg-black w-full text-center py-4 text-gray-300">
-        Copyright © 2025, Punjabipages.in | All rights reserved.
+        Copyright © 2025, Punjabipages.in | Designed and Developed by Code Pixels.
       </div>
     </footer>
   );

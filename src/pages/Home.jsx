@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import home from "../main_assets/home_new.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
-import girl from "../main_assets/orange_girl.png";
+import girl from "../main_assets/ipad_girl.png";
 import people from "../home_assets/people.png";
 import location from "../home_assets/location icon.png";
 import arcti from "../home_assets/arcticons_boost.png";
@@ -144,7 +144,7 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex  relative bottom-[5rem] z-10  flex-col justify-center items-center text-white text-center h-full px-6  mr-160 ml-20">
+      <div className="flex relative bottom-[5rem] z-10 flex-col justify-center items-start text-white text-left h-full px-6 mr-160 ml-20">
         <h1 className="text-5xl font-bold">
           List & Grow Your Business
           <br />
@@ -175,32 +175,32 @@ const Home = () => {
 
       {/* List Business Detail */}
 
-      <div className=" relative container mx-auto px-6 py-5 bg-[#FFFDF5]  mt-5">
+      <div className="relative container mx-auto px-6 py-5 bg-[#FFFDF5]">
         {/* <!-- Progress Steps --> */}
         <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#D72E2F] text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
               1
             </div>
-            <span className="mt-4 text-2xl font-semibold text-black">
+            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
               List Your Business
             </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#D72E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
               2
             </div>
-            <span className="mt-4 text-2xl font-semibold text-black">
+            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
               Verify Your Business
             </span>
           </div>
           <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#D72E2F] border-black text-black flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
               3
             </div>
-            <span className="mt-4 text-2xl font-semibold text-black">
+            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
               Target Customer
             </span>
           </div>
@@ -229,7 +229,6 @@ const Home = () => {
               src={girl}
               alt="Businessman"
               className="mr-60"
-              // class="w-64 md:w-80 rounded-lg"
             />
           </div>
         </div>
@@ -241,7 +240,7 @@ const Home = () => {
         {/* Heading Section */}
         <div className=" max-w-3xl mx-auto ml-6">
           <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
-            Why List Your <span className="text-[#F09918]">Business</span> with
+            Why List Your <span className="text-yellow-400">Business</span> with
             Us?
           </h1>
           <p className="text-2xl text-gray-300 mt-12 ml-15 leading-relaxed">
@@ -256,7 +255,7 @@ const Home = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 w-[100%] ">
           {/* Feature 1 */}
           <div className="text-center relative ">
-            <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
+            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
               <div className="absolute top-6 w-full h-full "></div>{" "}
               {/* Cutting the upper part */}
               <img
@@ -277,7 +276,7 @@ const Home = () => {
           {/* Feature 2 */}
 
           <div className="text-center relative">
-            <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
+            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
               <div className="absolute -top-6 w-full h-full "></div>{" "}
               {/* Cutting the upper part */}
               <img
@@ -297,7 +296,7 @@ const Home = () => {
 
           {/* Feature 3 */}
           <div className="text-center relative">
-            <div className="relative w-88 h-88 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
+            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
               <div className="absolute -top-6 w-full h-full "></div>{" "}
               {/* Cutting the upper part */}
               <img

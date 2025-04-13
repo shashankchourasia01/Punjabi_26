@@ -12,14 +12,14 @@ import dining from "../result_assets/cup_new.png";
 import clothing_store from "../result_assets/cloth_new.png";
 import spa from "../result_assets/flower_new.png";
 import Footer from "../components/Footer";
-import first from "../result_assets/1 card.png";
+// import first from "../result_assets/1 card.png";
 import second from "../result_assets/2 card.png";
-import third from "../result_assets/3 card.png";
-import left_arrow from "../result_assets/left_arrow.png";
-import right_arrow from "../result_assets/right_arrow.png";
+// import third from "../result_assets/3 card.png";
+// import left_arrow from "../result_assets/left_arrow.png";
+// import right_arrow from "../result_assets/right_arrow.png";
 import rectangle from "../result_assets/rectangle_new.png";
 import girl from "../result_assets/girl (1).png";
-import receptionist from "../result_assets/receptionists-elegant-suits-work-hours.png";
+import receptionist from "../result_assets/recep_replace.jpg";
 import left_phone from "../result_assets/left_phone.png";
 import right_phone from "../result_assets/right_phone.png";
 import playstore from "../result_assets/playstore 1.png";
@@ -35,6 +35,8 @@ import axios from "axios";
 import { X } from "lucide-react";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
+import weather_icon from "../result_assets/weather_icon.png";
+import Explore from "../components/Explore";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -85,10 +87,7 @@ const Result = () => {
     navigate("/more"); // Navigate to More.jsx page
   };
 
-  // Go to explore more page
-  const handleCategoryClickToExplore = () => {
-    navigate("/explore_more");
-  };
+  
 
   const handleCategoryClick = (category) => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
@@ -270,7 +269,7 @@ const Result = () => {
       <div className="mx-auto w-fit ml-80">
         <div
           id="weatherBox"
-          className="bg-black text-white w-[500px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
+          className="bg-black text-white w-[450px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
         >
           {/* Weather Search Input */}
           <form onSubmit={handleWeatherSubmit} className="flex">
@@ -280,12 +279,19 @@ const Result = () => {
               placeholder="Search the Weather..."
               name="location"
               onChange={handleWeatherChange}
-              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-10"
+              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-8 "
+            />
+
+            {/* Weather Icon */}
+            <img
+              src={weather_icon} // Make sure to define or import this
+              alt="Weather Icon"
+              className="w-[35px] h-[35px] my-auto ml-4"
             />
 
             {/* Search Button */}
             <button className="bg-[#F09918] cursor-pointer text-white h-full rounded-r-2xl ml-10 flex items-center justify-center w-[106px]">
-              <img src={search_icon} alt="Search" className="w-[50px] " />
+              <img src={search_icon} alt="Search" className="w-[40px] " />
             </button>
           </form>
 
@@ -387,7 +393,7 @@ const Result = () => {
         <div>
           <div
             id="explore"
-            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-40"
+            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-20"
           >
             <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
               <button key={"food"} onClick={() => handleCategoryClick("Food")}>
@@ -556,89 +562,18 @@ const Result = () => {
               <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 16+
               </div>
-              <div className="text text-white mt-10">Business Listing Daily</div>
+              <div className="text text-white mt-10">
+                Business Listing Daily
+              </div>
             </div>
           </div>
 
           {/* Featured business  4  */}
 
-          <div className="bg-white p-10">
-            {/*  Header Section  */}
-            <div
-              id="featuredBusiness"
-              className="flex justify-between items-center mb-6 mt-18"
-            >
-              <h2 className="text-4xl font-bold text-[#F09918] ml-20">
-                Featured Business
-              </h2>
-              <button
-                onClick={handleCategoryClickToExplore}
-                className="bg-[#F09918] text-white px-8 py-4 text-lg rounded-md font-medium shadow-md mr-20 transition-transform transform hover:scale-95"
-              >
-                Explore More
-              </button>
-            </div>
 
-            {/*  Image Cards Section  */}
-            <div className="flex justify-center gap-6 mt-20">
-              {/* <!-- Card 1 --> */}
-              <div className="text-center">
-                <img src={first} alt="" className="w-110 h-70" />
-                <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-black">Indian Hotels</h3>
-                  <div className="text-yellow-300">★★★★★</div>
-                </div>
-                <Link
-                  to="/explore_more"
-                  className="text-black text-2xl mt-8 cursor-pointer hover:underline"
-                >
-                  Click to Explore
-                </Link>
-              </div>
+          <Explore />
 
-              {/* <!-- Card 2 --> */}
-              <div className="text-center">
-                <img src={second} alt="" className="w-110 h-70" />
-                <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-black">Indian Food</h3>
-                  <div className="text-yellow-300">★★★★★</div>
-                </div>
-                <Link
-                  to="/explore_more"
-                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                >
-                  Click to Explore
-                </Link>
-              </div>
-
-              {/* <!-- Card 3 --> */}
-              <div className="text-center">
-                <img src={third} alt="" className="w-110 h-70" />
-                <div className="flex items-center justify-center space-x-2 mt-8 text-3xl">
-                  <h3 className="font-bold text-black">Accessories</h3>
-                  <div className="text-yellow-300">★★★★★</div>
-                </div>
-                <Link
-                  to="/explore_more"
-                  className="text-black text-2xl mt-5 cursor-pointer hover:underline"
-                >
-                  Click to Explore
-                </Link>
-              </div>
-            </div>
-
-            {/* <!-- Slider Icons --> */}
-            <div className="flex justify-center gap-6 mt-20">
-              <button className="border-4 text-[#01346B] p-9  rounded-full shadow-md cursor-pointer">
-                {" "}
-                <img src={left_arrow} alt="" />
-              </button>
-              <button className="border-4 text-[#01346B] p-9 rounded-full shadow-md cursor-pointer">
-                {" "}
-                <img src={right_arrow} alt="" />
-              </button>
-            </div>
-          </div>
+         
 
           {/* List your business 5 */}
 
