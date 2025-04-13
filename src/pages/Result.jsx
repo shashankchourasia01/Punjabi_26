@@ -280,7 +280,7 @@ const Result = () => {
               placeholder="Search the Weather..."
               name="location"
               onChange={handleWeatherChange}
-              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-8 "
+              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-12 "
             />
 
             {/* Weather Icon */}
