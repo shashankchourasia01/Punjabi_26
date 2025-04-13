@@ -16,7 +16,7 @@ const Dashboard = () => {
           <img
             src={logo}
             alt="Logo"
-            className="w-14 h-14 object-cover rounded-full ml-4 md:ml-20"
+            className="w-20 h-14 object-cover rounded-full ml-4 md:ml-15"
           />
         </a>
         <button className="md:hidden" onClick={() => setSidebarOpen(!sidebarOpen)}>
