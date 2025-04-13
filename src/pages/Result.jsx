@@ -322,7 +322,7 @@ const Result = () => {
       </div>
 
       {showForm && (
-        <div className="fixed top-5 right-4 bg-white text-black text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">
+        <div className="fixed top-5 right-4 bg-white text-black cursor-pointer text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">
           {/* Close Button */}
           {isUserLoggedIn ? (
             <div onClick={handleLogout}>Logout</div>

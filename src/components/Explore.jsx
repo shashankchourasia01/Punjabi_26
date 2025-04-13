@@ -14,6 +14,7 @@ import verified from "../explore_assets/verified.png"; // Add these assets
 const Explore = () => {
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  
 
   // Business data array
   const businesses = [
