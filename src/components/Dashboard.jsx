@@ -26,7 +26,7 @@ const Dashboard = () => {
 
       <div className="flex flex-1">
         {/* Sidebar */}
-        <aside className={`fixed md:static w-64 bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] text-white p-6 flex flex-col md:block transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
+        <aside className={`fixed md:static w-64 bg-gradient-to-b from-[#F09918]  to-[#1575C2] text-white p-6 flex flex-col md:block transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
           <nav className="flex-1">
             <ul className="space-y-4">
               {[
@@ -91,7 +91,7 @@ const Dashboard = () => {
           {/* Show "Premium Plans" Section ONLY IF activeSection is "premium" */}
           {activeSection === "premium" && (
             <div className="bg-white shadow-md p-6 rounded-lg">
-              <div className="bg-[#FF9E2F] py-4 rounded-md">
+              <div className="bg-[#F09918] py-4 rounded-md">
                 <h2 className="text-3xl ml-4 md:ml-10 font-bold text-black">
                   Boost Your Online Presence
                 </h2>
@@ -100,10 +100,10 @@ const Dashboard = () => {
                 </p>
               </div>
               <div className="flex flex-col md:flex-row justify-center gap-4 mt-7">
-                <button className={`px-4 py-2 rounded-md ${planType === "monthly" ? "bg-[#004080] text-white" : "bg-gray-200 text-black"}`} onClick={() => setPlanType("monthly")}>
+                <button className={`px-4 py-2 rounded-md ${planType === "monthly" ? "bg-[#1077BC] text-white" : "bg-gray-200 text-black"}`} onClick={() => setPlanType("monthly")}>
                   Monthly Plan
                 </button>
-                <button className={`px-4 py-2 rounded-md ${planType === "yearly" ? "bg-[#004080] text-white" : "bg-gray-200 text-black"}`} onClick={() => setPlanType("yearly")}>
+                <button className={`px-4 py-2 rounded-md ${planType === "yearly" ? "bg-[#1077BC] text-white" : "bg-gray-200 text-black"}`} onClick={() => setPlanType("yearly")}>
                   Yearly Plan
                 </button>
               </div>
@@ -121,7 +121,7 @@ const Dashboard = () => {
                         <p className="text-black text-center mt-2">
                           Lorem ipsum dolor sit amet consectetur.
                         </p>
-                        <button className="bg-[#004080] text-white px-4 py-2 rounded-md mt-25 w-50 mx-auto block">
+                        <button className="bg-[#1077BC] text-white px-4 py-2 rounded-md mt-25 w-50 mx-auto block">
                           Choose Plan
                         </button>
                       </div>

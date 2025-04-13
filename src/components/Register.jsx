@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import logo from "../home_assets/punjabi logo.png";
+import logo from "../explore_assets/new_logo.jpeg";
 import pagi2 from "../home_assets/pagi2_register_page.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -57,7 +57,7 @@ function Register() {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full">
       {/* Left Section (Registration Form) */}
-      <div className="w-full md:w-1/2 bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] flex flex-col items-center justify-center px-6 py-10">
+      <div className="w-full md:w-1/2 bg-gradient-to-b from-[#F09918] to-[#1077BC] flex flex-col items-center justify-center px-6 py-10">
         <img
           src={logo}
           alt="Logo"

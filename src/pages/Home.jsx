@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import home from "../main_assets/new_home_bg.jpg";
+import home from "../main_assets/home_new.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
 import girl from "../main_assets/orange_girl.png";
@@ -11,8 +11,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
-import axios from 'axios';
-
+import axios from "axios";
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -126,9 +125,7 @@ const Home = () => {
 
         {/* Menu Icon */}
         <img
-          onClick={() => {
-            setShowForm(true);
-          }}
+          onClick={() => setShowForm((prev) => !prev)}
           src={menu}
           alt="Menu Logo"
           className="w-12 rounded-full mr-15"
@@ -163,12 +160,12 @@ const Home = () => {
       {/* Registration Form (Only Visible When ShowForm is True) */}
 
       {showForm && (
-        <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+        <div className="fixed top-5 right-4 bg-white text-black text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">
           {/* Close Button */}
           {isUserLoggedIn ? (
             <div onClick={handleLogout}>Logout</div>
           ) : (
-            <div onClick={() => navigate("/login")}>login</div>
+            <div onClick={() => navigate("/login")}>Login</div>
           )}
            
         </div>

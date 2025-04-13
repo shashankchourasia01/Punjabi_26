@@ -93,7 +93,7 @@ function Login({setShowLogin}) {
   return (
     <div className="flex flex-col md:flex-row h-screen w-full overflow-hidden">
       {/* Left Section */}
-      <div className="w-full md:w-1/2 bg-gradient-to-b from-[#004080] via-[#01346B] to-[#002248] flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-10">
+      <div className="w-full md:w-1/2 bg-gradient-to-b from-[#F09918] to-[#1077BC] flex flex-col items-center justify-center px-4 sm:px-6 py-8 sm:py-10">
         {/* Logo */}
         <img src={logo} alt="Logo" className="w-16 sm:w-20 mb-3 sm:mb-4 rounded-full cursor-pointer"
         onClick={() => navigate("/result")}

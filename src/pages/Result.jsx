@@ -29,7 +29,7 @@ import { Link } from "react-router-dom";
 import Ellipse_4 from "../result_assets/Ellipse 4.png";
 import Ellipse_5 from "../result_assets/Ellipse 5.png";
 import Group_11 from "../result_assets/Group 11.png";
-import blue_bg from "../main_assets/blue_bg.png";
+import blue_bg from "../main_assets/new_blue.png";
 import { useState } from "react";
 import axios from "axios";
 import { X } from "lucide-react";
@@ -200,12 +200,10 @@ const Result = () => {
 
         {/* Menu Icon */}
         <img
+          onClick={() => setShowForm((prev) => !prev)}
           src={menu}
           alt="Menu Logo"
-          className="w-10 rounded-full mr-15"
-          onClick={() => {
-            setShowForm(true);
-          }}
+          className="w-12 rounded-full mr-15"
         />
       </div>
 
@@ -269,10 +267,10 @@ const Result = () => {
 
       {/* Weather checker */}
 
-      <div>
+      <div className="mx-auto w-fit ml-80">
         <div
           id="weatherBox"
-          className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
+          className="bg-black text-white w-[500px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
         >
           {/* Weather Search Input */}
           <form onSubmit={handleWeatherSubmit} className="flex">
@@ -282,11 +280,11 @@ const Result = () => {
               placeholder="Search the Weather..."
               name="location"
               onChange={handleWeatherChange}
-              className="w-[800px] p-3 rounded-2xl focus:outline-none text-black border border-gray-300 m-2"
+              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-10"
             />
 
             {/* Search Button */}
-            <button className="bg-[#F09918] cursor-pointer text-white h-full rounded-r-2xl ml-70 flex items-center justify-center w-[106px]">
+            <button className="bg-[#F09918] cursor-pointer text-white h-full rounded-r-2xl ml-10 flex items-center justify-center w-[106px]">
               <img src={search_icon} alt="Search" className="w-[50px] " />
             </button>
           </form>
@@ -324,12 +322,12 @@ const Result = () => {
       </div>
 
       {showForm && (
-        <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+        <div className="fixed top-5 right-4 bg-white text-black text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">
           {/* Close Button */}
           {isUserLoggedIn ? (
             <div onClick={handleLogout}>Logout</div>
           ) : (
-            <div onClick={() => navigate("/login")}>login</div>
+            <div onClick={() => navigate("/login")}>Login</div>
           )}
            
         </div>
@@ -558,7 +556,7 @@ const Result = () => {
               <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
                 16+
               </div>
-              <div className="text text-white mt-10">Lorem Ipsum</div>
+              <div className="text text-white mt-10">Business Listing Daily</div>
             </div>
           </div>
 
@@ -693,7 +691,7 @@ const Result = () => {
 
           <div className="relative z-0">
             <div className="mt-16">
-              <img src={blue_bg} alt="" />
+              <img src={blue_bg} alt="" className="w-full h-[900px]" />
             </div>
 
             <div className="absolute inset-0 flex items-center justify-center z-5">
@@ -709,7 +707,7 @@ const Result = () => {
                 </div>
 
                 <div className="text-white ">
-                  <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">End-to-End Expertise</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
@@ -719,10 +717,10 @@ const Result = () => {
 
               {/* mid image */}
               <div className="relative flex items-center justify-center w-[40rem]">
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49]  rounded-[50%] bg-[#013D7B]  z-10 top-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 top-[-1.5rem] right-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
-                <div className="absolute w-[120px] h-[120px] border-3 text-[#FF8D49] rounded-[50%] bg-[#013D7B]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px]   rounded-[50%] bg-[#D72E2F]  z-10 top-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-[#D72E2F]  z-10 top-[-1.5rem] right-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-[#D72E2F]  z-10 bottom-[-1.5rem] left-[6rem]"></div>
+                <div className="absolute w-[120px] h-[120px]  rounded-[50%] bg-[#D72E2F]  z-10 bottom-[-1.5rem] right-[6rem]"></div>
                 <img
                   src={Group_11}
                   alt="Woman using a blender"
@@ -745,7 +743,7 @@ const Result = () => {
               {/* right */}
               <div className="flex flex-col items-center justify-start w-[20rem] gap-y-80 text-white">
                 <div>
-                  <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">Innovative Approach</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
@@ -753,7 +751,7 @@ const Result = () => {
                 </div>
 
                 <div>
-                  <h1 className="text-2xl">Highly Affordable</h1>
+                  <h1 className="text-2xl">Customer-Centric Solution</h1>
                   <p className="mt-4">
                     From ideation to execution, we cover every aspect of the
                     digital journey.
