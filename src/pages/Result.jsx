@@ -37,6 +37,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
 import weather_icon from "../result_assets/weather_icon.png";
 import Explore from "../components/Explore";
+// import More from '../components/More';
 
 const Result = () => {
   const navigate = useNavigate();
@@ -532,6 +533,9 @@ const Result = () => {
                 More
               </p>
             </div>
+
+          {/* <More /> */}
+
           </div>
 
           {/* 500k+  3  */}
