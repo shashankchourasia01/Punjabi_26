@@ -1,6 +1,7 @@
 // components/SearchProducts.js
 import React, { useState } from "react";
 import axios from "axios";
+import { SERVER_URL } from "../services/Helper";
 
 const SearchProducts = () => {
   const [query, setQuery] = useState("");
@@ -17,7 +18,7 @@ const SearchProducts = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/search?query=${query}`
+        `${SERVER_URL}products/search?query=${query}`
       );
       setProducts(response.data.data || []);
     } catch (err) {

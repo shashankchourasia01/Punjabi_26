@@ -6,6 +6,7 @@ import { Card, CardContent } from "../components/ui/Card";
 import { Button } from "../components/ui/Button";
 import premium from "../explore_assets/premium.png";
 import verified from "../explore_assets/verified.png";
+import { SERVER_URL } from "../services/Helper";
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
@@ -26,7 +27,7 @@ const CategoryPage = () => {
     const fetchBusinesses = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/company/business/${categoryName}`
+          `${SERVER_URL}company/business/${categoryName}`
         );
         console.log(response);
         setBusinesses(response.data);

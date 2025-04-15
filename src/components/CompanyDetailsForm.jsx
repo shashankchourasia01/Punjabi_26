@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { SERVER_URL } from "../services/Helper";
 // import home_bg from '../home_assets/Home image.jpeg'
 
 const CompanyDetailsForm = () => {
@@ -114,7 +115,7 @@ const CompanyDetailsForm = () => {
     console.log("Submitting Data:", data);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/company/listbusiness",
+        `${SERVER_URL}company/listbusiness`,
         data,
         { withCredentials: true }
       );

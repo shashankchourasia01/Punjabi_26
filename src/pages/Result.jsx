@@ -37,6 +37,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
 import weather_icon from "../result_assets/weather_icon.png";
 import Explore from "../components/Explore";
+import { SERVER_URL } from "../services/Helper";
 // import More from '../components/More';
 
 const Result = () => {
@@ -61,7 +62,7 @@ const Result = () => {
     console.log("Submitting Data:", data);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/company/searchResults",
+        `${SERVER_URL}company/searchResults`,
         {
           params: {
             primaryBusiness: data.primaryBusiness, // Query parameter to be passed in URL
@@ -150,7 +151,7 @@ const Result = () => {
   const handleLogout = async () => {
     dispatch(logout());
     const response = await axios.post(
-      "http://localhost:5000/api/users/logout",
+      `${SERVER_URL}users/logout`,
       {},
       { withCredentials: true }
     );

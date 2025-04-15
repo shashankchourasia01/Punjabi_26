@@ -4,6 +4,7 @@ import logo from "../explore_assets/new_logo.jpeg";
 import pagi2 from "../home_assets/pagi2_register_page.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { SERVER_URL } from "../services/Helper";
 
 function Register() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/signup",
+        `${SERVER_URL}users/signup`,
         data
       );
 

@@ -14,6 +14,7 @@ import { logout } from "../store/authSlice";
 import axios from "axios";
 import google from "../main_assets/google_icon.png";
 import x from "../main_assets/x_icon.png";
+import { SERVER_URL } from "../services/Helper";
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
@@ -66,7 +67,7 @@ const Home = () => {
   const handleLogout = async () => {
     dispatch(logout());
     const response = await axios.post(
-      "http://localhost:5000/api/users/logout",
+      `${SERVER_URL}users/logout`,
       {},
       { withCredentials: true }
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { SERVER_URL } from "../services/Helper";
 
 const SearchResults = () => {
     const location = useLocation();
@@ -16,7 +17,7 @@ const SearchResults = () => {
             if (!query) return;
             
             try {
-                const response = await axios.get(`http://localhost:5000/api/company/searchResults?query=${query}`);
+                const response = await axios.get(`${SERVER_URL}company/searchResults?query=${query}`);
                 setResults(response.data.data);
             } catch (err) {
                 setError("Error fetching search results");
