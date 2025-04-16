@@ -1,22 +1,19 @@
 import React from "react";
-// import food from "../more_assets/salad 2.png";
-// import health from "../more_assets/healthcare 2.png";
-import clothing from "../more_assets/clothing_new.png";
-// import beauty from "../more_assets/beauty-product 2.png";
-import fitness from "../more_assets/fitness_new.png";
-import finance from "../more_assets/finance_new.png";
-// import event from "../more_assets/event 1.png";
+
+import clothing from "../result_assets/laundry.png";
+import fitness from "../more_assets/dumbbell 1.png";
+import finance from "../more_assets/budget 1.png";
 import kid from "../more_assets/playtime 1.png";
 import recruitment from '../more_assets/talent-search 1.png'
-import automotive from '../more_assets/automotive_new.png'
+import automotive from '../more_assets/automotive 1.png'
 import transport from '../more_assets/warehouse 1.png'
-import travel from '../more_assets/travelt_new.png'
+import travel from '../more_assets/travel 1.png'
 import law from '../more_assets/legal 1.png'
-import gurdwara from '../more_assets/gurudwara.png'
+import gurdwara from '../more_assets/amritsar 1.png'
 import { useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import cap from "../result_assets/cap_new.png";
-import more_icon from "../result_assets/more_new.png";
+import cap from "../result_assets/graduation-hat 1.png";
+import more_icon from "../result_assets/menu-bar 2.png";
 
 
 const More = () => {
@@ -61,7 +58,7 @@ const More = () => {
               <img
                 src={clothing}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain "
               />
             </div>
           </button>
@@ -76,7 +73,7 @@ const More = () => {
               <img
                 src={fitness}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -91,7 +88,7 @@ const More = () => {
               <img
                 src={finance}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -106,7 +103,7 @@ const More = () => {
               <img
                 src={kid}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -123,7 +120,7 @@ const More = () => {
               <img
                 src={recruitment}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -139,7 +136,7 @@ const More = () => {
               <img
                 src={automotive}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -155,7 +152,7 @@ const More = () => {
               <img
                 src={transport}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -171,7 +168,7 @@ const More = () => {
               <img
                 src={cap}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -187,7 +184,7 @@ const More = () => {
               <img
                 src={travel}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -203,7 +200,7 @@ const More = () => {
               <img
                 src={law}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -219,7 +216,7 @@ const More = () => {
               <img
                 src={gurdwara}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>
@@ -235,7 +232,7 @@ const More = () => {
               <img
                 src={more_icon}
                 alt="Food & Beverages"
-                className="w-13 h-13 object-contain rounded-full"
+                className="w-13 h-13 object-contain"
               />
             </div>
           </button>

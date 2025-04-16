@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import paji from "../home_assets/new_home_bg.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import search_icon from "../home_assets/search icon.png";
-import bus from "../result_assets/bus_new.png";
-import cap from "../result_assets/cap_new.png";
-import church from "../result_assets/temple_new.png";
-import more_icon from "../result_assets/more_new.png";
-import health from "../result_assets/health_new.png";
-import dining from "../result_assets/cup_new.png";
-import clothing_store from "../result_assets/cloth_new.png";
-import spa from "../result_assets/flower_new.png";
+import bus from "../result_assets/warehouse 1.png";
+import cap from "../result_assets/graduation-hat 1.png";
+import church from "../result_assets/event 1.png";
+import more_icon from "../result_assets/menu-bar 2.png";
+import health from "../result_assets/healthcare 2.png";
+import dining from "../result_assets/salad 2.png";
+import clothing_store from "../result_assets/clothing_store.png";
+import spa from "../result_assets/beauty-product 2.png";
 import Footer from "../components/Footer";
 import second from "../result_assets/2 card.png";
 import rectangle from "../result_assets/rectangle_new.png";
@@ -421,15 +420,15 @@ const Result = () => {
                   key={"food"}
                   onClick={() => handleCategoryClick("Food")}
                 >
-                  <div className="flex items-center justify-center rounded-full">
+                  <div className="flex items-center justify-center ">
                     <img
                       src={dining}
                       alt="Food & Beverages"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-13 h-13 object-contain "
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Food & Beverages
                 </p>
               </div>
@@ -443,11 +442,11 @@ const Result = () => {
                     <img
                       src={spa}
                       alt="Beauty & Wellness"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-13 h-13 object-contain"
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Beauty & Wellness
                 </p>
               </div>
@@ -461,11 +460,11 @@ const Result = () => {
                     <img
                       src={clothing_store}
                       alt="Apparel & Accessories"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-13 h-13 object-contain "
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Apparel & Accessories
                 </p>
               </div>
@@ -477,11 +476,11 @@ const Result = () => {
                     <img
                       src={cap}
                       alt="Education"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-13 h-13 object-contain"
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Education
                 </p>
               </div>
@@ -497,7 +496,7 @@ const Result = () => {
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Health
                 </p>
               </div>
@@ -511,11 +510,11 @@ const Result = () => {
                     <img
                       src={church}
                       alt="Wedding and Events"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-11 h-11 object-contain"
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Wedding and Events
                 </p>
               </div>
@@ -529,11 +528,11 @@ const Result = () => {
                     <img
                       src={bus}
                       alt="Logistic Services"
-                      className="w-13 h-13 object-contain rounded-full"
+                      className="w-11 h-11 object-contain"
                     />
                   </div>
                 </button>
-                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                <p className="text-center mt-2 mb-6 text-gray-700 font-medium text-lg">
                   Logistic Services
                 </p>
               </div>
