@@ -88,17 +88,18 @@ const Home = () => {
   return (
     <div className="relative h-screen z-[10]">
       {/* Navbar */}
-      <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
+      <div className="relative flex flex-wrap items-center justify-between px-4 py-4 bg-transparent w-full z-[50]">
+        {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src={logo}
             alt="Punjabi Logo"
-            className="w-16 rounded-full ml-15"
+            className="w-16 rounded-full ml-4"
           />
         </Link>
 
-        {/* Nav Links */}
-        <div className="flex justify-center ml-4 items-center space-x-10 w-[100%]">
+        {/* Center Nav Links (shown only on large screens) */}
+        <div className="hidden md:flex flex-1 justify-center items-center space-x-10">
           <button
             onClick={() => {
               if (isLoggedIn()) {
@@ -123,24 +124,67 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Dashboard Button */}
-
-        <div className="flex justify-center items-center h-12 w-40  mr-4 cursor-pointer rounded-lg border-2 border-yellow-400">
-          <button
-            onClick={goToDashboard}
-            className="text-white text-lg font-semibold cursor-pointer"
-          >
-            Dashboard
-          </button>
+        {/* Right section - Dashboard & Menu Icon */}
+        <div className="flex items-center space-x-4">
+          <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
+            <button
+              onClick={goToDashboard}
+              className="text-white text-lg font-semibold cursor-pointer"
+            >
+              Dashboard
+            </button>
+          </div>
+          <img
+            onClick={() => setShowForm((prev) => !prev)}
+            src={menu}
+            alt="Menu Logo"
+            className="w-10 rounded-full mr-4"
+          />
         </div>
 
-        {/* Menu Icon */}
-        <img
-          onClick={() => setShowForm((prev) => !prev)}
-          src={menu}
-          alt="Menu Logo"
-          className="w-12 rounded-full mr-15"
-        />
+        {/* Mobile Menu */}
+        {showForm && (
+          <div className="w-full flex flex-col items-center bg-black bg-opacity-90 py-4 space-y-4 mt-4 md:hidden rounded-md">
+            <button
+              onClick={() => {
+                if (isLoggedIn()) {
+                  setShowForm(false);
+                  navigate("/companyDetails");
+                }
+              }}
+              className="text-white font-semibold hover:text-gray-400"
+            >
+              Add a Business
+            </button>
+            <button
+              onClick={() => {
+                setShowForm(false);
+                goToResultPage();
+              }}
+              className="text-white font-semibold hover:text-gray-400"
+            >
+              Our Services
+            </button>
+            <button
+              onClick={() => {
+                setShowForm(false);
+                goToBlogs();
+              }}
+              className="text-white font-semibold hover:text-gray-400"
+            >
+              Blogs
+            </button>
+            <button
+              onClick={() => {
+                setShowForm(false);
+                goToDashboard();
+              }}
+              className="text-white font-semibold border border-yellow-400 px-4 py-2 rounded-md"
+            >
+              Dashboard
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Background Image */}
@@ -151,19 +195,20 @@ const Home = () => {
           alt="Home Background"
           className="w-full h-full object-cover"
         />
-        {/* .. */}
       </div>
 
       {/* Main Content */}
-      <div className="flex relative bottom-[5rem] z-10 flex-col justify-center items-start text-white text-left h-full px-6 mr-160 ml-20">
-        <h1 className="text-5xl font-bold">
+      <div className="flex relative z-10 flex-col justify-center items-start text-white text-left h-full px-4 md:px-10 lg:ml-20 -mt-10 md:-mt-20">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
           List & Grow Your Business
-          <br />
         </h1>
-        <h1 className="text-5xl font-bold mt-4">with Punjabi Pages!</h1>
-        <br />
-        <h4 className="mb-4 text-2xl">
-          Join 1000+ Businesses & connect with <br />
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-snug">
+          with Punjabi Pages!
+        </h1>
+
+        <h4 className="mt-4 text-lg md:text-xl lg:text-2xl leading-relaxed">
+          Join 1000+ Businesses & connect with{" "}
+          <br className="hidden md:block" />
           customers today!
         </h4>
       </div>
@@ -236,71 +281,75 @@ const Home = () => {
 
       {/* List Business Detail */}
 
-      <div className="relative container mx-auto px-6 bg-[#FFFDF5]">
+      <div className="relative container mt-20 mx-auto px-4 sm:px-6 bg-white">
         {/* <!-- Progress Steps --> */}
-        <div className="flex justify-center items-center space-x-10 md:space-x-20 mb-10">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-4 md:space-x-10 lg:space-x-20 mb-6 sm:mb-10">
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-3xl sm:text-4xl md:text-5xl">
               1
             </div>
-            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
+            <span className="mt-2 sm:mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-[#D72E2F] text-center">
               List Your Business
             </span>
           </div>
-          <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
+          <div className="w-16 sm:w-20 md:w-32 border-t-2 sm:border-t-4 border-green-700 rotate-90 sm:rotate-0"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-3xl sm:text-4xl md:text-5xl">
               2
             </div>
-            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
+            <span className="mt-2 sm:mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-[#D72E2F] text-center">
               Verify Your Business
             </span>
           </div>
-          <div className="w-20 md:w-32 border-t-4 border-green-700"></div>
+          <div className="w-16 sm:w-20 md:w-32 border-t-2 sm:border-t-4 border-green-700 rotate-90 sm:rotate-0"></div>
           <div className="relative flex flex-col items-center">
-            <div className="w-22 h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-5xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 border-2 bg-[#1077BC] border-black text-[#F09918] flex justify-center items-center rounded-full font-medium text-3xl sm:text-4xl md:text-5xl">
               3
             </div>
-            <span className="mt-4 text-2xl font-semibold text-[#D72E2F]">
+            <span className="mt-2 sm:mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-[#D72E2F] text-center">
               Target Customer
             </span>
           </div>
         </div>
 
         {/* <!-- Content Section --> */}
-        <div className="flex flex-row justify-between p-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center p-0">
           {/* <!-- Left Text --> */}
-          <div className="md:w-1/2 mt-30">
-            <h1 className="text-5xl font-bold text-[#F09918] ml-20">
+          <div className="w-full lg:w-1/2 mt-8 sm:mt-12 lg:mt-30 px-4 sm:px-6 lg:px-0 lg:ml-10 xl:ml-20 order-2 lg:order-1">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F09918] text-center lg:text-left">
               List Your Business Details
             </h1>
-            <p className="mt-4 ml-20 text-[#646464] text-2xl">
-              To begin, you need to create an account on <br />
-              Punjabi Pages. Simply visit the Sign-Up page and <br />
-              enter your details. Once submitted,you'll receive <br />
-              an OTP verification via email. Verify your email,log <br />
-              in to your dashboard, and you are ready to add <br />
-              your business information.
+            <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-[#646464] text-center lg:text-left">
+              To begin, you need to create an account on Punjabi Pages. Simply
+              visit the Sign-Up page and enter your details. Once
+              submitted,you'll receive an OTP verification via email. Verify
+              your email,log in to your dashboard, and you are ready to add your
+              business information.
             </p>
           </div>
 
           {/* <!-- Right Image --> */}
-          <div className="flex justify-center mb-[-0.6rem]">
-            <img src={girl} alt="Businessman" className="mr-60" />
+          <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+            <img
+              src={girl}
+              alt="Businessman"
+              className="w-3/4 sm:w-1/2 lg:w-3/4 xl:w-auto max-w-md lg:mr-10 xl:mr-60 align-bottom"
+              style={{ marginBottom: "-0.6rem" }}
+            />
           </div>
         </div>
       </div>
 
       {/* List Business page  */}
 
-      <section className="bg-[#1077BC] text-white py-12 px-4 flex items-center justify-center flex-col">
+      <section className="bg-[#1077BC] text-white py-8 sm:py-12 px-4 sm:px-6 flex items-center justify-center flex-col">
         {/* Heading Section */}
-        <div className=" max-w-3xl mx-auto ml-6">
-          <h1 className="text-3xl md:text-4xl font-bold ml-14 mt-14">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:ml-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold sm:ml-14 mt-8 sm:mt-14 text-center sm:text-left">
             Why List Your <span className="text-yellow-400">Business</span> with
             Us?
           </h1>
-          <p className="text-2xl text-gray-300 mt-12 ml-15 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mt-6 sm:mt-12 sm:ml-15 leading-relaxed text-center sm:text-left">
             Are you a Punjabi business owner in Australia? Increase your
             visibility and attract more customers by listing your business on
             Punjabi Pages – the leading directory for Punjabi-owned businesses
@@ -309,88 +358,83 @@ const Home = () => {
         </div>
 
         {/* Features Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 w-[100%] ">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-40 w-full max-w-5xl px-4 sm:px-6">
           {/* Feature 1 */}
-          <div className="text-center relative ">
-            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute top-6 w-full h-full "></div>{" "}
-              {/* Cutting the upper part */}
+          <div className="text-center relative px-4">
+            <div className="relative w-52 h-52 sm:w-60 sm:h-60 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden p-4">
+              <div className="absolute top-6 w-full h-full"></div>
               <img
                 src={location}
                 alt="Reach Local Customers"
-                className="w-18 h-18 mb-4 relative z-10"
+                className="w-12 h-12 sm:w-14 sm:h-14 mb-2 sm:mb-3 relative z-10"
               />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">
+              <h3 className="text-sm sm:text-base font-semibold mt-1 sm:mt-2 relative z-10">
                 Reach Local Customers
               </h3>
-              <p className="text-gray-300 text-sm relative z-10">
-                Get discovered by people searching <br />
-                for businesses like yours.
+              <p className="text-gray-300 text-xs sm:text-sm relative z-10 mt-1 sm:mt-2">
+                Get discovered by people searching for businesses like yours.
               </p>
             </div>
           </div>
 
           {/* Feature 2 */}
-
-          <div className="text-center relative">
-            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div>{" "}
-              {/* Cutting the upper part */}
+          <div className="text-center relative px-4">
+            <div className="relative w-52 h-52 sm:w-60 sm:h-60 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden p-4">
+              <div className="absolute -top-6 w-full h-full"></div>
               <img
                 src={arcti}
                 alt="Boost Online Presence"
-                className="w-18 h-18 mb-4 relative z-10"
+                className="w-12 h-12 sm:w-14 sm:h-14 mb-2 sm:mb-3 relative z-10"
               />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">
+              <h3 className="text-sm sm:text-base font-semibold mt-1 sm:mt-2 relative z-10">
                 Boost Online Presence
               </h3>
-              <p className="text-gray-300 text-sm relative z-10">
-                Improve your brand visibility and <br />
-                credibility. No hidden charges!
+              <p className="text-gray-300 text-xs sm:text-sm relative z-10 mt-1 sm:mt-2">
+                Improve your brand visibility and credibility. No hidden
+                charges!
               </p>
             </div>
           </div>
 
           {/* Feature 3 */}
-          <div className="text-center relative">
-            <div className="relative w-80 h-80 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden">
-              <div className="absolute -top-6 w-full h-full "></div>{" "}
-              {/* Cutting the upper part */}
+          <div className="text-center relative px-4">
+            <div className="relative w-52 h-52 sm:w-60 sm:h-60 mx-auto border-2 border-white rounded-full flex flex-col items-center justify-center overflow-hidden p-4">
+              <div className="absolute -top-6 w-full h-full"></div>
               <img
                 src={people}
                 alt="Targeted Audience"
-                className="w-18 h-18 mb-4 relative z-10"
+                className="w-12 h-12 sm:w-14 sm:h-14 mb-2 sm:mb-3 relative z-10"
               />
-              <h3 className="text-lg font-semibold mt-2 relative z-10">
+              <h3 className="text-sm sm:text-base font-semibold mt-1 sm:mt-2 relative z-10">
                 Targeted Audience
               </h3>
-              <p className="text-gray-300 text-sm relative z-10">
-                Connect with the Punjabi community <br />
-                looking for services they trust.
+              <p className="text-gray-300 text-xs sm:text-sm relative z-10 mt-1 sm:mt-2">
+                Connect with the Punjabi community looking for services they
+                trust.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Question page */}
 
-      <section className="bg-[#FFFDF5] py-16 px-6 md:px-12">
+      {/* Question section */}
+      <section className="bg-[#FFFDF5] py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#D72E2F] mt-18 mr-118">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#D72E2F]">
             Explore Answers to your Question!
           </h2>
         </div>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-6xl mx-auto mt-25">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto">
           {/* FAQ Item 1 */}
-          <div className=" p-6  ">
-            <h2 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. What is Panjabi Pages?
             </h2>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Panjabi Pages is a business directory app designed to help the
               Punjabi community discover and connect with local businesses,
               services, and cultural events. From restaurants to professionals,
@@ -399,11 +443,11 @@ const Home = () => {
           </div>
 
           {/* FAQ Item 2 */}
-          <div className=" p-6 ">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. Is Panjabi Pages only for Punjabi-owned businesses?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               No, any business that serves or supports the Punjabi community is
               welcome to list. Our goal is to build a strong, helpful network
               for everyone in the community.
@@ -411,70 +455,67 @@ const Home = () => {
           </div>
 
           {/* FAQ Item 3 */}
-          <div className=" p-6  ">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. How can I list my business on Panjabi Pages?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
-              Simply tap the “Add Your Business” button on the app, fill out the
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
+              Simply tap the "Add Your Business" button on the app, fill out the
               form with your details, and submit. Once verified, your listing
               will go live.
             </p>
           </div>
 
           {/* FAQ Item 4 */}
-          <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. Is there a fee to list a business?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Basic listings are free. We also offer premium plans for extra
               visibility, featured placements, and promotional tools.
             </p>
           </div>
 
           {/* FAQ Item 5 */}
-          <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. Can I search by location or business category?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Yes, you can filter by location, business type, and even specific
               services to find exactly what you're looking for.
             </p>
           </div>
 
           {/* FAQ Item 6 */}
-
-          <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. Can I leave reviews for businesses?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Absolutely! Reviews help others in the community make informed
               decisions, and businesses appreciate your honest feedback.
             </p>
           </div>
 
           {/* FAQ Item 7 */}
-
-          <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. Is the app available on both Android and iOS?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Yes, Panjabi Pages is available on both platforms so you can
               access it anytime, anywhere.
             </p>
           </div>
 
           {/* FAQ Item 8 */}
-
-          <div className=" p-6">
-            <h3 className="text-3xl font-semibold text-[#F09918]">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
               Q. How do I update my business details?
             </h3>
-            <p className="text-[#454545] mt-2 text-xl">
+            <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               You can log in to your account and edit your listing anytime. Our
               team also reviews changes for quality and accuracy.
             </p>

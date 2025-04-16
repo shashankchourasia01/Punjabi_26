@@ -38,6 +38,7 @@ import { logout } from "../store/authSlice";
 import weather_icon from "../result_assets/weather_icon.png";
 import Explore from "../components/Explore";
 import { SERVER_URL } from "../services/Helper";
+import PopularCategories from "../components/PopularCategories";
 // import More from '../components/More';
 
 const Result = () => {
@@ -61,14 +62,11 @@ const Result = () => {
     e.preventDefault();
     console.log("Submitting Data:", data);
     try {
-      const response = await axios.get(
-        `${SERVER_URL}company/searchResults`,
-        {
-          params: {
-            primaryBusiness: data.primaryBusiness, // Query parameter to be passed in URL
-          },
-        }
-      );
+      const response = await axios.get(`${SERVER_URL}company/searchResults`, {
+        params: {
+          primaryBusiness: data.primaryBusiness, // Query parameter to be passed in URL
+        },
+      });
       //alert(response.data.message || "Company registered successfully!");
       setSearch(true);
       setResults(response.data);
@@ -88,8 +86,6 @@ const Result = () => {
   const handleCategoryClickToMore = () => {
     navigate("/more"); // Navigate to More.jsx page
   };
-
-  
 
   const handleCategoryClick = (category) => {
     navigate(`/category/${encodeURIComponent(category)}`); // Navigate to category page
@@ -165,7 +161,7 @@ const Result = () => {
     <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
-        <Link to="/" className="flex items-center">
+        <Link to="/home" className="flex items-center">
           <img
             src={logo}
             alt="Punjabi Logo"
@@ -397,188 +393,201 @@ const Result = () => {
             id="explore"
             className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-20"
           >
-            <div className="flex items-center justify center flex-col mt-10 flex-wrap w-40">
-              <button key={"food"} onClick={() => handleCategoryClick("Food")}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={dining}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Food & Beverages
-              </p>
+            <div className="flex flex-row flex-nowrap overflow-x-auto space-x-6 px-4">
+              {/* Food & Beverages */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button
+                  key={"food"}
+                  onClick={() => handleCategoryClick("Food")}
+                >
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={dining}
+                      alt="Food & Beverages"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Food & Beverages
+                </p>
+              </div>
+
+              {/* Beauty & Wellness */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button
+                  onClick={() => handleCategoryClick("Beauty & Wellness")}
+                >
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={spa}
+                      alt="Beauty & Wellness"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Beauty & Wellness
+                </p>
+              </div>
+
+              {/* Apparel & Accessories */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button
+                  onClick={() => handleCategoryClick("Apparel & Accessories")}
+                >
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={clothing_store}
+                      alt="Apparel & Accessories"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Apparel & Accessories
+                </p>
+              </div>
+
+              {/* Education */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button onClick={() => handleCategoryClick("Education")}>
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={cap}
+                      alt="Education"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Education
+                </p>
+              </div>
+
+              {/* Health */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button onClick={() => handleCategoryClick("Health")}>
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={health}
+                      alt="Health"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Health
+                </p>
+              </div>
+
+              {/* Wedding and Events */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button
+                  onClick={() => handleCategoryClick("Wedding and Events")}
+                >
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={church}
+                      alt="Wedding and Events"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Wedding and Events
+                </p>
+              </div>
+
+              {/* Logistic Services */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button
+                  onClick={() => handleCategoryClick("Logistic Services")}
+                >
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={bus}
+                      alt="Logistic Services"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  Logistic Services
+                </p>
+              </div>
+
+              {/* More */}
+              <div className="flex items-center justify-center flex-col w-40">
+                <button onClick={handleCategoryClickToMore}>
+                  <div className="flex items-center justify-center rounded-full">
+                    <img
+                      src={more_icon}
+                      alt="More"
+                      className="w-13 h-13 object-contain rounded-full"
+                    />
+                  </div>
+                </button>
+                <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-lg">
+                  More
+                </p>
+              </div>
             </div>
 
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Beauty & Wellness")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={spa}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Beauty & Wellness
-              </p>
-            </div>
-
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Apparel & Accessories")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={clothing_store}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Apparel & Accessories
-              </p>
-            </div>
-
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Education")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={cap}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Education
-              </p>
-            </div>
-
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Health")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={health}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Health
-              </p>
-            </div>
-
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Wedding and Events")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={church}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Wedding and Events
-              </p>
-            </div>
-
-            <div className="flex items-center justify center flex-col mt-10 w-40">
-              <button
-                key={"food"}
-                onClick={() => handleCategoryClick("Logistic Services")}
-              >
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={bus}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                Logistic Services
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center flex-col mt-10 w-40">
-              <button key={"food"} onClick={handleCategoryClickToMore}>
-                <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
-                  <img
-                    src={more_icon}
-                    alt="Food & Beverages"
-                    className="w-16 h-16 object-contain rounded-full"
-                  />
-                </div>
-              </button>
-              <p className="text-center mt-6 mb-6 text-gray-700 font-medium text-xl">
-                More
-              </p>
-            </div>
-
-          {/* <More /> */}
-
+            {/* <More /> */}
           </div>
+
+          {/* Pupular Categories */}
+
+          <PopularCategories />
 
           {/* 500k+  3  */}
 
-          <div className=" bg-[#1077BC] py-22 flex justify-around items-center w-full relative">
-            <div className="stat relative text-center">
-              <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+          <div className="bg-[#1077BC] py-16 md:py-22 flex flex-wrap justify-center gap-8 md:justify-around items-center w-full relative px-4">
+            {/* Business Stat */}
+            <div className="stat relative text-center w-[160px] md:w-auto">
+              <div className="number text-3xl sm:text-4xl md:text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1077BC]">
                 500+
               </div>
-              <div className="text text-white mt-10">Businesses</div>
+              <div className="text text-white mt-10 text-sm sm:text-base md:text-lg">
+                Businesses
+              </div>
             </div>
 
-            <div className="stat relative text-center">
-              <div className="number text-5xl font-medium  text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            {/* Users Stat */}
+            <div className="stat relative text-center w-[160px] md:w-auto">
+              <div className="number text-3xl sm:text-4xl md:text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1077BC]">
                 40K
               </div>
-              <div className="text text-white mt-10">Users</div>
+              <div className="text text-white mt-10 text-sm sm:text-base md:text-lg">
+                Users
+              </div>
             </div>
 
-            <div className="stat relative text-center">
-              <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            {/* Premium Users Stat */}
+            <div className="stat relative text-center w-[160px] md:w-auto">
+              <div className="number text-3xl sm:text-4xl md:text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1077BC]">
                 200+
               </div>
-              <div className="text text-white mt-10">Premium Usrs</div>
+              <div className="text text-white mt-10 text-sm sm:text-base md:text-lg">
+                Premium Users
+              </div>
             </div>
 
-            <div className="stat relative text-center">
-              <div className="number text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2">
+            {/* Listings Stat */}
+            <div className="stat relative text-center w-[160px] md:w-auto">
+              <div className="number text-3xl sm:text-4xl md:text-5xl font-medium text-white px-4 py-1 rounded absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#1077BC]">
                 16+
               </div>
-              <div className="text text-white mt-10">
-                Business Listing Daily
+              <div className="text text-white mt-10 text-sm sm:text-base md:text-lg">
+                Business Listings Daily
               </div>
             </div>
           </div>
 
           {/* Featured business  4  */}
 
-
           <Explore />
-
-         
 
           {/* List your business 5 */}
 

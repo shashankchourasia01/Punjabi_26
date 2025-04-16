@@ -11,6 +11,7 @@ import Dashboard from "./components/Dashboard";
 import More from "./components/More";
 import Blogs from "./components/Blogs";
 import Explore from "./components/Explore";
+import PopularCategories from "./components/PopularCategories";
 //import SearchResults from "./pages/SearchResults";
 
 
@@ -20,8 +21,9 @@ const App = () => {
       <StoreContextProvider>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
             <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Result />} />
             <Route path="/result" element={<Result />} />
             <Route path="/companyDetails" element={<CompanyDetails />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -31,6 +33,7 @@ const App = () => {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/more" element={<More />} />
             <Route path="/explore_more" element={<Explore />} />
+            <Route path="/popular_categories" element={<PopularCategories />} />
             
           </Routes>
         </main>
