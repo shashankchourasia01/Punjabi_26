@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import paji from "../home_assets/new_home_bg.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
-import menu from "../home_assets/Menu Logo.png";
 import search_icon from "../home_assets/search icon.png";
 import bus from "../result_assets/bus_new.png";
 import cap from "../result_assets/cap_new.png";
@@ -35,6 +34,7 @@ import weather_icon from "../result_assets/weather_icon.png";
 import Explore from "../components/Explore";
 import { SERVER_URL } from "../services/Helper";
 import PopularCategories from "../components/PopularCategories";
+import bg_video from "../result_assets/bg_video.mp4";
 import UserLocation from "../components/UserLocation";
 // import More from '../components/More';
 
@@ -189,7 +189,7 @@ const Result = () => {
   return (
     <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
-      <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
+      <div className=" relative flex items-center justify-between px-10 py-2 bg-[#1077BC] w-full ">
         <Link to="/home" className="flex items-center">
           <img
             src={logo}
@@ -224,13 +224,13 @@ const Result = () => {
           </Link>
         </div>
 
-        {/* Menu Icon */}
-        <img
+        {/* Login Button*/}
+        <button
           onClick={() => setShowForm((prev) => !prev)}
-          src={menu}
-          alt="Menu Logo"
-          className="w-12 rounded-full mr-20"
-        />
+          className="mr-20 px-4 py-2 bg-yellow-500 text-black text-lg rounded-lg hover:bg-yellow-600 transition"
+        >
+          Login
+        </button>
 
         {/* Weather checker */}
 
@@ -285,34 +285,38 @@ const Result = () => {
       {/* <UserLocation /> */}
 
       {/* Background Image */}
-      <div className="absolute inset-0 z-[-50]">
-        <div className="absolute inset-0 bg-black opacity-15 "></div>
-        <img
-          src={paji}
-          alt="Home Background"
-          className="w-full h-full bg-cover bg-center"
-        />
-        {/* .. */}
+      <div className="absolute inset-0 z-[-50] pt-20">
+        <div className="absolute "></div>
+        <video
+          className="w-full h-[450px] object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={bg_video} type="video/mp4" />
+        </video>
       </div>
 
       {/* Main Content */}
-      <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-20 justify-center">
+      <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-40 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover Punjabi
+          Discover Punjabi Businesses
           <br />
         </h1>
-        <h1 className="text-5xl font-bold mt-4">Businesses And Pages!</h1>
+
         <br />
         <h4 className="mb-4 text-2xl">
-          From restaurants to real estate,find trusted
+          From restaurants to real estate,find trusted businesses in your
+          community.
         </h4>
-        <h4 className="mb-20 text-2xl">businesses in your community.</h4>
+
+
 
         {/* Search Bar */}
-
         <div
           id="searchBox"
-          className="bg-white w-[900px] h-[70px] flex justify-center items-stretch rounded-lg shadow-lg mt-10"
+          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg shadow-lg mt-10"
         >
           {/* Search Business Input */}
           <form onSubmit={handleSubmit} className="flex">
@@ -322,7 +326,7 @@ const Result = () => {
               placeholder="Search the Businesses..."
               name="primaryBusiness"
               onChange={handleChange}
-              className="w-[450px] p-2 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-1"
+              className="w-[717px] p-2 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-1"
             />
 
             {/* Location Input */}
@@ -408,7 +412,7 @@ const Result = () => {
         <div>
           <div
             id="explore"
-            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-50"
+            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-25"
           >
             <div className="flex flex-row flex-nowrap overflow-x-auto space-x-6 px-4">
               {/* Food & Beverages */}
