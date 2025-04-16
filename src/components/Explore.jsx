@@ -187,7 +187,7 @@ const Explore = () => {
             </span>
           </h1>
 
-          <div className="flex justify-between w-[100%] mx-auto gap-26 pb-4 mt-10">
+          <div className="flex justify-between w-[100%] mx-auto gap-10 pb-4 mt-10">
             {businesses.slice(0, 3).map((business) => (
               <div
                 key={business.id}
@@ -233,7 +233,7 @@ const Explore = () => {
           </h1>
 
           <div>
-            <div className="flex justify-between w-[100%] mx-auto gap-26 pb-4 mt-10">
+            <div className="flex justify-between w-[100%] mx-auto gap-10 pb-4 mt-10">
               {businesses.slice(3, 6).map((business) => (
                 <div
                   key={business.id}
@@ -280,7 +280,7 @@ const Explore = () => {
             </span>
           </h1>
 
-          <div className="flex justify-between w-[100%] mx-auto gap-26 pb-4 mt-10">
+          <div className="flex justify-between w-[100%] mx-auto gap-10 pb-4 mt-10">
             {businesses.slice(6, 9).map((business) => (
               <div
                 key={business.id}

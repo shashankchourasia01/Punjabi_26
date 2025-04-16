@@ -12,11 +12,7 @@ import dining from "../result_assets/cup_new.png";
 import clothing_store from "../result_assets/cloth_new.png";
 import spa from "../result_assets/flower_new.png";
 import Footer from "../components/Footer";
-// import first from "../result_assets/1 card.png";
 import second from "../result_assets/2 card.png";
-// import third from "../result_assets/3 card.png";
-// import left_arrow from "../result_assets/left_arrow.png";
-// import right_arrow from "../result_assets/right_arrow.png";
 import rectangle from "../result_assets/rectangle_new.png";
 import girl from "../result_assets/girl (1).png";
 import receptionist from "../result_assets/recep_replace.jpg";
@@ -284,7 +280,6 @@ const Result = () => {
             )}
           </div>
         )}
-
       </div>
 
       {/* <UserLocation /> */}
@@ -317,7 +312,7 @@ const Result = () => {
 
         <div
           id="searchBox"
-          className="bg-white w-[1200px] h-[80px] flex justify-center items-stretch  rounded-2xl shadow-lg mt-10"
+          className="bg-white w-[900px] h-[70px] flex justify-center items-stretch rounded-lg shadow-lg mt-10"
         >
           {/* Search Business Input */}
           <form onSubmit={handleSubmit} className="flex">
@@ -327,21 +322,21 @@ const Result = () => {
               placeholder="Search the Businesses..."
               name="primaryBusiness"
               onChange={handleChange}
-              className="w-[800px] p-3 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-2"
+              className="w-[450px] p-2 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-1"
             />
 
-            {/* Location Input (Optional, not used in backend yet) */}
+            {/* Location Input */}
             <input
               type="text"
               name="location"
               placeholder="Location"
-              className="w-[300px] p-3 focus:outline-none text-black"
               onChange={handleChange}
+              className="w-[350px] p-2 focus:outline-none text-black m-1"
             />
 
             {/* Search Button */}
-            <button className="bg-[#F09918] text-white h-full rounded-r-2xl flex items-center justify-center w-[106px]">
-              <img src={search_icon} alt="Search" className="w-[50px]" />
+            <button className="bg-[#F09918] text-white h-full rounded-r-lg ml-3 flex items-center justify-center w-[75px]">
+              <img src={search_icon} alt="Search" className="w-[30px]" />
             </button>
           </form>
         </div>
@@ -615,13 +610,13 @@ const Result = () => {
 
           <div
             id="addBusiness"
-            className="relative bg-white w-full flex items-center justify-center min-h-screen p-6"
+            className="relative bg-white w-full flex items-center justify-center h-[696px] p-6"
           >
             {/* Background Image */}
             <img
               src={rectangle}
               alt="Background"
-              className="absolute  w-[1400px] mx-auto top-[15rem] left-1/2 -translate-x-1/2 -translate-y-1/20 z-[5] h-[451px]"
+              className="absolute  w-[1400px] mx-auto top-[12rem] left-1/2 -translate-x-1/2 -translate-y-1/20 z-[5] h-[451px]"
             />
 
             <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl">

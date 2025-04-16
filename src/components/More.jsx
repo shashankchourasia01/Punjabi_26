@@ -57,11 +57,11 @@ const More = () => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Clothing")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={clothing}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -72,11 +72,11 @@ const More = () => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Fitness")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={fitness}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -87,11 +87,11 @@ const More = () => {
 
         <div className="flex items-center justify center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Finance")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={finance}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -102,11 +102,11 @@ const More = () => {
 
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Kid")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={kid}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -119,11 +119,11 @@ const More = () => {
 
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Recritment")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={recruitment}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -135,11 +135,11 @@ const More = () => {
         {/* 10 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Automotive")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={automotive}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -151,11 +151,11 @@ const More = () => {
         {/* 11 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Transport")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={transport}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -167,11 +167,11 @@ const More = () => {
         {/* 12 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Education")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={cap}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -183,11 +183,11 @@ const More = () => {
         {/* 13 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Travel")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={travel}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -199,11 +199,11 @@ const More = () => {
         {/* 14 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Law")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={law}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -215,11 +215,11 @@ const More = () => {
         {/* 15 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("Gurdwara")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={gurdwara}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
@@ -231,11 +231,11 @@ const More = () => {
         {/* 16 */}
         <div className="flex items-center justify-center flex-col mt-10 w-40">
           <button key={"food"} onClick={() => handleCategoryClick("More")}>
-            <div className="w-40 h-40 flex items-center justify-center rounded-full bg-gradient-to-b from-[#F09918] to-[#D72E2F]">
+            <div className="flex items-center justify-center">
               <img
                 src={more_icon}
                 alt="Food & Beverages"
-                className="w-16 h-16 object-contain rounded-full"
+                className="w-13 h-13 object-contain rounded-full"
               />
             </div>
           </button>
