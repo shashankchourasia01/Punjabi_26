@@ -193,7 +193,7 @@ const Result = () => {
           <img
             src={logo}
             alt="Punjabi Logo"
-            className="w-16 rounded-full ml-4"
+            className="w-20 rounded-full ml-4"
           />
         </Link>
 
