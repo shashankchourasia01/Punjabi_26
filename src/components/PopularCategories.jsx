@@ -77,7 +77,7 @@ const PopularCategories = () => {
   return (
     <div className="bg-[#FFFDF5] mt-10 py-12 px-4">
       <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
-        Popular categories on Yellow
+        Popular categories on Punjabi Pages
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-start gap-10 overflow-x-auto">
         {Object.entries(popularCategories).map(([city, businesses]) => (

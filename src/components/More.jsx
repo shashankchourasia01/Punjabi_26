@@ -26,11 +26,11 @@ const More = () => {
     
   return (
     <div >
-        <h1 className=" flex items-center justify-center font-semibold text-4xl">All Categories</h1>
+        <h1 className=" flex items-center justify-center font-semibold text-4xl mt-10">All Categories</h1>
         {/* Close Button (Top-Right) */}
         <button
         onClick={() => window.history.back()}
-        className="absolute top-4 right-4 text-black cursor-pointer"
+        className="absolute top-10 right-4 text-black cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

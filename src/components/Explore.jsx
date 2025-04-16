@@ -283,7 +283,7 @@ const Explore = () => {
           </h1>
 
           <div className="w-full px-4 md:px-10 lg:px-20 xl:px-32 2xl:px-40">
-            <div className="flex justify-between w-full mx-auto gap-10 pb-4 mt-10">
+            <div className="flex justify-between w-full mx-auto gap-6 pb-4 mt-10">
               {businesses.slice(6, 9).map((business) => (
                 <div
                   key={business.id}

@@ -12,7 +12,7 @@ import spa from "../result_assets/beauty-product 2.png";
 import Footer from "../components/Footer";
 import second from "../result_assets/2 card.png";
 import rectangle from "../result_assets/rectangle_new.png";
-import girl from "../result_assets/girl (1).png";
+import girl from "../result_assets/new_girl.png";
 import receptionist from "../result_assets/recep_replace.jpg";
 import left_phone from "../result_assets/left_phone.png";
 import right_phone from "../result_assets/right_phone.png";
@@ -315,7 +315,7 @@ const Result = () => {
         {/* Search Bar */}
         <div
           id="searchBox"
-          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg shadow-lg mt-10"
+          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg ml-10 shadow-lg mt-10"
         >
           {/* Search Business Input */}
           <form onSubmit={handleSubmit} className="flex">
@@ -628,7 +628,7 @@ const Result = () => {
                 <img
                   src={girl}
                   alt="Woman using a blender"
-                  className="w-full max-w-md md:max-w-lg mt-10  absolute top-[25.6rem] left-[30rem] transform -translate-x-1/2 -translate-y-1/2"
+                  className="w-full max-w-md md:max-w-lg mt-10  absolute top-[21rem] left-[30rem] transform -translate-x-1/2 -translate-y-1/2"
                 />
               </div>
 
