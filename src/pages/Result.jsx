@@ -298,7 +298,7 @@ const Result = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mt-40 justify-center">
+      <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mr-30 mt-40 justify-center">
         <h1 className="text-5xl font-bold">
           Discover Punjabi Businesses
           <br />
@@ -310,12 +310,12 @@ const Result = () => {
           community.
         </h4>
 
-
+        </div>
 
         {/* Search Bar */}
         <div
           id="searchBox"
-          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg ml-10 shadow-lg mt-10"
+          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg ml-45 shadow-lg mt-10"
         >
           {/* Search Business Input */}
           <form onSubmit={handleSubmit} className="flex">
@@ -343,7 +343,7 @@ const Result = () => {
             </button>
           </form>
         </div>
-      </div>
+      
 
       {showForm && (
         <div className="fixed top-5 right-4 bg-white text-black cursor-pointer text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">
