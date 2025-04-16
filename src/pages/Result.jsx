@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import paji from "../home_assets/new_home_bg.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
@@ -39,6 +39,7 @@ import weather_icon from "../result_assets/weather_icon.png";
 import Explore from "../components/Explore";
 import { SERVER_URL } from "../services/Helper";
 import PopularCategories from "../components/PopularCategories";
+import UserLocation from "../components/UserLocation";
 // import More from '../components/More';
 
 const Result = () => {
@@ -46,7 +47,7 @@ const Result = () => {
   const [showForm, setShowForm] = useState(false);
   //const [LoggedIn, setLoggedIn] = useState(false);
   // weather
-  // const [wLocation, wSetLocation] = useState("");
+  const [weatherVisible, setWeatherVisible] = useState(false);
   const [weather, setWeather] = useState(null);
   const [showWeather, setShowWeather] = useState(true);
 
@@ -96,6 +97,21 @@ const Result = () => {
     setLocation(e.target.value);
   };
 
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          fetchWeatherByCoords(lat, lon); // call this function
+        },
+        (err) => {
+          console.error("Error getting location:", err.message);
+        }
+      );
+    }
+  }, []);
+
   const handleWeatherSubmit = async (e) => {
     e.preventDefault();
 
@@ -112,6 +128,23 @@ const Result = () => {
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
+    }
+  };
+
+  const fetchWeatherByCoords = async (lat, lon) => {
+    const apiKey = "f69ee6d52e37c6d325586aa8562b7b04";
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data.main) {
+        setWeather(data);
+      } else {
+        alert("Unable to fetch weather for your location.");
+      }
+    } catch (error) {
+      console.error("Error fetching weather by location:", error);
     }
   };
 
@@ -158,6 +191,8 @@ const Result = () => {
   };
 
   return (
+
+    
     <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
@@ -168,6 +203,8 @@ const Result = () => {
             className="w-16 rounded-full ml-15"
           />
         </Link>
+
+        
 
         {/* Nav Links */}
         <div className="hidden md:flex space-x-10 pr-30">
@@ -202,7 +239,91 @@ const Result = () => {
           alt="Menu Logo"
           className="w-12 rounded-full mr-15"
         />
+
+        
+
+        {/* weather */}
+        {/* Weather checker */}
+        <div className="relative">
+          {/* Weather Icon Button */}
+          {!weatherVisible && (
+            <button
+              onClick={() => setWeatherVisible(true)}
+              className="fixed top-5 right-5 z-50"
+            >
+              <img
+                src={weather_icon}
+                alt="Weather Icon"
+                className="w-12 h-12"
+              />
+            </button>
+          )}
+
+          {/* Weather Box */}
+          {weatherVisible && (
+            <div className="relative">
+              {/* Weather Icon Button */}
+              {!weatherVisible && (
+                <button
+                  onClick={() => setWeatherVisible(true)}
+                  className="fixed top-5 right-5 z-50"
+                >
+                  <img
+                    src={weather_icon}
+                    alt="Weather Icon"
+                    className="w-12 h-12"
+                  />
+                </button>
+              )}
+
+              {/* Weather Box */}
+              {weatherVisible && (
+                <div className="absolute top-16 right-5 bg-black text-white w-[450px] p-4 rounded-2xl shadow-lg">
+                  <form onSubmit={handleWeatherSubmit} className="flex">
+                    <input
+                      type="text"
+                      placeholder="Search the Weather..."
+                      name="location"
+                      onChange={handleWeatherChange}
+                      className="w-full p-2 rounded-xl text-black"
+                    />
+                    <button type="submit" className="ml-2">
+                      <img
+                        src={search_icon}
+                        alt="Search"
+                        className=" w-[30px]"
+                      />
+                    </button>
+                  </form>
+
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setWeatherVisible(false)}
+                    className="absolute top-2 right-2 bg-gray-200 p-1 rounded-full hover:bg-gray-300"
+                  >
+                    <X className="w-4 h-4 text-black" />
+                  </button>
+
+                  {/* Weather Info */}
+                  {weather && (
+                    <div className="mt-4 text-left">
+                      <h2 className="text-lg font-semibold mb-2">
+                        Weather in {weather.name}
+                      </h2>
+                      <p>🌡️ Temperature: {weather.main.temp}°C</p>
+                      <p>🌤️ Condition: {weather.weather[0].description}</p>
+                      <p>💧 Humidity: {weather.main.humidity}%</p>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
+
+      {/* user location */}
+      <UserLocation />
 
       {/* Background Image */}
       <div className="absolute inset-0 z-[-50]">
@@ -259,69 +380,6 @@ const Result = () => {
               <img src={search_icon} alt="Search" className="w-[50px]" />
             </button>
           </form>
-        </div>
-      </div>
-
-      {/* Weather checker */}
-
-      <div className="mx-auto w-fit ml-80">
-        <div
-          id="weatherBox"
-          className="bg-black text-white w-[450px] h-[80px] flex justify-center items-stretch rounded-2xl shadow-lg mt-10 ml-40"
-        >
-          {/* Weather Search Input */}
-          <form onSubmit={handleWeatherSubmit} className="flex">
-            {/* Location Input */}
-            <input
-              type="text"
-              placeholder="Search the Weather..."
-              name="location"
-              onChange={handleWeatherChange}
-              className="w-[310px] p-3 rounded-2xl focus:outline-none text-white font-lg border-2 border-gray-300 m-2 ml-12 "
-            />
-
-            {/* Weather Icon */}
-            <img
-              src={weather_icon} // Make sure to define or import this
-              alt="Weather Icon"
-              className="w-[35px] h-[35px] my-auto ml-4"
-            />
-
-            {/* Search Button */}
-            <button className="bg-[#F09918] cursor-pointer text-white h-full rounded-r-2xl ml-10 flex items-center justify-center w-[106px]">
-              <img src={search_icon} alt="Search" className="w-[40px] " />
-            </button>
-          </form>
-
-          {/* Display Weather Information */}
-          {weather && (
-            <div
-              id="weather_search"
-              className="absolute z-10 mt-[100px] bg-white w-[1200px] rounded-b-2xl shadow-lg p-5 text-black"
-            >
-              {/* Close Button */}
-              <button
-                onClick={() => {
-                  setWeather(null); // clear weather result
-                  document
-                    .getElementById("weather_search")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="absolute top-3 right-3 bg-gray-200 p-2 rounded-full hover:bg-gray-300"
-              >
-                <X className="w-4 h-4" />
-              </button>
-
-              <h2 className="text-xl font-semibold mb-2">
-                Weather in {weather.name}
-              </h2>
-              <p className="mb-1">🌡️ Temperature: {weather.main.temp}°C</p>
-              <p className="mb-1">
-                🌤️ Condition: {weather.weather[0].description}
-              </p>
-              <p>💧 Humidity: {weather.main.humidity}%</p>
-            </div>
-          )}
         </div>
       </div>
 
