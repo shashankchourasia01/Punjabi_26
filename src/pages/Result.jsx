@@ -191,8 +191,6 @@ const Result = () => {
   };
 
   return (
-
-    
     <div id="about" className="relative h-screen z-[10]">
       {/* {/Navbar/} */}
       <div className=" relative flex items-center justify-between px-10 py-4 bg-transparent w-full z-[50]">
@@ -200,11 +198,9 @@ const Result = () => {
           <img
             src={logo}
             alt="Punjabi Logo"
-            className="w-16 rounded-full ml-15"
+            className="w-16 rounded-full ml-4"
           />
         </Link>
-
-        
 
         {/* Nav Links */}
         <div className="hidden md:flex space-x-10 pr-30">
@@ -237,93 +233,61 @@ const Result = () => {
           onClick={() => setShowForm((prev) => !prev)}
           src={menu}
           alt="Menu Logo"
-          className="w-12 rounded-full mr-15"
+          className="w-12 rounded-full mr-20"
         />
 
-        
-
-        {/* weather */}
         {/* Weather checker */}
-        <div className="relative">
-          {/* Weather Icon Button */}
-          {!weatherVisible && (
-            <button
-              onClick={() => setWeatherVisible(true)}
-              className="fixed top-5 right-5 z-50"
-            >
-              <img
-                src={weather_icon}
-                alt="Weather Icon"
-                className="w-12 h-12"
+
+        <button
+          onClick={() => setWeatherVisible(true)}
+          className={`absolute top-5 right-5 z-50 ${
+            weatherVisible ? "hidden" : ""
+          }`}
+        >
+          <img src={weather_icon} alt="Weather Icon" className="w-12 h-12" />
+        </button>
+
+        {/* Weather Box */}
+        {weatherVisible && (
+          <div className="fixed top-20 right-5 bg-black text-white w-[250px] p-4 rounded-2xl shadow-lg z-50">
+            <form onSubmit={handleWeatherSubmit} className="flex">
+              <input
+                type="text"
+                placeholder="Search the Weather..."
+                name="location"
+                onChange={handleWeatherChange}
+                className="w-full p-2 rounded-xl text-black"
               />
+              <button type="submit" className="ml-2">
+                <img src={search_icon} alt="Search" className="w-[30px]" />
+              </button>
+            </form>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setWeatherVisible(false)}
+              className="absolute top-2 right-2 bg-gray-200 p-1 rounded-full hover:bg-gray-300"
+            >
+              <X className="w-4 h-4 text-black" />
             </button>
-          )}
 
-          {/* Weather Box */}
-          {weatherVisible && (
-            <div className="relative">
-              {/* Weather Icon Button */}
-              {!weatherVisible && (
-                <button
-                  onClick={() => setWeatherVisible(true)}
-                  className="fixed top-5 right-5 z-50"
-                >
-                  <img
-                    src={weather_icon}
-                    alt="Weather Icon"
-                    className="w-12 h-12"
-                  />
-                </button>
-              )}
+            {/* Weather Info */}
+            {weather && (
+              <div className="mt-4 text-left">
+                <h2 className="text-lg font-semibold mb-2">
+                  Weather in {weather.name}
+                </h2>
+                <p>🌡️ Temperature: {weather.main.temp}°C</p>
+                <p>🌤️ Condition: {weather.weather[0].description}</p>
+                <p>💧 Humidity: {weather.main.humidity}%</p>
+              </div>
+            )}
+          </div>
+        )}
 
-              {/* Weather Box */}
-              {weatherVisible && (
-                <div className="absolute top-16 right-5 bg-black text-white w-[450px] p-4 rounded-2xl shadow-lg">
-                  <form onSubmit={handleWeatherSubmit} className="flex">
-                    <input
-                      type="text"
-                      placeholder="Search the Weather..."
-                      name="location"
-                      onChange={handleWeatherChange}
-                      className="w-full p-2 rounded-xl text-black"
-                    />
-                    <button type="submit" className="ml-2">
-                      <img
-                        src={search_icon}
-                        alt="Search"
-                        className=" w-[30px]"
-                      />
-                    </button>
-                  </form>
-
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setWeatherVisible(false)}
-                    className="absolute top-2 right-2 bg-gray-200 p-1 rounded-full hover:bg-gray-300"
-                  >
-                    <X className="w-4 h-4 text-black" />
-                  </button>
-
-                  {/* Weather Info */}
-                  {weather && (
-                    <div className="mt-4 text-left">
-                      <h2 className="text-lg font-semibold mb-2">
-                        Weather in {weather.name}
-                      </h2>
-                      <p>🌡️ Temperature: {weather.main.temp}°C</p>
-                      <p>🌤️ Condition: {weather.weather[0].description}</p>
-                      <p>💧 Humidity: {weather.main.humidity}%</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
       </div>
 
-      {/* user location */}
-      <UserLocation />
+      {/* <UserLocation /> */}
 
       {/* Background Image */}
       <div className="absolute inset-0 z-[-50]">
@@ -449,7 +413,7 @@ const Result = () => {
         <div>
           <div
             id="explore"
-            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-20"
+            className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-x-40 mt-50"
           >
             <div className="flex flex-row flex-nowrap overflow-x-auto space-x-6 px-4">
               {/* Food & Beverages */}
