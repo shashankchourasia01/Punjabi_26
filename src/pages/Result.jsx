@@ -338,10 +338,10 @@ const Result = () => {
 
           {/* Search Button */}
           <div className="flex items-stretch">
-      <button className="bg-[#F09918] text-white rounded-sm flex items-center justify-center w-[75px] min-w-[60px] mt-2 h-[54px]">
-        <img src={search_icon} alt="Search" className="w-[30px]" />
-      </button>
-    </div>
+            <button className="bg-[#F09918] text-white rounded-sm flex items-center justify-center w-[75px] min-w-[60px] mt-2 h-[54px]">
+              <img src={search_icon} alt="Search" className="w-[30px]" />
+            </button>
+          </div>
         </form>
       </div>
 

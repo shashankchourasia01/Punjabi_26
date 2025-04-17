@@ -199,7 +199,7 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="flex relative z-10 flex-col justify-center items-start text-white text-left h-full px-4 md:px-10 lg:ml-20 -mt-10 md:-mt-20">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
+        {/* <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
           List & Grow Your Business
         </h1>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-snug">
@@ -210,7 +210,59 @@ const Home = () => {
           Join 1000+ Businesses & connect with{" "}
           <br className="hidden md:block" />
           customers today!
-        </h4>
+        </h4> */}
+
+          {/* login form */}
+          <div className="absolute top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+            <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
+              Login Here
+            </h5>
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
+            />
+            <input
+              type="text"
+              placeholder="Password"
+              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
+            />
+
+            <button
+              onClick={goToResultPage}
+              className="w-full rounded-2xl bg-yellow-400 text-white p-2 font-bold"
+            >
+              Sign in
+            </button>
+
+            {/* Social Login Buttons */}
+            <button
+              onClick={handleGoogleLogin}
+              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-3 sm:mt-4 bg-black transition text-sm sm:text-base"
+            >
+              <img src={google} alt="Google" className="w-4 sm:w-5" />
+              <span>Sign in with Google</span>
+            </button>
+
+            <button
+              onClick={handleTwitterLogin}
+              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-2 sm:mt-3 bg-black transition text-sm sm:text-base"
+            >
+              <img src={x} alt="Twitter" className="w-4 sm:w-5" />
+              <span>Sign in with Twitter</span>
+            </button>
+
+            <p className="text-black text-xs mt-5  sm:text-sm">
+              Don't have an account?{" "}
+              <Link to="/register" className="text-[#F09918] hover:underline">
+                Sign Up
+              </Link>{" "}
+              for <strong>FREE</strong>
+            </p>
+          </div>
+          {/* last div of form */}
+
       </div>
 
       {/* Registration Form (Only Visible When ShowForm is True) */}
@@ -225,7 +277,7 @@ const Home = () => {
           )}
 
           {/* login form */}
-          <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+          {/* <div className="fixed top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
             <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
               Login Here
             </h5>
@@ -248,7 +300,6 @@ const Home = () => {
               Sign in
             </button>
 
-            {/* Social Login Buttons */}
             <button
               onClick={handleGoogleLogin}
               className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-3 sm:mt-4 bg-white hover:bg-gray-100 transition text-sm sm:text-base"
@@ -272,7 +323,7 @@ const Home = () => {
               </Link>{" "}
               for <strong>FREE</strong>
             </p>
-          </div>
+          </div> */}
           {/* last div of form */}
         </div>
       )}
