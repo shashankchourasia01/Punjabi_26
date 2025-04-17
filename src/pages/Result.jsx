@@ -309,41 +309,41 @@ const Result = () => {
           From restaurants to real estate,find trusted businesses in your
           community.
         </h4>
+      </div>
 
-        </div>
+      {/* Search Bar */}
+      <div
+        id="searchBox"
+        className="bg-white w-full max-w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg shadow-lg mt-10 mx-auto px-4"
+      >
+        {/* Search Business Input */}
+        <form onSubmit={handleSubmit} className="flex flex-1 max-w-[1170px]">
+          {/* Search Input */}
+          <input
+            type="text"
+            placeholder="Search the Businesses..."
+            name="primaryBusiness"
+            onChange={handleChange}
+            className="flex-1 min-w-[100px] p-2 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-1"
+          />
 
-        {/* Search Bar */}
-        <div
-          id="searchBox"
-          className="bg-white w-[1170px] h-[70px] flex justify-center items-stretch rounded-lg ml-45 shadow-lg mt-10"
-        >
-          {/* Search Business Input */}
-          <form onSubmit={handleSubmit} className="flex">
-            {/* Search Input */}
-            <input
-              type="text"
-              placeholder="Search the Businesses..."
-              name="primaryBusiness"
-              onChange={handleChange}
-              className="w-[717px] p-2 rounded-l-2xl focus:outline-none text-black border-r border-gray-300 m-1"
-            />
+          {/* Location Input */}
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            onChange={handleChange}
+            className="flex-1 min-w-[100px] p-2 focus:outline-none text-black m-1"
+          />
 
-            {/* Location Input */}
-            <input
-              type="text"
-              name="location"
-              placeholder="Location"
-              onChange={handleChange}
-              className="w-[350px] p-2 focus:outline-none text-black m-1"
-            />
-
-            {/* Search Button */}
-            <button className="bg-[#F09918] text-white h-full rounded-r-lg ml-3 flex items-center justify-center w-[75px]">
-              <img src={search_icon} alt="Search" className="w-[30px]" />
-            </button>
-          </form>
-        </div>
-      
+          {/* Search Button */}
+          <div className="flex items-stretch">
+      <button className="bg-[#F09918] text-white rounded-sm flex items-center justify-center w-[75px] min-w-[60px] mt-2 h-[54px]">
+        <img src={search_icon} alt="Search" className="w-[30px]" />
+      </button>
+    </div>
+        </form>
+      </div>
 
       {showForm && (
         <div className="fixed top-5 right-4 bg-white text-black cursor-pointer text-lg p-6 shadow-2xl rounded-lg w-46 z-50 mt-16 mr-5 gap-2">

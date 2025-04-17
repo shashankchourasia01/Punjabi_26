@@ -136,7 +136,7 @@ const Footer = () => {
 
       {/* Bottom Copyright Section */}
       <div className="mt-4 bg-black w-full text-center py-4 text-gray-300 text-sm sm:text-base">
-        Copyright © 2025, Punjabipages.in | Park Management and Consultant.
+        Copyright © 2025, Punjabipages.in | Designed & Developed by PARK Management Consultants.com.au
       </div>
     </footer>
   );
