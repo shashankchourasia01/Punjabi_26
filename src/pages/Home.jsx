@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import home from "../main_assets/home_new.jpg";
 import logo from "../explore_assets/new_logo.jpeg";
 import menu from "../home_assets/Menu Logo.png";
@@ -18,6 +18,9 @@ import { SERVER_URL } from "../services/Helper";
 
 const Home = () => {
   const [showForm, setShowForm] = useState(false);
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
   const navigate = useNavigate();
 
   //  Function to navigate to Result Page
@@ -58,6 +61,10 @@ const Home = () => {
 
     return true;
   };
+
+  useEffect(() => {
+    setLoggedIn(isLoggedIn());
+  }, []);
 
   //login
   const isUserLoggedIn = useSelector((state) => state.auth.status); // Check if user is logged in
@@ -126,14 +133,16 @@ const Home = () => {
 
         {/* Right section - Dashboard & Menu Icon */}
         <div className="flex items-center space-x-4">
-          <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
-            <button
-              onClick={goToDashboard}
-              className="text-white text-lg font-semibold cursor-pointer"
-            >
-              Dashboard
-            </button>
-          </div>
+          {loggedIn && (
+            <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
+              <button
+                onClick={goToDashboard}
+                className="text-white text-lg font-semibold cursor-pointer"
+              >
+                Dashboard
+              </button>
+            </div>
+          )}
           <img
             onClick={() => setShowForm((prev) => !prev)}
             src={menu}
@@ -199,70 +208,56 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="flex relative z-10 flex-col justify-center items-start text-white text-left h-full px-4 md:px-10 lg:ml-20 -mt-10 md:-mt-20">
-        {/* <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug">
-          List & Grow Your Business
-        </h1>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-snug">
-          with Punjabi Pages!
-        </h1>
+        {/* login form */}
+        <div className="absolute top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
+          <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
+            Login Here
+          </h5>
 
-        <h4 className="mt-4 text-lg md:text-xl lg:text-2xl leading-relaxed">
-          Join 1000+ Businesses & connect with{" "}
-          <br className="hidden md:block" />
-          customers today!
-        </h4> */}
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
+          />
+          <input
+            type="text"
+            placeholder="Password"
+            className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
+          />
 
-          {/* login form */}
-          <div className="absolute top-5 right-10 bg-white p-6 shadow-2xl rounded-lg w-96 z-50 mt-40 mr-20 gap-2">
-            <h5 className="text-center text-lg font-bold mb-4 text-[#153A23]">
-              Login Here
-            </h5>
+          <button
+            onClick={goToResultPage}
+            className="w-full rounded-2xl bg-yellow-400 text-white p-2 font-bold"
+          >
+            Sign in
+          </button>
 
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
-            />
-            <input
-              type="text"
-              placeholder="Password"
-              className="w-full p-1 border mb-3 shadow-2xl rounded-md border-gray-300 text-black h-10 placeholder:text-[12px] pl-5"
-            />
+          {/* Social Login Buttons */}
+          <button
+            onClick={handleGoogleLogin}
+            className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-3 sm:mt-4 bg-black transition text-sm sm:text-base"
+          >
+            <img src={google} alt="Google" className="w-4 sm:w-5" />
+            <span>Sign in with Google</span>
+          </button>
 
-            <button
-              onClick={goToResultPage}
-              className="w-full rounded-2xl bg-yellow-400 text-white p-2 font-bold"
-            >
-              Sign in
-            </button>
+          <button
+            onClick={handleTwitterLogin}
+            className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-2 sm:mt-3 bg-black transition text-sm sm:text-base"
+          >
+            <img src={x} alt="Twitter" className="w-4 sm:w-5" />
+            <span>Sign in with Twitter</span>
+          </button>
 
-            {/* Social Login Buttons */}
-            <button
-              onClick={handleGoogleLogin}
-              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-3 sm:mt-4 bg-black transition text-sm sm:text-base"
-            >
-              <img src={google} alt="Google" className="w-4 sm:w-5" />
-              <span>Sign in with Google</span>
-            </button>
-
-            <button
-              onClick={handleTwitterLogin}
-              className="w-full max-w-xs flex items-center justify-center gap-2 border rounded-md py-2 sm:py-3 mt-2 sm:mt-3 bg-black transition text-sm sm:text-base"
-            >
-              <img src={x} alt="Twitter" className="w-4 sm:w-5" />
-              <span>Sign in with Twitter</span>
-            </button>
-
-            <p className="text-black text-xs mt-5  sm:text-sm">
-              Don't have an account?{" "}
-              <Link to="/register" className="text-[#F09918] hover:underline">
-                Sign Up
-              </Link>{" "}
-              for <strong>FREE</strong>
-            </p>
-          </div>
-          {/* last div of form */}
-
+          <p className="text-black text-xs mt-5  sm:text-sm">
+            Don't have an account?{" "}
+            <Link to="/register" className="text-[#F09918] hover:underline">
+              Sign Up
+            </Link>{" "}
+            for <strong>FREE</strong>
+          </p>
+        </div>
+        {/* last div of form */}
       </div>
 
       {/* Registration Form (Only Visible When ShowForm is True) */}
@@ -467,7 +462,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
 
       {/* Question section */}
       <section className="bg-[#FFFDF5] py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12">
