@@ -236,7 +236,7 @@ const Result = () => {
         <button
           onClick={() => setWeatherVisible(true)}
           className={`absolute top-5 right-5 z-50 ${
-            weatherVisible ? "hidden" : ""
+            weatherVisible ? "" : ""
           }`}
         >
           <img src={weather_icon} alt="Weather Icon" className="w-12 h-12" />
@@ -244,24 +244,24 @@ const Result = () => {
 
         {/* Weather Box */}
         {weatherVisible && (
-          <div className="fixed top-20 right-5 bg-black text-white w-[250px] p-4 rounded-2xl shadow-lg z-50">
+          <div className="absolute top-23 right-5 bg-[#F09918] text-white w-[250px] p-4 rounded-2xl shadow-lg z-50">
             <form onSubmit={handleWeatherSubmit} className="flex">
               <input
                 type="text"
-                placeholder="Search the Weather..."
+                placeholder="Search Weather"
                 name="location"
                 onChange={handleWeatherChange}
-                className="w-full p-2 rounded-xl text-black"
+                className="w-full p-2 rounded-xl text-black border-2"
               />
               <button type="submit" className="ml-2">
-                <img src={search_icon} alt="Search" className="w-[30px]" />
+                <img src={search_icon} alt="Search" className="w-[30px] mr-4" />
               </button>
             </form>
 
             {/* Close Button */}
             <button
               onClick={() => setWeatherVisible(false)}
-              className="absolute top-2 right-2 bg-gray-200 p-1 rounded-full hover:bg-gray-300"
+              className="absolute top-1 right-1 bg-gray-200 p-1 rounded-full hover:bg-gray-300"
             >
               <X className="w-4 h-4 text-black" />
             </button>

@@ -53,13 +53,7 @@ const Home = () => {
       : null;
 
     //console.log("Access Token:", accessToken);
-
-    if (!accessToken) {
-      alert("Please log in first");
-      return false;
-    }
-
-    return true;
+    return !!accessToken;
   };
 
   useEffect(() => {
