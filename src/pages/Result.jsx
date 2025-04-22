@@ -35,12 +35,11 @@ import { SERVER_URL } from "../services/Helper";
 import PopularCategories from "../components/PopularCategories";
 import bg_video from "../result_assets/bg_video.mp4";
 import UserLocation from "../components/UserLocation";
-// import More from '../components/More';
 
 const Result = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
-  //const [LoggedIn, setLoggedIn] = useState(false);
+  
   // weather
   const [weatherVisible, setWeatherVisible] = useState(false);
   const [weather, setWeather] = useState(null);

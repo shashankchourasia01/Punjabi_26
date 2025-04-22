@@ -61,17 +61,28 @@ function Login({setShowLogin}) {
       const response = await axios.post(newUrl, data, { withCredentials: true });
   
       if (response.status === 200) {
-        const { token, refreshToken } = response.data;
+        const { token, refreshToken, user } = response.data;
         dispatch(login(response.data));
   
         console.log("Logged in successfully");
+  
         localStorage.setItem("token", token);
         if (refreshToken) {
           localStorage.setItem("refreshToken", refreshToken);
         }
   
+        // ✅ Store userType for later use
+        const userType = user.userType;
+        localStorage.setItem("userType", userType);
+  
+        // ✅ Navigate based on userType
+        if (userType === "Admin") {
+          navigate("/admin/dashboard");
+        } else {
+          navigate("/result");
+        }
+  
         setToken(token);
-        navigate("/result");
       }
     } catch (error) {
       console.error(error);

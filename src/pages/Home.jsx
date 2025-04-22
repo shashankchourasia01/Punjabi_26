@@ -127,16 +127,28 @@ const Home = () => {
 
         {/* Right section - Dashboard & Menu Icon */}
         <div className="flex items-center space-x-4">
-          {loggedIn && (
-            <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
-              <button
-                onClick={goToDashboard}
-                className="text-white text-lg font-semibold cursor-pointer"
-              >
-                Dashboard
-              </button>
-            </div>
-          )}
+        {loggedIn && (
+  localStorage.getItem("userType") === "Admin" ? (
+    <div className="hidden md:flex justify-center items-center h-12 w-60 cursor-pointer rounded-lg border-2 border-yellow-400">
+      <button
+        onClick={() => navigate("/admin/dashboard")}
+        className="text-white text-lg font-semibold cursor-pointer"
+      >
+        Admin Dashboard
+      </button>
+    </div>
+  ) : (
+    <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
+      <button
+        onClick={goToDashboard}
+        className="text-white text-lg font-semibold cursor-pointer"
+      >
+        Dashboard
+      </button>
+    </div>
+  )
+)}
+
           <img
             onClick={() => setShowForm((prev) => !prev)}
             src={menu}
