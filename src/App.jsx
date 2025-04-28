@@ -13,6 +13,7 @@ import Blogs from "./components/Blogs";
 import Explore from "./components/Explore";
 import PopularCategories from "./components/PopularCategories";
 import AdminDashboard from "./components/AdminDashboard";
+import Review from "./components/Review";
 //import SearchResults from "./pages/SearchResults";
 
 
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/explore_more" element={<Explore />} />
             <Route path="/popular_categories" element={<PopularCategories />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/review" element={<Review />} />
             
           </Routes>
         </main>

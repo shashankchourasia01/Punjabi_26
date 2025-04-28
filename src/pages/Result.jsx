@@ -220,6 +220,13 @@ const Result = () => {
           >
             Blogs
           </Link>
+          <Link
+            to="/review"
+            className="text-white font-semibold hover:text-gray-900"
+          >
+            Write a Review
+          </Link>
+
         </div>
 
         {/* Login Button*/}
