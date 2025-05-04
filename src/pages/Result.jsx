@@ -226,6 +226,12 @@ const Result = () => {
           >
             Write a Review
           </Link>
+          <Link
+            to="/articles"
+            className="text-white font-semibold hover:text-gray-900"
+          >
+            Articles
+          </Link>
 
         </div>
 

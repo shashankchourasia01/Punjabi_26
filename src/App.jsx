@@ -14,6 +14,8 @@ import Explore from "./components/Explore";
 import PopularCategories from "./components/PopularCategories";
 import AdminDashboard from "./components/AdminDashboard";
 import Review from "./components/Review";
+import Articles from "./components/Articles";
+import ArticleDetails from "./components/ArticleDetail";
 //import SearchResults from "./pages/SearchResults";
 
 
@@ -38,7 +40,8 @@ const App = () => {
             <Route path="/popular_categories" element={<PopularCategories />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/review" element={<Review />} />
-            
+            <Route path="/articles" element={<Articles />} />   
+            <Route path="/article/:id" element={<ArticleDetails />} />         
           </Routes>
         </main>
       </StoreContextProvider>
