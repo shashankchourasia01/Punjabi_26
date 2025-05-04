@@ -93,7 +93,7 @@ const Articles = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-4xl  mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {tabData[activeTab].map((item, index) => (
             <div
               key={index}
@@ -122,7 +122,7 @@ const Articles = () => {
           {/* recent articles */}
           <div className="px-6 lg:px-16 py-12 bg-white text-gray-600">
   <h2 className="text-3xl font-bold mb-8 text-center">Recent Articles</h2>
-  <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {tabData.Recent.map((item) => (
       <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
         {/* Article Image */}
