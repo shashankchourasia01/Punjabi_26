@@ -1,7 +1,8 @@
 import React from "react";
 
 const popularCategories = {
-  Sydney: [
+  // Sydney
+  Dhanbad: [
     "Plumbers",
     "Electricians",
     "Locksmiths",
@@ -15,7 +16,8 @@ const popularCategories = {
     "Concrete Contractors",
     "Auto Wreckers",
   ],
-  Melbourne: [
+  // Melbourne
+  Bokaro: [
     "Plumbers",
     "Electricians",
     "Locksmiths",
@@ -29,7 +31,8 @@ const popularCategories = {
     "Concrete Contractors",
     "Auto Wreckers",
   ],
-  Brisbane: [
+  // Brisbane
+  Jamsedpur: [
     "Plumbers",
     "Electricians",
     "Locksmiths",
@@ -43,7 +46,8 @@ const popularCategories = {
     "Concrete Contractors",
     "Auto Wreckers",
   ],
-  Adelaide: [
+  // Adelaide
+  Ranchi: [
     "Plumbers",
     "Electricians",
     "Locksmiths",
@@ -57,7 +61,8 @@ const popularCategories = {
     "Concrete Contractors",
     "Auto Wreckers",
   ],
-  Perth: [
+  // Perth
+  Jasidih: [
     "Plumbers",
     "Electricians",
     "Locksmiths",
@@ -85,7 +90,7 @@ const PopularCategories = () => {
             <h3 className="text-2xl font-semibold mt-5 mb-3 text-center md:text-left ">
               {city}
             </h3>
-            <ul className="space-y-2 text-lg cursor-pointer text-center mt-10 md:text-left text-base text-gray-800">
+            <ul className="space-y-2 text-lg cursor-pointer text-center mt-10 md:text-left  text-gray-800">
               {businesses.map((biz, index) => (
                 <li key={index}>{biz}</li>
               ))}

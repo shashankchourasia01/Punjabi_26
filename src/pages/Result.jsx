@@ -312,7 +312,7 @@ const Result = () => {
       {/* Main Content */}
       <div className="w-[80%] mx-auto flex flex-col items-start text-white text-center mr-30 mt-40 justify-center">
         <h1 className="text-5xl font-bold">
-          Discover Punjabi Businesses
+          Discover  Businesses
           <br />
         </h1>
 
