@@ -1,87 +1,87 @@
 
-name: Deploy React App to Production
+# name: Deploy React App to Production
 
-on: [push]  # Replace with the branch you want to deploy from
+# on: [push]  # Replace with the branch you want to deploy from
 
-jobs:
-  deploy_to_s3:
-    name: Build and Deploy React App to S3
-    strategy:
-      matrix:
-        node-version: [20.x]  # Updated to use Node.js 20.x
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy_to_s3:
+#     name: Build and Deploy React App to S3
+#     strategy:
+#       matrix:
+#         node-version: [20.x]  # Updated to use Node.js 20.x
+#     runs-on: ubuntu-latest
 
-    env:
-      AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
-      AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
-      AWS_REGION: "${{ secrets.AWS_REGION }}"  # Set your AWS region
-      S3_BUCKET_NAME: "punjabi-pages-deploy-bucket"  # Replace with your S3 bucket name
+#     env:
+#       AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
+#       AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
+#       AWS_REGION: "${{ secrets.AWS_REGION }}"  # Set your AWS region
+#       S3_BUCKET_NAME: "punjabi-pages-deploy-bucket"  # Replace with your S3 bucket name
 
-    steps:
-      # Step 1: Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       # Step 1: Checkout the repository
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+#       # Step 2: Set up Node.js
+#       - name: Set up Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
 
-      # Step 3: Install dependencies and build the React app
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build --if-present
+#       # Step 3: Install dependencies and build the React app
+#       - name: Install dependencies and build
+#         run: |
+#           npm install
+#           npm run build --if-present
 
-      # Step 4: Zip the build folder (assuming it's named "dist")
-      - name: Zip build folder
-        uses: montudor/action-zip@v1
-        with:
-          args: zip -r dist.zip dist
+#       # Step 4: Zip the build folder (assuming it's named "dist")
+#       - name: Zip build folder
+#         uses: montudor/action-zip@v1
+#         with:
+#           args: zip -r dist.zip dist
 
-      # Step 5: Delete all existing content in the S3 bucket
-      - name: Clear S3 bucket content
-        run: aws s3 rm s3://punjabipages.au --recursive
-        env:
-          AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
-          AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
-          AWS_REGION: "${{ secrets.AWS_REGION }}"
+#       # Step 5: Delete all existing content in the S3 bucket
+#       - name: Clear S3 bucket content
+#         run: aws s3 rm s3://punjabipages.au --recursive
+#         env:
+#           AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
+#           AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
+#           AWS_REGION: "${{ secrets.AWS_REGION }}"
 
-      # Step 6: Upload the zip file to S3
-      - name: Upload dist.zip to S3
-        run: |
-          aws s3 cp ./dist.zip s3://punjabipages.au/dist.zip
-        env:
-          aws-access-key-id: '${{ secrets.AWS_ACCESS_KEY }}'
-          aws-secret-access-key: '${{ secrets.AWS_ACCESS_SECRET }}'
-          aws-region: "${{ secrets.AWS_REGION }}"
-          bucket: punjabipages.au
-          key: dist.zip
-          source: dist.zip
+#       # Step 6: Upload the zip file to S3
+#       - name: Upload dist.zip to S3
+#         run: |
+#           aws s3 cp ./dist.zip s3://punjabipages.au/dist.zip
+#         env:
+#           aws-access-key-id: '${{ secrets.AWS_ACCESS_KEY }}'
+#           aws-secret-access-key: '${{ secrets.AWS_ACCESS_SECRET }}'
+#           aws-region: "${{ secrets.AWS_REGION }}"
+#           bucket: punjabipages.au
+#           key: dist.zip
+#           source: dist.zip
 
-      # Step 7: Unzip content in S3 bucket and remove the uploaded zip file
-      - name: Unzip content in S3 bucket and cleanup
-        run: |
-          # Copy dist.zip from S3 to local
-          aws s3 cp s3://punjabipages.au/dist.zip dist.zip
+#       # Step 7: Unzip content in S3 bucket and remove the uploaded zip file
+#       - name: Unzip content in S3 bucket and cleanup
+#         run: |
+#           # Copy dist.zip from S3 to local
+#           aws s3 cp s3://punjabipages.au/dist.zip dist.zip
           
-          # Unzip locally
-          unzip -o dist.zip -d dist
+#           # Unzip locally
+#           unzip -o dist.zip -d dist
           
-          # Sync unzipped content to the root of the S3 bucket
-          aws s3 sync dist s3://punjabipages.au/ --delete
+#           # Sync unzipped content to the root of the S3 bucket
+#           aws s3 sync dist s3://punjabipages.au/ --delete
           
-          # Remove dist.zip from the S3 bucket
-          aws s3 rm s3://punjabipages.au/dist.zip
+#           # Remove dist.zip from the S3 bucket
+#           aws s3 rm s3://punjabipages.au/dist.zip
 
-          # Remove the extracted dist folder from the S3 bucket
-          aws s3 rm s3://punjabipages.au/dist --recursive
-        env:
-          AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
-          AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
-          AWS_REGION: "${{ secrets.AWS_REGION }}"
+#           # Remove the extracted dist folder from the S3 bucket
+#           aws s3 rm s3://punjabipages.au/dist --recursive
+#         env:
+#           AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY }}'
+#           AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_ACCESS_SECRET }}'
+#           AWS_REGION: "${{ secrets.AWS_REGION }}"
 
-      # Step 8: Clean up local zip file
-      - name: Clean up local zip file
-        run: rm dist.zip
+#       # Step 8: Clean up local zip file
+#       - name: Clean up local zip file
+#         run: rm dist.zip
