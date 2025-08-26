@@ -127,27 +127,26 @@ const Home = () => {
 
         {/* Right section - Dashboard & Menu Icon */}
         <div className="flex items-center space-x-4">
-        {loggedIn && (
-  localStorage.getItem("userType") === "Admin" ? (
-    <div className="hidden md:flex justify-center items-center h-12 w-60 cursor-pointer rounded-lg border-2 border-yellow-400">
-      <button
-        onClick={() => navigate("/admin/dashboard")}
-        className="text-white text-lg font-semibold cursor-pointer"
-      >
-        Admin Dashboard
-      </button>
-    </div>
-  ) : (
-    <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
-      <button
-        onClick={goToDashboard}
-        className="text-white text-lg font-semibold cursor-pointer"
-      >
-        Dashboard
-      </button>
-    </div>
-  )
-)}
+          {loggedIn &&
+            (localStorage.getItem("userType") === "Admin" ? (
+              <div className="hidden md:flex justify-center items-center h-12 w-60 cursor-pointer rounded-lg border-2 border-yellow-400">
+                <button
+                  onClick={() => navigate("/admin/dashboard")}
+                  className="text-white text-lg font-semibold cursor-pointer"
+                >
+                  Admin Dashboard
+                </button>
+              </div>
+            ) : (
+              <div className="hidden md:flex justify-center items-center h-12 w-40 cursor-pointer rounded-lg border-2 border-yellow-400">
+                <button
+                  onClick={goToDashboard}
+                  className="text-white text-lg font-semibold cursor-pointer"
+                >
+                  Dashboard
+                </button>
+              </div>
+            ))}
 
           <img
             onClick={() => setShowForm((prev) => !prev)}
@@ -372,7 +371,7 @@ const Home = () => {
               List Your Business Details
             </h1>
             <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-[#646464] text-center lg:text-left">
-              To begin, you need to create an account on Punjabi Pages. Simply
+              To begin, you need to create an account on Business Listing Page. Simply
               visit the Sign-Up page and enter your details. Once
               submitted,you'll receive an OTP verification via email. Verify
               your email,log in to your dashboard, and you are ready to add your
@@ -402,10 +401,10 @@ const Home = () => {
             Us?
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mt-6 sm:mt-12 sm:ml-15 leading-relaxed text-center sm:text-left">
-            Are you a Punjabi business owner in Australia? Increase your
-            visibility and attract more customers by listing your business on
-            Punjabi Pages – the leading directory for Punjabi-owned businesses
-            across Australia.
+            Are you a business owner in India? Boost your online presence and
+            connect with more customers by listing your business on Business
+            Listing Page – a dedicated platform for showcasing local businesses
+            across India.
           </p>
         </div>
 
@@ -483,7 +482,7 @@ const Home = () => {
           {/* FAQ Item 1 */}
           <div className="p-4 sm:p-6">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
-              Q. What is Panjabi Pages?
+              Q. What is Business Listing Pages?
             </h2>
             <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Panjabi Pages is a business directory app designed to help the
@@ -496,7 +495,7 @@ const Home = () => {
           {/* FAQ Item 2 */}
           <div className="p-4 sm:p-6">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
-              Q. Is Panjabi Pages only for Punjabi-owned businesses?
+              Q. Is Business Listing only for Punjabi-owned businesses?
             </h3>
             <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               No, any business that serves or supports the Punjabi community is
@@ -508,7 +507,7 @@ const Home = () => {
           {/* FAQ Item 3 */}
           <div className="p-4 sm:p-6">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F09918]">
-              Q. How can I list my business on Panjabi Pages?
+              Q. How can I list my business on Business Listing ?
             </h3>
             <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
               Simply tap the "Add Your Business" button on the app, fill out the
@@ -556,7 +555,7 @@ const Home = () => {
               Q. Is the app available on both Android and iOS?
             </h3>
             <p className="text-[#454545] mt-2 text-base sm:text-lg md:text-xl">
-              Yes, Panjabi Pages is available on both platforms so you can
+              Yes, Business Listing  is available on both platforms so you can
               access it anytime, anywhere.
             </p>
           </div>

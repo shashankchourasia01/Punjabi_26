@@ -22,7 +22,7 @@ const Articles = () => {
           </Link>
         </div>
         <h1 className="text-lg md:text-xl font-bold text-black text-center w-full md:w-auto">
-          Punjabi Pages Articles
+        Business Listing Page Articles
         </h1>
         <div className="w-0 md:w-auto" />
       </nav>
@@ -31,7 +31,7 @@ const Articles = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-16 py-12 gap-8 bg-white text-black">
         <div className="flex-1 max-w-xl text-left">
           <h2 className="text-4xl font-bold mb-4 text-gray-700">
-            Punjabi Pages Articles
+          Business Listing Page Articles
           </h2>
           <p className="text-gray-600 font-semibold mb-6">
             Our in-depth articles, cost guides and DIY resources empower you
@@ -50,7 +50,7 @@ const Articles = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">
-              Popular Articles on Punjabi Pages
+              Popular Articles on Business Listing Page
             </h3>
             <div className="flex flex-wrap gap-4 text-blue-600">
               <a href="#" className="hover:underline">

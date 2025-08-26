@@ -120,7 +120,7 @@ const Review = () => {
           </Link>
         </div>
         <h1 className="text-lg md:text-2xl font-semibold text-black text-center w-full absolute left-0 right-0 mx-auto">
-          Review a Businesses in Punjabi Pages
+          Review a Businesses in Business Listing Page
         </h1>
       </nav>
       {/* Main Section */}

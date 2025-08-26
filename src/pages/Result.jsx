@@ -650,7 +650,7 @@ const Result = () => {
                   List Your Business for FREE Today!
                 </h2>
                 <p className="mt-2 text-gray-700 text-lg">
-                  Join the largest Punjabi business directory in Australia.
+                  Join the largest business directory in India.
                   Increase your visibility and connect with customers easily!
                 </p>
 
@@ -873,7 +873,7 @@ const Result = () => {
               {/* Right Side - Heading & Text */}
               <div className="text-white text-center lg:text-left max-w-lg">
                 <h2 className="text-3xl md:text-5xl font-bold">
-                  Discover <span className="text-yellow-500">Punjabi</span>{" "}
+                  Discover <span className="text-yellow-500">Listing</span>{" "}
                   Businesses And Pages!
                 </h2>
                 <p className="mt-4 text-lg md:text-xl">
